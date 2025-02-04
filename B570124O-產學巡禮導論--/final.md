@@ -1,0 +1,130 @@
+# 產學巡禮期末心得統整
+
+## 某學長
+- 海大資工系直升碩（網路安全實驗室）
+- KeyXentic 公司 
+    - 工作經歷
+    	- 網管工程師
+    	- 韌體工程師
+    	- 硬體工程師
+    	- 專案經理
+    	- 軟體架構師
+    	- 軟體工程師
+    - 產品
+        - Keyper 身份認證平台
+        - KeyTrust 金鑰管理服務
+        - XenBox 檔案資料保護
+    - What is  CyberSecurity?
+        - 攻防演練
+        - 身份鑑別
+        - 資安檢測
+        - 加密研究
+## 趙智民
+- 開課：電腦網路與 IoT 簡介
+    - 核心設備
+        - 封包交換器 Packet Switches
+            - E.g. 路由器 Router、交換器 Switches
+        - 通訊媒介 Communication Links:
+            - E.g. Fiber、Copper、Radio
+    - Internet Protocol Stack :
+        - 應用層 Application Layer [端到端]
+            - E.g. FTP、HTTPS
+        - 傳輸層 Transport Layer [端到端]
+            - E.g. TCP、UDP
+        - 網路層 Network Layer [For 核心]
+            - E.g. IP Routing Protocols
+        - 連接層 Link Layer [For 核心]
+            - E.g. 乙太網、802.11(wifi)
+        - 物理層 Physical Layer [For 核心]
+            - E.g. 'Bit'
+    - What is Protocol?
+        - 兩個通訊的實體之間的規則
+        - 規範傳送訊息的格式、順序、收到訊息後要做什麼？
+## 辛華昀 
+- 開課：
+    - 數位邏輯、數位邏輯實驗 [大一下]
+        - 硬體設計的基礎
+        - 麵包板
+        - CAD & 開發板
+    - 數位系統設計 [大二上]
+        - 學習使用硬體描述語言：VHDL / Verilog
+    - 計算機組織 [大二上]
+    - 嵌入式系統設計 [大三上]
+        - 物聯網、感測器、硬體整合
+    - 軟硬體協同設計 [碩士]
+        - Language: C / VHDL / Verilog
+- FPGA & CPLD
+    - CPLD適合用來實現各種運算和組合邏輯(combinational logic)，FPGA則是適用於實現循序邏輯(sequential logic)。換句話說，FPGA適合於觸發器(flip-flop)較多的結構，而CPLD則適合於觸發器有限而乘積項(product term)較多的結構。
+    - CPLD的時間特性預估比FPGA容易。CPLD的連續式佈線(互聯)結構決定了它的時序延遲是均勻的和可預測的，而FPGA的分段式佈線結構使得其時間延遲的預測變的困難。同樣的理由也造成CPLD的速度比FPGA快，
+    - 在編程上FPGA比CPLD具有更大的靈活性。CPLD透過修改具有固定內部連線電路的邏輯功能來編程，而FPGA主要是透過改變內部電路佈線來編程，也就是說：FPGA可在邏輯閘下編程，而CPLD是在邏輯塊下編程。
+## 張雅慧
+- 開課：
+    - 資料庫系統 [大三核心選修]
+        - 資料庫介紹 Introduction DataBase
+        - 資料庫系統 DBMS
+            - 資料庫系統、處理資料的程式
+        - SQL
+        - Web-Based 資料庫系統應用
+    - 高等資料庫 [碩一]
+        - 複雜資料型態：Json、Knowledge Graph
+        - 資料分析 -> 資料探勘 -> 機器學習
+        - SQL 查詢語句處理 -> 索引結構（縮小比對範圍）
+        - 時空資料查詢處理 -> 更複雜的索引結構
+## 張欽圳 
+- 領域：Python 程式設計、機器視覺、機器學習
+- 在現今，資料分析、機器學習、深度學習......都廣泛使用Python
+- 課程：
+    - Python 程式設計 [大二上]
+        - 主要教的內容：非程式語言初學者，該怎麼學習新的語言？
+        - 重要的 Python 模組
+    - 電腦視覺 [大三]
+        - 機器視覺理論 ＆ 應用 
+        - 影像擷取原理
+        - 影像處理基礎演算法
+        - 神經網路遠裡與電腦視覺應用
+        - 基礎 3D 電腦視覺技術
+    - 機器學習 ML
+        - 一種讓電腦應用樣子資料來解決問題的方式
+        - 設計有效率的演算法來表示資料，學習模型、評估模型效能
+## 葉春超
+- 開課：
+    - 電腦網路　[必修]
+        - Telecommunication Networks : 3G / 4G / 5G
+        - IoT Networks: AI + IoTs
+        - Data Center
+    - 程式設計 [重修班]
+## 嚴茂旭
+- 開課：
+    - 數位邏輯設計
+    - 數位邏輯設計實驗
+    - 計算組織學 [必修] 
+- 重要：FPGA 現場可程式閘陣列
+    - Altera DEI 多媒體開發平台
+    - 硬體描述語言：Verilog、VHDL
+    - 摩爾定律 Moore's Law
+## 陳錦鴻 [學長] 
+- From 澳門 / 海大學長
+- 工作經歷：
+    - 如姍有限公司（軟體開發工程師）
+    - 國泰人壽（高級專員）
+- 專案：
+    - UBI APP 自用汽車保險駕駛行為專案
+    - 牙醫診所管理系統
+    - Diners APP 餐廳訂位管理系統
+    - 和泰產險活力生態APP
+    - 機場旅平險專案
+    - 保險 X OCR 專案
+## 丁培毅
+- 開課：
+    - 物件導向程式設計
+        - 目標：開發一個大型軟體系統
+        - 物件導向程式設計的抽象畫概念：
+            - 抽象化
+            - 介面
+            - 多形
+            - 封裝
+            - 繼承
+            - Design Paterns
+            - 軟體的重用 Reues
+            - 元件化 Component
+    - 密碼學應用
