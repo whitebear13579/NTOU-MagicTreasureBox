@@ -1,0 +1,15 @@
+顯示變數
+在檢查點#1,#2的值。
+(Show the value of r at check points #1 and #2.)
+
+檢查點1(check point #1) r (after line 31)
+4483969781433656843
+檢查點2(check point #2) r (after line 34)
+8530188037963946077
+
+顯示當 i == 2024 時有關 r 的值。
+(Show the value of at check points #3 and #4 when is equal to 2024.)
+檢查點3(check point #1) r (before line 39)
+3450767003494143037
+檢查點4(check point #2) r (after line 39)
+1119853690092393437

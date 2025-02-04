@@ -1,0 +1,6 @@
+{'version':'1.0',
+'in_files':["test1.txt","test2.txt"],
+'out_files':["answer1.txt","answer2.txt"],
+'test1.txt':{"r":[],"seed":[["986888"],["754211"]]},
+'test2.txt':{"ne":[],"seed":[["917366"],["178222"]]}
+}

@@ -1,0 +1,41 @@
+The following program inserts 10000 numbers, which are not all distinct, into an empty binary search tree. This binary search tree only keeps distinct numbers. Then, this program lists the data in the binary search tree by three ways, namely, the inorder traversal, the preorder traversal, and the postorder traversal.
+
+1
+哪種方法將數字按排序順序列出？
+Which traversal method can list the numbers in sorted order?
+A. inorder
+
+2
+The depth (or height) of the tree is the maximum depth among all nodes in the tree.
+For the following binary tree, node 4 is called the root node.
+       4
+      / \
+     2   5
+    / \
+   1   3
+The depth of node 1 is 2 (path:4->2->1 (root->left->left)), and the depth of node 5 is 1 (path:4->5 (root->right)).
+The depth of this tree is 2. (longest path:4->2->1 (root->left->left) or 4->2->3 (root->left->right))
+
+根據上面對樹深度(depth)的定義，可以知道樹的深度可以這麼計算:
+Case 1. 若root有左右子樹 (if (root->left != NULL && root->right != NULL)):
+     depth(root)=max(depth(root->left),depth(root->right))+1
+Case 2. 若root只有左子樹 (if (root->left != NULL && root->right == NULL)):
+     depth(root)=depth(root->left)+1
+Case 3. 若root只有右子樹 (if (root->left == NULL && root->right != NULL)):
+     depth(root)=depth(root->right)+1
+Case 4. 若root沒有左右子樹 (if (root->left == NULL && root->right == NULL)):
+     depth(root)=0
+
+The depth of a binary tree can be determined in the following manner:
+Case 1. The root node has both the left and right subtrees (if (root->left != NULL && root->right != NULL)): 
+     depth(root)=max(depth(root->left),depth(root->right))+1
+Case 2. The root node only has the left subtree (if (root->left != NULL && root->right == NULL)): 
+     depth(root)=depth(root->left)+1
+Case 3. The root node only has the right subtree (if (root->left == NULL && root->right != NULL)):
+     depth(root)=depth(root->right)+1
+Case 4. The root node does not have the left and right subtrees (if (root->left == NULL && root->right == NULL)):
+     depth(root)=0
+
+這棵二分搜尋樹的深度是多少?
+What is the depth of this binary search tree?
+31

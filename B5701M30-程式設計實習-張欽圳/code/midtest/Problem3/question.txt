@@ -1,0 +1,11 @@
+1. 這個程式總共呼叫 f(n) 幾次?
+2097151
+
+2. 這個程式的 F(10) 幾次?
+2048
+
+3. 呼叫堆疊(call stack)裡最多會有幾份 f(n) 的stack frame/activation record?
+注意 f(n) 被呼叫一次，呼叫堆疊就會 r 加一份 f(n) 的stack frame，當 f(n) 結束時他的那一份stack frame也會從call stack移除。
+21
+4. 呼叫堆疊裡 f(n) 的stack frame中，所有 n 的總和最大為多少?
+231

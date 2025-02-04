@@ -1,0 +1,5 @@
+f(8)=96, # of calls:85
+f(9)=177, # of calls:157
+f(10)=326, # of calls:289
+f(12)=1104, # of calls:979
+f(3)=4, # of calls:4

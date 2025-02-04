@@ -1,0 +1,7 @@
+修改下面程式，快速計算foo(30)及計算foo(30)時，foo共被呼叫幾次(含foo(30))
+Modify the following program to efficiently calculate foo(30) and the total number of calls to foo, with the call to foo(30) included.
+foo(30)=   (1)
+3814986502092304
+
+# of calls to foo=   (2)    (note that the number of calls to foo for calculating foo(3) is 15.)
+114383962274805
