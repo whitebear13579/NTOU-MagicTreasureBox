@@ -1,0 +1,1 @@
+{"name":"Local: FizzBuzz","url":"d:\\Project\\C++\\NTOU_1B_CppCodeCourse\\week4\\FizzBuzz.cpp","tests":[{"id":1741930826358,"input":"7","output":"1\n2\nFizz\n4\nBuzz\nFizz\n7"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Project\\C++\\NTOU_1B_CppCodeCourse\\week4\\FizzBuzz.cpp","group":"local","local":true}

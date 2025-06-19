@@ -1,0 +1,37 @@
+This program is designed to check if the parentheses in a given string are balanced. It processes several input strings and handles a special case for the string "c8763".
+
+Problem Description
+Input:
+The first input is an integer n, which tells how many strings will follow. Each subsequent string consists only of left and right parentheses. However, there is one special string "c8763". When the program reads "c8763", it immediately skips the rest of the current iteration and does not perform any checks on it.
+
+Task:
+For each string (except "c8763"), the program uses a stack-based algorithm to verify whether the parentheses are balanced. That means every '(' must have a corresponding ')' in the correct order.
+
+How the Nested Loop Works
+Outer Loop:
+
+The loop runs n times, processing each input string one at a time.
+If the input is "c8763", the program uses continue to skip the remaining code in the current iteration, so no matching check is done.
+Inner Loop (Parentheses Check):
+
+The program iterates over each character in the string.
+If a '(' is encountered:
+It pushes a value onto a stack to represent an open parenthesis.
+If a ')' is encountered:
+It first checks if the stack is empty:
+If the stack is empty: There is no matching '(' for this ')', so it sets a flag (indicating a mismatch) and breaks out of the loop.
+If the stack is not empty: It pops the top element off the stack, effectively matching the ')' with a preceding '('.
+After the Inner Loop:
+
+The program checks two conditions:
+Mismatch Flag: If a mismatch was detected (flag is true).
+Remaining Items in the Stack: If the stack is not empty (meaning there are unmatched '(' left).
+If either condition is true, the program outputs "N" (for "No", the string is not balanced). Otherwise, it outputs "Y" (for "Yes", the string is balanced).
+Reset for Next Iteration:
+
+The input string and the mismatch flag are reset before moving on to the next string, ensuring that each new string is checked independently.
+Summary of the Output
+For each processed string (ignoring "c8763"):
+Outputs "Y" if every '(' has a matching ')' and they are properly nested.
+Outputs "N" if there is any unmatched ')' or leftover '('.
+In essence, the nested loop structure first iterates over each input string and then iterates over each character in that string to ensure that every opening parenthesis is properly closed.

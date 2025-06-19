@@ -1,0 +1,40 @@
+Problem Description (in Overhyped Baidu Tieba Style):
+Yo, bros! Here comes the ULTIMATE BRACKET APOCALYPSE!!! You’re given a bunch of strings—ONLY LEFT/RIGHT BRACKETS or the LEGENDARY STRING "c8763"!!! When you see "c8763", you SKIP IT LIKE A BOSS 😎. For other strings, you gotta check if the brackets are MATCHED LIKE SOULMATES!!! Fail this, and the universe explodes!!! 💣💔 Code this right, or face the wrath of 10,000 angry keyboard warriors!!! ⌨️⚔️
+
+Explanation of the Nested Loop’s Output (in Drama Queen Mode):
+Let’s dissect this code like it’s a HACKER MOVIE PLOT!!!
+
+Outer Loop:
+
+Mission: Process EACH TEST CASE like a ninja slicing through input!
+
+If the string is "c8763", ABORT MISSION (skip it)!!! 
+
+Else, prepare for BRACKET WARFARE!!! 
+
+Inner Loop (Bracket Battle Royale):
+
+Left Bracket "(": PUSH IT INTO THE STACK LIKE STACKING GOLD BARS!!! 
+
+Right Bracket ")":
+
+If the stack is EMPTY (no left brackets to match), RED ALERT!!!  Set iLoveCPPYes = 1 (aka "WE’RE DOOMED!!!").
+
+Else, POP THE STACK like popping bubble wrap!
+
+AFTER THE BATTLE:
+
+If EITHER the stack isn’t empty (leftover brackets) OR iLoveCPPYes is triggered (unmatched right brackets), scream "N" (WRONG)!
+
+If all brackets are MATCHED PERFECTLY, shout "Y" (CORRECT)! 
+
+Code’s Secret Sauce (Spoiler Alert!):
+
+The stack acts like a Bracket Guardian—tracking unmatched left brackets.
+
+The iLoveCPPYes flag is the DOOMSDAY BUTTON for unmatched right brackets. 
+
+"Y" means success, "N" means failure—BUT WAIT! The code uses MACROS TO SWAP "Y" and "N"!!! YesYes prints "N", Nope prints "Y". THIS IS A TRAP!!! 
+
+Final Verdict:
+If you survive the nested loops and brackets, you’re a CODING GOD!!! If not… well, better luck next time, mortal!
