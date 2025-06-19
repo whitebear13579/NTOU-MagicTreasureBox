@@ -1,0 +1,212 @@
+|mcu
+CLK => CLK.IN1
+HEX0[0] << <GND>
+HEX0[1] << <GND>
+HEX0[2] << <GND>
+HEX0[3] << <GND>
+HEX0[4] << <GND>
+HEX0[5] << <GND>
+HEX0[6] << <GND>
+HEX1[0] << <GND>
+HEX1[1] << <GND>
+HEX1[2] << <GND>
+HEX1[3] << <GND>
+HEX1[4] << <GND>
+HEX1[5] << <GND>
+HEX1[6] << <GND>
+HEX2[0] << <GND>
+HEX2[1] << <GND>
+HEX2[2] << <GND>
+HEX2[3] << <GND>
+HEX2[4] << <GND>
+HEX2[5] << <GND>
+HEX2[6] << <GND>
+HEX3[0] << <GND>
+HEX3[1] << <GND>
+HEX3[2] << <GND>
+HEX3[3] << <GND>
+HEX3[4] << <GND>
+HEX3[5] << <GND>
+HEX3[6] << <GND>
+LED[0] << rgy_top:rgy1.g
+LED[1] << rgy_top:rgy1.y
+LED[2] << rgy_top:rgy1.r
+LED[3] << <GND>
+LED[4] << <GND>
+LED[5] << rgy_top:rgy1.g
+LED[6] << rgy_top:rgy1.y
+LED[7] << rgy_top:rgy1.r
+LED[8] << <GND>
+LED[9] << <GND>
+SW[0] => ~NO_FANOUT~
+SW[1] => ~NO_FANOUT~
+SW[2] => ~NO_FANOUT~
+SW[3] => ~NO_FANOUT~
+SW[4] => ~NO_FANOUT~
+SW[5] => ~NO_FANOUT~
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => ~NO_FANOUT~
+SW[9] => ~NO_FANOUT~
+BTN[0] => ~NO_FANOUT~
+BTN[1] => _.IN1
+BTN[1] => _.IN1
+BTN[2] => ~NO_FANOUT~
+
+
+|mcu|freg_div_23:freg1
+clk => q[0].CLK
+clk => q[1].CLK
+clk => q[2].CLK
+clk => q[3].CLK
+clk => q[4].CLK
+clk => q[5].CLK
+clk => q[6].CLK
+clk => q[7].CLK
+clk => q[8].CLK
+clk => q[9].CLK
+clk => q[10].CLK
+clk => q[11].CLK
+clk => q[12].CLK
+clk => q[13].CLK
+clk => q[14].CLK
+clk => q[15].CLK
+clk => q[16].CLK
+clk => q[17].CLK
+clk => q[18].CLK
+clk => q[19].CLK
+clk => q[20].CLK
+clk => q[21].CLK
+clk => q[22].CLK
+clk => q[23].CLK
+clk => q[24].CLK
+clk => q[25].CLK
+clk => q[26].CLK
+clk => q[27].CLK
+clk => q[28].CLK
+clk => q[29].CLK
+clk => q[30].CLK
+clk => q[31].CLK
+reset => q[0].ACLR
+reset => q[1].ACLR
+reset => q[2].ACLR
+reset => q[3].ACLR
+reset => q[4].ACLR
+reset => q[5].ACLR
+reset => q[6].ACLR
+reset => q[7].ACLR
+reset => q[8].ACLR
+reset => q[9].ACLR
+reset => q[10].ACLR
+reset => q[11].ACLR
+reset => q[12].ACLR
+reset => q[13].ACLR
+reset => q[14].ACLR
+reset => q[15].ACLR
+reset => q[16].ACLR
+reset => q[17].ACLR
+reset => q[18].ACLR
+reset => q[19].ACLR
+reset => q[20].ACLR
+reset => q[21].ACLR
+reset => q[22].ACLR
+reset => q[23].ACLR
+reset => q[24].ACLR
+reset => q[25].ACLR
+reset => q[26].ACLR
+reset => q[27].ACLR
+reset => q[28].ACLR
+reset => q[29].ACLR
+reset => q[30].ACLR
+reset => q[31].ACLR
+clk_out <= q[23].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mcu|rgy_top:rgy1
+clk => clk.IN1
+reset => reset.IN1
+r[0] <= rgy_comb:rgy.r
+r[1] <= rgy_comb:rgy.r
+g[0] <= rgy_comb:rgy.g
+g[1] <= rgy_comb:rgy.g
+y[0] <= rgy_comb:rgy.y
+y[1] <= rgy_comb:rgy.y
+
+
+|mcu|rgy_top:rgy1|updown:comb
+clk => clk.IN4
+reset => reset.IN4
+x => Dc.IN1
+x => Db.IN1
+x => Da.IN1
+x => Dc.IN1
+x => Db.IN1
+x => Da.IN1
+Q[0] <= dflipflop:diff4.q
+Q[1] <= dflipflop:diff3.q
+Q[2] <= dflipflop:diff2.q
+Q[3] <= dflipflop:diff1.q
+
+
+|mcu|rgy_top:rgy1|updown:comb|dflipflop:diff1
+d => q.DATAA
+d => q_n.DATAA
+clk => q_n~reg0.CLK
+clk => q~reg0.CLK
+reset => q.OUTPUTSELECT
+reset => q_n.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_n <= q_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mcu|rgy_top:rgy1|updown:comb|dflipflop:diff2
+d => q.DATAA
+d => q_n.DATAA
+clk => q_n~reg0.CLK
+clk => q~reg0.CLK
+reset => q.OUTPUTSELECT
+reset => q_n.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_n <= q_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mcu|rgy_top:rgy1|updown:comb|dflipflop:diff3
+d => q.DATAA
+d => q_n.DATAA
+clk => q_n~reg0.CLK
+clk => q~reg0.CLK
+reset => q.OUTPUTSELECT
+reset => q_n.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_n <= q_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mcu|rgy_top:rgy1|updown:comb|dflipflop:diff4
+d => q.DATAA
+d => q_n.DATAA
+clk => q_n~reg0.CLK
+clk => q~reg0.CLK
+reset => q.OUTPUTSELECT
+reset => q_n.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_n <= q_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mcu|rgy_top:rgy1|rgy_comb:rgy
+q[0] => ~NO_FANOUT~
+q[1] => g.IN0
+q[2] => g.IN1
+q[3] => g.IN1
+q[3] => y.IN1
+q[3] => r[1].DATAIN
+q[3] => g.IN1
+q[3] => y.IN1
+q[3] => r[0].DATAIN
+r[0] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+r[1] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+g[0] <= g.DB_MAX_OUTPUT_PORT_TYPE
+g[1] <= g.DB_MAX_OUTPUT_PORT_TYPE
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+

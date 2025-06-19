@@ -1,0 +1,51 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\USER\Downloads\tempWeek10\de0_empty\simulation\modelsim
+vadder4B
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+!i10b 1
+Z2 !s100 Q`J:z7>=Y33YGgL[BUYT]0
+Z3 In<j>e_?k@AncnbFDm7;Aj0
+Z4 V4Eo3F>Bo4n?:^EC;`hD`O2
+Z5 !s105 adder4B_sv_unit
+S1
+Z6 dC:\Users\USER\Downloads\tempWeek10\de0_empty\simulation\modelsim
+Z7 w1745309881
+Z8 8../../design/adder4B.sv
+Z9 F../../design/adder4B.sv
+L0 1
+Z10 OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1745310383.511000
+!s107 ../../design/adder4B.sv|
+Z11 !s90 -reportprogress|300|../../design/adder4B.sv|
+!s101 -O0
+o-O0
+Z12 nadder4@b
+vtb_adder4B
+R1
+Z13 I1lfAN_0BjRSc1e7=dUI6=3
+Z14 VPT1D]=lOCQI>NFV45zYVF3
+Z15 !s105 tb_adder4B_sv_unit
+S1
+R6
+Z16 w1745310372
+Z17 8../tb/tb_adder4B.sv
+Z18 F../tb/tb_adder4B.sv
+L0 1
+R10
+r1
+31
+Z19 !s90 -reportprogress|300|../tb/tb_adder4B.sv|
+o-O0
+Z20 ntb_adder4@b
+!i10b 1
+Z21 !s100 X7NF?_555>>[dQ<g<3K6U3
+!s85 0
+Z22 !s108 1745310383.310000
+Z23 !s107 ../tb/tb_adder4B.sv|
+!s101 -O0

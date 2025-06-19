@@ -1,0 +1,100 @@
+# Reading C:/intelFPGA_lite/19.1/modelsim_ase/tcl/vsim/pref.tcl
+# do mcu_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/pan/Downloads/Final_exam_empty_project/Test_modelsim/simulation/tb {C:/Users/pan/Downloads/Final_exam_empty_project/Test_modelsim/simulation/tb/seven_segment_decoder_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:19:32 on Jun 02,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/pan/Downloads/Final_exam_empty_project/Test_modelsim/simulation/tb" C:/Users/pan/Downloads/Final_exam_empty_project/Test_modelsim/simulation/tb/seven_segment_decoder_tb.sv 
+# -- Compiling module seven_segment_decoder_tb
+# 
+# Top level modules:
+# 	seven_segment_decoder_tb
+# End time: 17:19:32 on Jun 02,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/pan/Downloads/Final_exam_empty_project/Test_modelsim/design {C:/Users/pan/Downloads/Final_exam_empty_project/Test_modelsim/design/seven_segment_decoder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:19:32 on Jun 02,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/pan/Downloads/Final_exam_empty_project/Test_modelsim/design" C:/Users/pan/Downloads/Final_exam_empty_project/Test_modelsim/design/seven_segment_decoder.sv 
+# -- Compiling module seven_segment_decoder
+# 
+# Top level modules:
+# 	seven_segment_decoder
+# End time: 17:19:32 on Jun 02,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:19:38 on Jun 02,2025
+# vlog -reportprogress 300 ../tb/seven_segment_decoder_tb.sv 
+# -- Compiling module seven_segment_decoder_tb
+# 
+# Top level modules:
+# 	seven_segment_decoder_tb
+# End time: 17:19:38 on Jun 02,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:19:38 on Jun 02,2025
+# vlog -reportprogress 300 ../../design/seven_segment_decoder.sv 
+# -- Compiling module seven_segment_decoder
+# 
+# Top level modules:
+# 	seven_segment_decoder
+# End time: 17:19:38 on Jun 02,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+do sim.do
+# vsim -voptargs="+acc" work.seven_segment_decoder_tb 
+# Start time: 17:19:41 on Jun 02,2025
+# Loading sv_std.std
+# Loading work.seven_segment_decoder_tb
+# Loading work.seven_segment_decoder
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Error: (vish-4014) No objects found matching '/tb_fourbits_addsuber/m'.
+# Executing ONERROR command at macro ./wave.do line 4
+# ** Error: (vish-4014) No objects found matching '/tb_fourbits_addsuber/a'.
+# Executing ONERROR command at macro ./wave.do line 5
+# ** Error: (vish-4014) No objects found matching '/tb_fourbits_addsuber/b'.
+# Executing ONERROR command at macro ./wave.do line 6
+# ** Error: (vish-4014) No objects found matching '/tb_fourbits_addsuber/s'.
+# Executing ONERROR command at macro ./wave.do line 7
+# ** Error: (vish-4014) No objects found matching '/tb_fourbits_addsuber/cout'.
+# Executing ONERROR command at macro ./wave.do line 8
+# ** Error: (vish-4014) No objects found matching '/tb_fourbits_addsuber/v'.
+# Executing ONERROR command at macro ./wave.do line 9
+# ** Error: (vish-4014) No objects found matching '/tb_fourbits_addsuber/adder0/adder2/cout'.
+# Executing ONERROR command at macro ./wave.do line 10
+# ** Error: (vish-4014) No objects found matching '/tb_fourbits_addsuber/adder0/adder3/cout'.
+# Executing ONERROR command at macro ./wave.do line 11
+#                    0 a=0000, seg=1000000
+#                   10 a=0001, seg=1111001
+#                   20 a=0010, seg=0100100
+#                   30 a=0011, seg=0110000
+#                   40 a=0100, seg=0011000
+#                   50 a=0101, seg=0010011
+#                   60 a=0110, seg=0000010
+#                   70 a=0111, seg=1111000
+#                   80 a=1000, seg=0000000
+#                   90 a=1001, seg=0010000
+#                  100 a=1010, seg=0001000
+#                  110 a=1011, seg=0000011
+#                  120 a=1100, seg=1000110
+#                  130 a=1101, seg=0100001
+#                  140 a=1110, seg=0000110
+#                  150 a=1111, seg=0001110
+# ** Note: $stop    : ../tb/seven_segment_decoder_tb.sv(30)
+#    Time: 160 ps  Iteration: 0  Instance: /seven_segment_decoder_tb
+# Break in Module seven_segment_decoder_tb at ../tb/seven_segment_decoder_tb.sv line 30
+add wave -position insertpoint  \
+sim:/seven_segment_decoder_tb/a \
+sim:/seven_segment_decoder_tb/seg
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/pan/Downloads/Final_exam_empty_project/Test_modelsim/simulation/modelsim/wave.do
+# End time: 17:20:14 on Jun 02,2025, Elapsed time: 0:00:33
+# Errors: 24, Warnings: 0

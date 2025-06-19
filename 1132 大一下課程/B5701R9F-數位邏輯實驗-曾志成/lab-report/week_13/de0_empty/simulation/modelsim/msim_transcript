@@ -1,0 +1,115 @@
+# Reading C:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do mcu_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -sv -work work +incdir+C:/Users/USER/Downloads/week_13/de0_empty/design {C:/Users/USER/Downloads/week_13/de0_empty/design/rgy_comb.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module rgy_comb
+# 
+# Top level modules:
+# 	rgy_comb
+# vlog -sv -work work +incdir+C:/Users/USER/Downloads/week_13/de0_empty/design {C:/Users/USER/Downloads/week_13/de0_empty/design/rgy_top.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module rgy_top
+# 
+# Top level modules:
+# 	rgy_top
+# vlog -sv -work work +incdir+C:/Users/USER/Downloads/week_13/de0_empty/design {C:/Users/USER/Downloads/week_13/de0_empty/design/freg_div_23.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module freg_div_23
+# 
+# Top level modules:
+# 	freg_div_23
+# vlog -sv -work work +incdir+C:/Users/USER/Downloads/week_13/de0_empty/design {C:/Users/USER/Downloads/week_13/de0_empty/design/dflipflop.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module dflipflop
+# 
+# Top level modules:
+# 	dflipflop
+# vlog -sv -work work +incdir+C:/Users/USER/Downloads/week_13/de0_empty/design {C:/Users/USER/Downloads/week_13/de0_empty/design/updown.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module updown
+# 
+# Top level modules:
+# 	updown
+# vlog -sv -work work +incdir+C:/Users/USER/Downloads/week_13/de0_empty/design {C:/Users/USER/Downloads/week_13/de0_empty/design/mcu.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mcu
+# 
+# Top level modules:
+# 	mcu
+# 
+
+
+do compile2.do
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_rgy
+# 
+# Top level modules:
+# 	tb_rgy
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module rgy_comb
+# 
+# Top level modules:
+# 	rgy_comb
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module rgy_top
+# 
+# Top level modules:
+# 	rgy_top
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module dflipflop
+# 
+# Top level modules:
+# 	dflipflop
+do sim2.do
+# vsim -voptargs=+acc work.tb_rgy 
+# Loading sv_std.std
+# Loading work.tb_rgy
+# Loading work.rgy_top
+# Loading work.updown
+# Loading work.dflipflop
+# Loading work.rgy_comb
+# ** Warning: (vsim-3017) C:/Users/USER/Downloads/week_13/de0_empty/design/updown.sv(9): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_rgy/u_rgy_top/comb/diff1
+# ** Warning: (vsim-3722) C:/Users/USER/Downloads/week_13/de0_empty/design/updown.sv(9): [TFMPC] - Missing connection for port 'q_n'.
+# 
+# ** Warning: (vsim-3017) C:/Users/USER/Downloads/week_13/de0_empty/design/updown.sv(10): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_rgy/u_rgy_top/comb/diff2
+# ** Warning: (vsim-3722) C:/Users/USER/Downloads/week_13/de0_empty/design/updown.sv(10): [TFMPC] - Missing connection for port 'q_n'.
+# 
+# ** Warning: (vsim-3017) C:/Users/USER/Downloads/week_13/de0_empty/design/updown.sv(11): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_rgy/u_rgy_top/comb/diff3
+# ** Warning: (vsim-3722) C:/Users/USER/Downloads/week_13/de0_empty/design/updown.sv(11): [TFMPC] - Missing connection for port 'q_n'.
+# 
+# ** Warning: (vsim-3017) C:/Users/USER/Downloads/week_13/de0_empty/design/updown.sv(12): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_rgy/u_rgy_top/comb/diff4
+# ** Warning: (vsim-3722) C:/Users/USER/Downloads/week_13/de0_empty/design/updown.sv(12): [TFMPC] - Missing connection for port 'q_n'.
+# 
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Error: (vish-4014) No objects found matching '/testbench/adder1/a'.
+# Executing ONERROR command at macro ./wave.do line 13
+# ** Error: (vish-4014) No objects found matching '/testbench/adder1/b'.
+# Executing ONERROR command at macro ./wave.do line 14
+# ** Error: (vish-4014) No objects found matching '/testbench/adder1/s'.
+# Executing ONERROR command at macro ./wave.do line 15
+# ** Error: (vish-4014) No objects found matching '/testbench/b[6]'.
+# Executing ONERROR command at macro ./wave.do line 16
+# ** Error: (vish-4014) No objects found matching '/testbench/b[5]'.
+# Executing ONERROR command at macro ./wave.do line 17
+# Break in Module tb_rgy at ../tb/tb_rgy.sv line 18
+# Simulation Breakpoint: Break in Module tb_rgy at ../tb/tb_rgy.sv line 18
+# MACRO ./sim2.do PAUSED at line 7
+add wave -position insertpoint sim:/tb_rgy/*

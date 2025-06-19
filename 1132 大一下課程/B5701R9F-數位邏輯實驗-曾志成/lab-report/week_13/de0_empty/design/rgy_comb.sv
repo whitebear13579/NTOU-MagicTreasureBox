@@ -1,0 +1,11 @@
+module rgy_comb(
+    input logic [3:0]q,
+    output logic [1:0]r, g, y
+);
+    assign r[0]=~q[3];
+    assign g[0] =  q[3] & ~(q[2] & q[1]);
+    assign y[0]=q[1]&q[2]&q[3];
+    assign r[1]=q[3];
+    assign g[1] = ~q[3] & ~(q[2] & q[1]);
+    assign y[1]=q[1]&q[2]&~q[3];
+endmodule

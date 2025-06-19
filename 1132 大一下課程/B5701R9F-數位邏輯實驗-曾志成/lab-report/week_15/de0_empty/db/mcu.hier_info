@@ -1,0 +1,56 @@
+|tb_birthday
+
+
+|tb_birthday|birthday:u_birthday
+clk => clk.IN4
+reset => reset.IN4
+date[0] <= dflipflop:dff4.q
+date[1] <= dflipflop:dff3.q
+date[2] <= dflipflop:dff2.q
+date[3] <= dflipflop:dff1.q
+
+
+|tb_birthday|birthday:u_birthday|dflipflop:dff1
+d => q.DATAA
+d => q_n.DATAA
+clk => q_n~reg0.CLK
+clk => q~reg0.CLK
+reset => q.OUTPUTSELECT
+reset => q_n.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_n <= q_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_birthday|birthday:u_birthday|dflipflop:dff2
+d => q.DATAA
+d => q_n.DATAA
+clk => q_n~reg0.CLK
+clk => q~reg0.CLK
+reset => q.OUTPUTSELECT
+reset => q_n.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_n <= q_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_birthday|birthday:u_birthday|dflipflop:dff3
+d => q.DATAA
+d => q_n.DATAA
+clk => q_n~reg0.CLK
+clk => q~reg0.CLK
+reset => q.OUTPUTSELECT
+reset => q_n.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_n <= q_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_birthday|birthday:u_birthday|dflipflop:dff4
+d => q.DATAA
+d => q_n.DATAA
+clk => q_n~reg0.CLK
+clk => q~reg0.CLK
+reset => q.OUTPUTSELECT
+reset => q_n.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_n <= q_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

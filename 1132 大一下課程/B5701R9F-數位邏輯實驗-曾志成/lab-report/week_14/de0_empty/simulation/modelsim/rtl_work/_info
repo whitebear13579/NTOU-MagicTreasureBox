@@ -1,0 +1,159 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\USER\Downloads\week_14\de0_empty\simulation\modelsim
+vday_timer
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+Z2 ID9<QNUcF[K44]J[E]M7650
+Z3 VFMSV7e`G?e^DLPL^gX0R>3
+Z4 !s105 day_timer_sv_unit
+S1
+Z5 dC:\Users\USER\Downloads\week_14\de0_empty\simulation\modelsim
+Z6 w1747724123
+Z7 8../../design/day_timer.sv
+Z8 F../../design/day_timer.sv
+L0 1
+Z9 OV;L;10.1d;51
+r1
+31
+o-O0
+Z10 !s100 fQ4Mf^2f>a_oTWM6JWd0B3
+Z11 !s108 1747725206.514000
+Z12 !s107 ../../design/day_timer.sv|
+Z13 !s90 -reportprogress|300|../../design/day_timer.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vdflipflop
+R1
+Z14 Ig_X9jA:JT`AhjBGdQ_R5R0
+Z15 V3TRf^NLQFW8^ijS0Uk]M]2
+Z16 !s105 dflipflop_sv_unit
+S1
+R5
+Z17 w1746509398
+Z18 8../../design/dflipflop.sv
+Z19 F../../design/dflipflop.sv
+L0 1
+R9
+r1
+31
+o-O0
+Z20 !s100 <Y0L9:n8C3c;M=0c9]dYI1
+Z21 !s108 1747725207.081000
+Z22 !s107 ../../design/dflipflop.sv|
+Z23 !s90 -reportprogress|300|../../design/dflipflop.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vfreg_div_23
+R1
+Z24 Ile@N5LToNP<>K7aR[]H[R1
+Z25 Vj@NRNebab7LaU>KAB:fEd2
+S1
+R5
+Z26 w1747724702
+Z27 8../../design/freg_div_23.sv
+Z28 F../../design/freg_div_23.sv
+L0 1
+R9
+r1
+31
+o-O0
+!i10b 1
+Z29 !s100 2K_PF>`_4@9G>Whd[j?Yc2
+Z30 !s105 freg_div_23_sv_unit
+!s85 0
+Z31 !s108 1747725207.241000
+Z32 !s107 ../../design/freg_div_23.sv|
+Z33 !s90 -reportprogress|300|../../design/freg_div_23.sv|
+!s101 -O0
+vssd
+R1
+!i10b 1
+!s100 [2XkN:F`G]QA6=]7dzFNl0
+IfLfPeBHh1E:IL=fP4H4eU0
+VaV<_EhXP3_kBA^m5CzleV0
+!s105 ssd_sv_unit
+S1
+R5
+w1745909553
+8../../design/ssd.sv
+F../../design/ssd.sv
+L0 1
+R9
+r1
+!s85 0
+31
+!s108 1747725207.414000
+!s107 ../../design/ssd.sv|
+!s90 -reportprogress|300|../../design/ssd.sv|
+!s101 -O0
+o-O0
+vtb_timer2
+R1
+Z34 IRl>ZQdDf5YcK`>bJE=<bo0
+Z35 VI?kB<TfS4oD23L`JHcCLD0
+Z36 !s105 tb_timer2_sv_unit
+S1
+R5
+Z37 w1747724254
+Z38 8../tb/tb_timer2.sv
+Z39 F../tb/tb_timer2.sv
+L0 1
+R9
+r1
+31
+o-O0
+Z40 !s100 ]6?<zKC>AXlW9[nd?^V>@3
+Z41 !s108 1747725206.260000
+Z42 !s107 ../tb/tb_timer2.sv|
+Z43 !s90 -reportprogress|300|../tb/tb_timer2.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vten_digit
+R1
+Z44 IgE72OKO]IK16[BUCaG3A`2
+Z45 VW^3Q^h=^K^4=:Pm3Gl1^c1
+Z46 !s105 ten_digit_sv_unit
+S1
+R5
+Z47 w1747723321
+Z48 8../../design/ten_digit.sv
+Z49 F../../design/ten_digit.sv
+L0 1
+R9
+r1
+31
+o-O0
+Z50 !s100 AFYamA`<zi>Cn6AGLAX>=3
+Z51 !s108 1747725206.717000
+Z52 !s107 ../../design/ten_digit.sv|
+Z53 !s90 -reportprogress|300|../../design/ten_digit.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vunit
+R1
+Z54 IzF;MmB5HKhi=ZZl=9@7oD1
+Z55 VLnjN^63oo=FJbbG<Oba_R3
+Z56 !s105 unit_sv_unit
+S1
+R5
+Z57 w1747721394
+Z58 8../../design/unit.sv
+Z59 F../../design/unit.sv
+L0 1
+R9
+r1
+31
+o-O0
+Z60 !s100 FMZX1ki77YKHXPcAYOWi=0
+Z61 !s108 1747725206.904000
+Z62 !s107 ../../design/unit.sv|
+Z63 !s90 -reportprogress|300|../../design/unit.sv|
+!i10b 1
+!s85 0
+!s101 -O0

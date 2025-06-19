@@ -1,0 +1,14 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -sv -work work +incdir+C:/Users/USER/Downloads/week_13/de0_empty/design {C:/Users/USER/Downloads/week_13/de0_empty/design/rgy_comb.sv}
+vlog -sv -work work +incdir+C:/Users/USER/Downloads/week_13/de0_empty/design {C:/Users/USER/Downloads/week_13/de0_empty/design/rgy_top.sv}
+vlog -sv -work work +incdir+C:/Users/USER/Downloads/week_13/de0_empty/design {C:/Users/USER/Downloads/week_13/de0_empty/design/freg_div_23.sv}
+vlog -sv -work work +incdir+C:/Users/USER/Downloads/week_13/de0_empty/design {C:/Users/USER/Downloads/week_13/de0_empty/design/dflipflop.sv}
+vlog -sv -work work +incdir+C:/Users/USER/Downloads/week_13/de0_empty/design {C:/Users/USER/Downloads/week_13/de0_empty/design/updown.sv}
+vlog -sv -work work +incdir+C:/Users/USER/Downloads/week_13/de0_empty/design {C:/Users/USER/Downloads/week_13/de0_empty/design/mcu.sv}
+

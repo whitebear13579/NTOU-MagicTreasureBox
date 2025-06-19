@@ -1,0 +1,246 @@
+|tb_timer2
+
+
+|tb_timer2|day_timer:u_day_timer
+clk => clk.IN4
+reset => n_reset.IN1
+sec_tens[0] <= ten_digit:sec_ten.q
+sec_tens[1] <= ten_digit:sec_ten.q
+sec_tens[2] <= ten_digit:sec_ten.q
+min_tens[0] <= ten_digit:min_ten.q
+min_tens[1] <= ten_digit:min_ten.q
+min_tens[2] <= ten_digit:min_ten.q
+sec_units[0] <= unit:sec_unit.q
+sec_units[1] <= unit:sec_unit.q
+sec_units[2] <= unit:sec_unit.q
+sec_units[3] <= unit:sec_unit.q
+min_units[0] <= unit:min_unit.q
+min_units[1] <= unit:min_unit.q
+min_units[2] <= unit:min_unit.q
+min_units[3] <= unit:min_unit.q
+
+
+|tb_timer2|day_timer:u_day_timer|unit:sec_unit
+clk => clk.IN4
+reset => reset.IN4
+Cin => Da.IN1
+Cin => Db.IN1
+Cin => Dc.IN1
+Cin => Dd.IN1
+Cin => Carry.IN1
+Cin => Da.IN1
+Cin => Db.IN1
+Cin => Dc.IN1
+Cin => Dd.IN1
+q[0] <= dflipflop:dff4.q
+q[1] <= dflipflop:dff3.q
+q[2] <= dflipflop:dff2.q
+q[3] <= dflipflop:dff1.q
+Carry <= Carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_timer2|day_timer:u_day_timer|unit:sec_unit|dflipflop:dff1
+d => q.DATAA
+d => q_n.DATAA
+clk => q_n~reg0.CLK
+clk => q~reg0.CLK
+reset => q.OUTPUTSELECT
+reset => q_n.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_n <= q_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_timer2|day_timer:u_day_timer|unit:sec_unit|dflipflop:dff2
+d => q.DATAA
+d => q_n.DATAA
+clk => q_n~reg0.CLK
+clk => q~reg0.CLK
+reset => q.OUTPUTSELECT
+reset => q_n.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_n <= q_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_timer2|day_timer:u_day_timer|unit:sec_unit|dflipflop:dff3
+d => q.DATAA
+d => q_n.DATAA
+clk => q_n~reg0.CLK
+clk => q~reg0.CLK
+reset => q.OUTPUTSELECT
+reset => q_n.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_n <= q_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_timer2|day_timer:u_day_timer|unit:sec_unit|dflipflop:dff4
+d => q.DATAA
+d => q_n.DATAA
+clk => q_n~reg0.CLK
+clk => q~reg0.CLK
+reset => q.OUTPUTSELECT
+reset => q_n.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_n <= q_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_timer2|day_timer:u_day_timer|ten_digit:sec_ten
+clk => clk.IN3
+reset => reset.IN3
+Cin => Da.IN1
+Cin => Db.IN1
+Cin => Dc.IN1
+Cin => Carry.IN1
+Cin => Da.IN1
+Cin => Db.IN1
+Cin => Dc.IN1
+q[0] <= dflipflop:dff3.q
+q[1] <= dflipflop:dff2.q
+q[2] <= dflipflop:dff1.q
+Carry <= Carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_timer2|day_timer:u_day_timer|ten_digit:sec_ten|dflipflop:dff1
+d => q.DATAA
+d => q_n.DATAA
+clk => q_n~reg0.CLK
+clk => q~reg0.CLK
+reset => q.OUTPUTSELECT
+reset => q_n.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_n <= q_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_timer2|day_timer:u_day_timer|ten_digit:sec_ten|dflipflop:dff2
+d => q.DATAA
+d => q_n.DATAA
+clk => q_n~reg0.CLK
+clk => q~reg0.CLK
+reset => q.OUTPUTSELECT
+reset => q_n.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_n <= q_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_timer2|day_timer:u_day_timer|ten_digit:sec_ten|dflipflop:dff3
+d => q.DATAA
+d => q_n.DATAA
+clk => q_n~reg0.CLK
+clk => q~reg0.CLK
+reset => q.OUTPUTSELECT
+reset => q_n.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_n <= q_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_timer2|day_timer:u_day_timer|unit:min_unit
+clk => clk.IN4
+reset => reset.IN4
+Cin => Da.IN1
+Cin => Db.IN1
+Cin => Dc.IN1
+Cin => Dd.IN1
+Cin => Carry.IN1
+Cin => Da.IN1
+Cin => Db.IN1
+Cin => Dc.IN1
+Cin => Dd.IN1
+q[0] <= dflipflop:dff4.q
+q[1] <= dflipflop:dff3.q
+q[2] <= dflipflop:dff2.q
+q[3] <= dflipflop:dff1.q
+Carry <= Carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_timer2|day_timer:u_day_timer|unit:min_unit|dflipflop:dff1
+d => q.DATAA
+d => q_n.DATAA
+clk => q_n~reg0.CLK
+clk => q~reg0.CLK
+reset => q.OUTPUTSELECT
+reset => q_n.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_n <= q_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_timer2|day_timer:u_day_timer|unit:min_unit|dflipflop:dff2
+d => q.DATAA
+d => q_n.DATAA
+clk => q_n~reg0.CLK
+clk => q~reg0.CLK
+reset => q.OUTPUTSELECT
+reset => q_n.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_n <= q_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_timer2|day_timer:u_day_timer|unit:min_unit|dflipflop:dff3
+d => q.DATAA
+d => q_n.DATAA
+clk => q_n~reg0.CLK
+clk => q~reg0.CLK
+reset => q.OUTPUTSELECT
+reset => q_n.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_n <= q_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_timer2|day_timer:u_day_timer|unit:min_unit|dflipflop:dff4
+d => q.DATAA
+d => q_n.DATAA
+clk => q_n~reg0.CLK
+clk => q~reg0.CLK
+reset => q.OUTPUTSELECT
+reset => q_n.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_n <= q_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_timer2|day_timer:u_day_timer|ten_digit:min_ten
+clk => clk.IN3
+reset => reset.IN3
+Cin => Da.IN1
+Cin => Db.IN1
+Cin => Dc.IN1
+Cin => Carry.IN1
+Cin => Da.IN1
+Cin => Db.IN1
+Cin => Dc.IN1
+q[0] <= dflipflop:dff3.q
+q[1] <= dflipflop:dff2.q
+q[2] <= dflipflop:dff1.q
+Carry <= Carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_timer2|day_timer:u_day_timer|ten_digit:min_ten|dflipflop:dff1
+d => q.DATAA
+d => q_n.DATAA
+clk => q_n~reg0.CLK
+clk => q~reg0.CLK
+reset => q.OUTPUTSELECT
+reset => q_n.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_n <= q_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_timer2|day_timer:u_day_timer|ten_digit:min_ten|dflipflop:dff2
+d => q.DATAA
+d => q_n.DATAA
+clk => q_n~reg0.CLK
+clk => q~reg0.CLK
+reset => q.OUTPUTSELECT
+reset => q_n.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_n <= q_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_timer2|day_timer:u_day_timer|ten_digit:min_ten|dflipflop:dff3
+d => q.DATAA
+d => q_n.DATAA
+clk => q_n~reg0.CLK
+clk => q~reg0.CLK
+reset => q.OUTPUTSELECT
+reset => q_n.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_n <= q_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

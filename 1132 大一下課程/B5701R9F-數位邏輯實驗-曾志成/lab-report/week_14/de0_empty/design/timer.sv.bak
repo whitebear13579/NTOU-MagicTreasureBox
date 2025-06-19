@@ -1,0 +1,24 @@
+module timer(
+    input clk,
+    input reset,
+    output logic [2:0] sec_tens, min_tens,
+    output logic [3:0] sec_units, min_units
+);
+    logic c1, c2, c3, c4;
+
+    unit sec_unit(
+        .clk(clk), .reset(reset), Cin(1'b1), .q(sec_units), carry(c1)
+    );
+
+    ten_digit sec_ten(
+        .clk(clk), .reset(reset), Cin(c1), .q(sec_tens), carry(c2)
+    );
+
+    unit min_unit(
+        .clk(clk), .reset(reset), Cin(c2), .q(min_units), carry(c3)
+    );
+
+    ten_digit sec_ten(
+        .clk(clk), .reset(reset), Cin(c3), .q(min_tens), carry(c4)
+    );
+endmodule

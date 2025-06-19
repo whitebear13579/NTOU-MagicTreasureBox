@@ -1,0 +1,13 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -sv -work work +incdir+C:/Users/pan/Downloads/code_digitallogic/Class_perparing/Class_perparing/Week14/Code/HW1-timer {C:/Users/pan/Downloads/code_digitallogic/Class_perparing/Class_perparing/Week14/Code/HW1-timer/unit_digit.sv}
+vlog -sv -work work +incdir+C:/Users/pan/Downloads/code_digitallogic/Class_perparing/Class_perparing/Week14/Code/HW1-timer {C:/Users/pan/Downloads/code_digitallogic/Class_perparing/Class_perparing/Week14/Code/HW1-timer/timer.sv}
+vlog -sv -work work +incdir+C:/Users/pan/Downloads/code_digitallogic/Class_perparing/Class_perparing/Week14/Code/HW1-timer {C:/Users/pan/Downloads/code_digitallogic/Class_perparing/Class_perparing/Week14/Code/HW1-timer/test_timer.sv}
+vlog -sv -work work +incdir+C:/Users/pan/Downloads/code_digitallogic/Class_perparing/Class_perparing/Week14/Code/HW1-timer {C:/Users/pan/Downloads/code_digitallogic/Class_perparing/Class_perparing/Week14/Code/HW1-timer/ten_digit.sv}
+vlog -sv -work work +incdir+C:/Users/pan/Downloads/code_digitallogic/Class_perparing/Class_perparing/Week14/Code/HW1-timer {C:/Users/pan/Downloads/code_digitallogic/Class_perparing/Class_perparing/Week14/Code/HW1-timer/dff_pos.sv}
+

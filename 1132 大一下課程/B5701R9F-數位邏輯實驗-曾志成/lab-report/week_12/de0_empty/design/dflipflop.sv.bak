@@ -1,0 +1,16 @@
+module dflipflop(
+    input d,
+    input clk,
+    input reset,
+    output logic q
+);
+    //正邊緣觸發 D型正反器
+    always_ff @(posedge clk)
+    begin
+        if (reset)
+            q <= 1'b0;
+        else 
+            q <= d;
+    end
+
+endmodule

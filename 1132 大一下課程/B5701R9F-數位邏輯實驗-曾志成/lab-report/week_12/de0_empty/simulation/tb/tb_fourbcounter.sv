@@ -1,0 +1,27 @@
+module tb_fourbcounter;
+
+    logic [3:0] Q;
+    logic [6:0] seg;
+    logic clk, reset;
+
+    fourbcounter u_fourbcounter(
+        .clk(clk),
+        .reset(reset),
+        .Q(Q)
+    );
+
+    ssd u_ssd(
+        .a(Q),
+        .seg(seg)
+    );
+
+    always #5 clk = ~clk;
+    
+    initial begin
+        clk = 0;
+        reset = 1;
+        #10 reset = 0;
+        #500 $stop;
+    end 
+
+endmodule

@@ -1,0 +1,106 @@
+# Reading C:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do mcu_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -sv -work work +incdir+C:/Users/USER/Downloads/week_12/de0_empty/simulation/tb {C:/Users/USER/Downloads/week_12/de0_empty/simulation/tb/tb_counter.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_counter
+# 
+# Top level modules:
+# 	tb_counter
+# vlog -sv -work work +incdir+C:/Users/USER/Downloads/week_12/de0_empty/design {C:/Users/USER/Downloads/week_12/de0_empty/design/counter.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# vlog -sv -work work +incdir+C:/Users/USER/Downloads/week_12/de0_empty/design {C:/Users/USER/Downloads/week_12/de0_empty/design/dflipflop.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module dflipflop
+# 
+# Top level modules:
+# 	dflipflop
+# 
+do compile1.do
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_counter
+# 
+# Top level modules:
+# 	tb_counter
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module dflipflop
+# 
+# Top level modules:
+# 	dflipflop
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ssd
+# 
+# Top level modules:
+# 	ssd
+do compile1.do
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_counter
+# 
+# Top level modules:
+# 	tb_counter
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module dflipflop
+# 
+# Top level modules:
+# 	dflipflop
+dp sim1.do
+# invalid command name "dp"
+do sim1.do
+# vsim -voptargs=+acc work.tb_counter 
+# Loading sv_std.std
+# Loading work.tb_counter
+# Loading work.counter
+# Loading work.dflipflop
+# ** Warning: (vsim-3017) ../../design/counter.sv(11): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_counter/u_counter/dff1
+# ** Warning: (vsim-3722) ../../design/counter.sv(11): [TFMPC] - Missing connection for port 'q_n'.
+# 
+# ** Warning: (vsim-3017) ../../design/counter.sv(12): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_counter/u_counter/dff2
+# ** Warning: (vsim-3722) ../../design/counter.sv(12): [TFMPC] - Missing connection for port 'q_n'.
+# 
+# ** Warning: (vsim-3017) ../../design/counter.sv(13): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_counter/u_counter/dff3
+# ** Warning: (vsim-3722) ../../design/counter.sv(13): [TFMPC] - Missing connection for port 'q_n'.
+# 
+add wave -position insertpoint sim:/tb_counter/*
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Error: (vish-4014) No objects found matching '/testbench/adder1/a'.
+# Executing ONERROR command at macro ./wave.do line 13
+# ** Error: (vish-4014) No objects found matching '/testbench/adder1/b'.
+# Executing ONERROR command at macro ./wave.do line 14
+# ** Error: (vish-4014) No objects found matching '/testbench/adder1/s'.
+# Executing ONERROR command at macro ./wave.do line 15
+# ** Error: (vish-4014) No objects found matching '/testbench/b[6]'.
+# Executing ONERROR command at macro ./wave.do line 16
+# ** Error: (vish-4014) No objects found matching '/testbench/b[5]'.
+# Executing ONERROR command at macro ./wave.do line 17
+# Break in Module tb_counter at ../tb/tb_counter.sv line 18
+# Simulation Breakpoint: Break in Module tb_counter at ../tb/tb_counter.sv line 18
+# MACRO ./sim1.do PAUSED at line 7

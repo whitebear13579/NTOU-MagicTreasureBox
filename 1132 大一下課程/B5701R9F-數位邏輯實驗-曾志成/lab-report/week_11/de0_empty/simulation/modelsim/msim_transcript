@@ -1,0 +1,75 @@
+# Reading C:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do mcu_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -sv -work work +incdir+C:/Users/USER/Downloads/week_11/simulation/tb {C:/Users/USER/Downloads/week_11/simulation/tb/tb_fourSAS.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_fourSAS
+# 
+# Top level modules:
+# 	tb_fourSAS
+# vlog -sv -work work +incdir+C:/Users/USER/Downloads/week_11/design {C:/Users/USER/Downloads/week_11/design/ssd.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ssd
+# 
+# Top level modules:
+# 	ssd
+# vlog -sv -work work +incdir+C:/Users/USER/Downloads/week_11/design {C:/Users/USER/Downloads/week_11/design/fourSAS.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fourSAS
+# 
+# Top level modules:
+# 	fourSAS
+# vlog -sv -work work +incdir+C:/Users/USER/Downloads/week_11/design {C:/Users/USER/Downloads/week_11/design/fulla.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fulla
+# 
+# Top level modules:
+# 	fulla
+# 
+do compile.do
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_fourSAS
+# 
+# Top level modules:
+# 	tb_fourSAS
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fourSAS
+# 
+# Top level modules:
+# 	fourSAS
+do sim.do
+# vsim -voptargs=+acc work.tb_fourSAS 
+# Loading sv_std.std
+# Loading work.tb_fourSAS
+# Loading work.fourSAS
+# Loading work.fulla
+# Loading work.ssd
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Error: (vish-4014) No objects found matching '/testbench/adder1/a'.
+# Executing ONERROR command at macro ./wave.do line 13
+# ** Error: (vish-4014) No objects found matching '/testbench/adder1/b'.
+# Executing ONERROR command at macro ./wave.do line 14
+# ** Error: (vish-4014) No objects found matching '/testbench/adder1/s'.
+# Executing ONERROR command at macro ./wave.do line 15
+# ** Error: (vish-4014) No objects found matching '/testbench/b[6]'.
+# Executing ONERROR command at macro ./wave.do line 16
+# ** Error: (vish-4014) No objects found matching '/testbench/b[5]'.
+# Executing ONERROR command at macro ./wave.do line 17
+#                    0 a=15, b=15, m=0, seg=0000110, c=1, v=0, s=1110
+#                   10 a= 4, b= 7, m=0, seg=0000011, c=0, v=1, s=1011
+#                   20 a= 0, b=15, m=1, seg=1111001, c=0, v=0, s=0001
+#                   30 a=13, b=10, m=1, seg=0110000, c=1, v=0, s=0011
+#                   40 a= 7, b= 8, m=1, seg=0001110, c=0, v=1, s=1111
+# Break in Module tb_fourSAS at ../tb/tb_fourSAS.sv line 27
+# Simulation Breakpoint: Break in Module tb_fourSAS at ../tb/tb_fourSAS.sv line 27
+# MACRO ./sim.do PAUSED at line 7
+add wave -position insertpoint sim:/tb_fourSAS/*

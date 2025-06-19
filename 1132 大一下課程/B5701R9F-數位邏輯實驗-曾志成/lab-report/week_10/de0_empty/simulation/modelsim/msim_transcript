@@ -1,0 +1,145 @@
+# Reading C:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do mcu_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -sv -work work +incdir+C:/Users/USER/Downloads/tempWeek10/de0_empty/design {C:/Users/USER/Downloads/tempWeek10/de0_empty/design/adder4B.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module adder4B
+# 
+# Top level modules:
+# 	adder4B
+# vlog -sv -work work +incdir+C:/Users/USER/Downloads/tempWeek10/de0_empty/simulation/tb {C:/Users/USER/Downloads/tempWeek10/de0_empty/simulation/tb/tb_adder4B.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_adder4B
+# 
+# Top level modules:
+# 	tb_adder4B
+# 
+do compile.do
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_adder4B
+# 
+# Top level modules:
+# 	tb_adder4B
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module adder4B
+# 
+# Top level modules:
+# 	adder4B
+do sim.do
+# vsim -voptargs=+acc work.tb_adder4B 
+# Loading sv_std.std
+# Loading work.tb_adder4B
+# Loading work.adder4B
+# ** Warning: (vsim-3015) ../tb/tb_adder4B.sv(11): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'a'. The port definition is at: ../../design/adder4B.sv(2).
+# 
+#         Region: /tb_adder4B/u_adder4B_0
+# ** Warning: (vsim-3015) ../tb/tb_adder4B.sv(11): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'b'. The port definition is at: ../../design/adder4B.sv(3).
+# 
+#         Region: /tb_adder4B/u_adder4B_0
+# ** Warning: (vsim-3015) ../tb/tb_adder4B.sv(19): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'a'. The port definition is at: ../../design/adder4B.sv(2).
+# 
+#         Region: /tb_adder4B/u_adder4B_1
+# ** Warning: (vsim-3015) ../tb/tb_adder4B.sv(19): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'b'. The port definition is at: ../../design/adder4B.sv(3).
+# 
+#         Region: /tb_adder4B/u_adder4B_1
+# ** Warning: (vsim-3015) ../tb/tb_adder4B.sv(27): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'a'. The port definition is at: ../../design/adder4B.sv(2).
+# 
+#         Region: /tb_adder4B/u_adder4B_2
+# ** Warning: (vsim-3015) ../tb/tb_adder4B.sv(27): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'b'. The port definition is at: ../../design/adder4B.sv(3).
+# 
+#         Region: /tb_adder4B/u_adder4B_2
+# ** Warning: (vsim-3015) ../tb/tb_adder4B.sv(35): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'a'. The port definition is at: ../../design/adder4B.sv(2).
+# 
+#         Region: /tb_adder4B/u_adder4B_3
+# ** Warning: (vsim-3015) ../tb/tb_adder4B.sv(35): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'b'. The port definition is at: ../../design/adder4B.sv(3).
+# 
+#         Region: /tb_adder4B/u_adder4B_3
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Error: (vish-4014) No objects found matching '/testbench/adder1/a'.
+# Executing ONERROR command at macro ./wave.do line 13
+# ** Error: (vish-4014) No objects found matching '/testbench/adder1/b'.
+# Executing ONERROR command at macro ./wave.do line 14
+# ** Error: (vish-4014) No objects found matching '/testbench/adder1/s'.
+# Executing ONERROR command at macro ./wave.do line 15
+# ** Error: (vish-4014) No objects found matching '/testbench/b[6]'.
+# Executing ONERROR command at macro ./wave.do line 16
+# ** Error: (vish-4014) No objects found matching '/testbench/b[5]'.
+# Executing ONERROR command at macro ./wave.do line 17
+#                    0 s=xxxx, c0=x, b=xxxx, a=xxxx
+#                   10 s=0001, c0=0, b=1001, a=1000
+#                   20 s=0101, c0=1, b=1000, a=1100
+#                   30 s=0000, c0=1, b=1010, a=0101
+#                   40 s=0010, c0=1, b=0001, a=0000
+# Break in Module tb_adder4B at ../tb/tb_adder4B.sv line 44
+# Simulation Breakpoint: Break in Module tb_adder4B at ../tb/tb_adder4B.sv line 44
+# MACRO ./sim.do PAUSED at line 7
+add wave -position insertpoint sim:/tb_adder4B/*
+do compile.do
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_adder4B
+# 
+# Top level modules:
+# 	tb_adder4B
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module adder4B
+# 
+# Top level modules:
+# 	adder4B
+do sim.do
+# vsim -voptargs=+acc work.tb_adder4B 
+# Loading sv_std.std
+# Loading work.tb_adder4B
+# Loading work.adder4B
+# ** Warning: (vsim-3015) ../tb/tb_adder4B.sv(11): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'a'. The port definition is at: ../../design/adder4B.sv(2).
+# 
+#         Region: /tb_adder4B/u_adder4B_0
+# ** Warning: (vsim-3015) ../tb/tb_adder4B.sv(11): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'b'. The port definition is at: ../../design/adder4B.sv(3).
+# 
+#         Region: /tb_adder4B/u_adder4B_0
+# ** Warning: (vsim-3015) ../tb/tb_adder4B.sv(19): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'a'. The port definition is at: ../../design/adder4B.sv(2).
+# 
+#         Region: /tb_adder4B/u_adder4B_1
+# ** Warning: (vsim-3015) ../tb/tb_adder4B.sv(19): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'b'. The port definition is at: ../../design/adder4B.sv(3).
+# 
+#         Region: /tb_adder4B/u_adder4B_1
+# ** Warning: (vsim-3015) ../tb/tb_adder4B.sv(27): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'a'. The port definition is at: ../../design/adder4B.sv(2).
+# 
+#         Region: /tb_adder4B/u_adder4B_2
+# ** Warning: (vsim-3015) ../tb/tb_adder4B.sv(27): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'b'. The port definition is at: ../../design/adder4B.sv(3).
+# 
+#         Region: /tb_adder4B/u_adder4B_2
+# ** Warning: (vsim-3015) ../tb/tb_adder4B.sv(35): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'a'. The port definition is at: ../../design/adder4B.sv(2).
+# 
+#         Region: /tb_adder4B/u_adder4B_3
+# ** Warning: (vsim-3015) ../tb/tb_adder4B.sv(35): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'b'. The port definition is at: ../../design/adder4B.sv(3).
+# 
+#         Region: /tb_adder4B/u_adder4B_3
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Error: (vish-4014) No objects found matching '/testbench/adder1/a'.
+# Executing ONERROR command at macro ./wave.do line 13
+# ** Error: (vish-4014) No objects found matching '/testbench/adder1/b'.
+# Executing ONERROR command at macro ./wave.do line 14
+# ** Error: (vish-4014) No objects found matching '/testbench/adder1/s'.
+# Executing ONERROR command at macro ./wave.do line 15
+# ** Error: (vish-4014) No objects found matching '/testbench/b[6]'.
+# Executing ONERROR command at macro ./wave.do line 16
+# ** Error: (vish-4014) No objects found matching '/testbench/b[5]'.
+# Executing ONERROR command at macro ./wave.do line 17
+#                    0 s=1101, c0=0, b=0110, a=0111
+#                   10 s=0001, c0=0, b=1001, a=1000
+#                   20 s=0101, c0=1, b=1000, a=1100
+#                   30 s=0000, c0=1, b=1010, a=0101
+#                   40 s=0010, c0=1, b=0001, a=0000
+# Break in Module tb_adder4B at ../tb/tb_adder4B.sv line 44
+# Simulation Breakpoint: Break in Module tb_adder4B at ../tb/tb_adder4B.sv line 44
+# MACRO ./sim.do PAUSED at line 7
+add wave -position insertpoint sim:/tb_adder4B/*

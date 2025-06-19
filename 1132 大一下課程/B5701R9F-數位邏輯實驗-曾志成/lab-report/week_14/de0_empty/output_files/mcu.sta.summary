@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'CLK'
+Slack : -1.378
+TNS   : -16.040
+
+Type  : Slow 1200mV 85C Model Setup 'freg_div_23:freg1|q[18]'
+Slack : -0.866
+TNS   : -10.463
+
+Type  : Slow 1200mV 85C Model Hold 'CLK'
+Slack : -0.075
+TNS   : -0.075
+
+Type  : Slow 1200mV 85C Model Hold 'freg_div_23:freg1|q[18]'
+Slack : 0.358
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -22.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'freg_div_23:freg1|q[18]'
+Slack : -1.000
+TNS   : -14.000
+
+Type  : Slow 1200mV 0C Model Setup 'CLK'
+Slack : -1.092
+TNS   : -12.156
+
+Type  : Slow 1200mV 0C Model Setup 'freg_div_23:freg1|q[18]'
+Slack : -0.661
+TNS   : -7.808
+
+Type  : Slow 1200mV 0C Model Hold 'CLK'
+Slack : -0.047
+TNS   : -0.047
+
+Type  : Slow 1200mV 0C Model Hold 'freg_div_23:freg1|q[18]'
+Slack : 0.313
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -22.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'freg_div_23:freg1|q[18]'
+Slack : -1.000
+TNS   : -14.000
+
+Type  : Fast 1200mV 0C Model Setup 'CLK'
+Slack : -0.351
+TNS   : -2.148
+
+Type  : Fast 1200mV 0C Model Setup 'freg_div_23:freg1|q[18]'
+Slack : -0.065
+TNS   : -0.366
+
+Type  : Fast 1200mV 0C Model Hold 'CLK'
+Slack : -0.132
+TNS   : -0.132
+
+Type  : Fast 1200mV 0C Model Hold 'freg_div_23:freg1|q[18]'
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -23.064
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'freg_div_23:freg1|q[18]'
+Slack : -1.000
+TNS   : -14.000
+
+------------------------------------------------------------

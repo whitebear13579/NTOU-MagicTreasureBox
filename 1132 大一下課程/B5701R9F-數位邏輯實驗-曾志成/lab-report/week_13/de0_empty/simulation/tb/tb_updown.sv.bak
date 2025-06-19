@@ -1,0 +1,20 @@
+module tb_updown;
+    logic [3:0]Q;
+    logic clk, restart, x;
+
+    updown u_updown(
+        .clk(clk),
+        .reset(reset),
+        .x(x),
+        .Q(Q)
+    );
+
+    always #5 clk = ~clk;
+
+    initial begin
+        clk = 0; reset = 1; x = 0;
+        #10 reset = 0;
+        #200 x = 1;
+        #200 $stop;
+    end
+module

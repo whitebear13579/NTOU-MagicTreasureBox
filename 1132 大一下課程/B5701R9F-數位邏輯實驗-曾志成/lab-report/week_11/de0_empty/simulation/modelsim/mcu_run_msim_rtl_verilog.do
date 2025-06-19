@@ -1,0 +1,12 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -sv -work work +incdir+C:/Users/USER/Downloads/week_11/simulation/tb {C:/Users/USER/Downloads/week_11/simulation/tb/tb_fourSAS.sv}
+vlog -sv -work work +incdir+C:/Users/USER/Downloads/week_11/design {C:/Users/USER/Downloads/week_11/design/ssd.sv}
+vlog -sv -work work +incdir+C:/Users/USER/Downloads/week_11/design {C:/Users/USER/Downloads/week_11/design/fourSAS.sv}
+vlog -sv -work work +incdir+C:/Users/USER/Downloads/week_11/design {C:/Users/USER/Downloads/week_11/design/fulla.sv}
+

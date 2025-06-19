@@ -1,0 +1,152 @@
+|tb_fourSAS
+
+
+|tb_fourSAS|fourSAS:u_fourSAS
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => XOR0.IN0
+b[1] => XOR1.IN0
+b[2] => XOR2.IN0
+b[3] => XOR3.IN0
+m => m.IN1
+s[0] <= s[0].DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= s[1].DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= s[2].DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= s[3].DB_MAX_OUTPUT_PORT_TYPE
+seg[0] <= ssd:ssd1.seg
+seg[1] <= ssd:ssd1.seg
+seg[2] <= ssd:ssd1.seg
+seg[3] <= ssd:ssd1.seg
+seg[4] <= ssd:ssd1.seg
+seg[5] <= ssd:ssd1.seg
+seg[6] <= ssd:ssd1.seg
+c <= fulla:f3.Cout
+v <= XOR4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_fourSAS|fourSAS:u_fourSAS|fulla:f0
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_fourSAS|fourSAS:u_fourSAS|fulla:f1
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_fourSAS|fourSAS:u_fourSAS|fulla:f2
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_fourSAS|fourSAS:u_fourSAS|fulla:f3
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_fourSAS|fourSAS:u_fourSAS|ssd:ssd1
+a[0] => seg.IN0
+a[0] => seg.IN0
+a[0] => seg.IN0
+a[0] => seg.IN0
+a[0] => seg.IN0
+a[0] => seg.IN0
+a[0] => seg.IN0
+a[0] => seg.IN0
+a[0] => seg.IN0
+a[0] => seg.IN1
+a[0] => seg.IN1
+a[0] => seg.IN0
+a[1] => seg.IN0
+a[1] => seg.IN1
+a[1] => seg.IN0
+a[1] => seg.IN0
+a[1] => seg.IN1
+a[1] => seg.IN0
+a[1] => seg.IN0
+a[1] => seg.IN1
+a[1] => seg.IN1
+a[1] => seg.IN0
+a[1] => seg.IN0
+a[1] => seg.IN1
+a[1] => seg.IN1
+a[2] => seg.IN0
+a[2] => seg.IN1
+a[2] => seg.IN0
+a[2] => seg.IN1
+a[2] => seg.IN1
+a[2] => seg.IN1
+a[2] => seg.IN0
+a[2] => seg.IN1
+a[2] => seg.IN1
+a[2] => seg.IN1
+a[2] => seg.IN1
+a[2] => seg.IN1
+a[2] => seg.IN0
+a[2] => seg.IN1
+a[3] => seg.IN1
+a[3] => seg.IN1
+a[3] => seg.IN1
+a[3] => seg.IN1
+a[3] => seg.IN1
+a[3] => seg.IN1
+a[3] => seg.IN1
+a[3] => seg.IN1
+a[3] => seg.IN1
+a[3] => seg.IN1
+a[3] => seg.IN1
+a[3] => seg.IN1
+a[3] => seg.IN1
+a[3] => seg.IN1
+a[3] => seg.IN1
+a[3] => seg.IN1
+a[3] => seg.IN1
+a[3] => seg.IN1
+a[3] => seg.IN1
+seg[0] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+
+

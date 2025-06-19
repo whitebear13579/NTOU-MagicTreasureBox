@@ -1,0 +1,10 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -sv -work work +incdir+E:/SynologyDrive/class/de0 {E:/SynologyDrive/class/de0/mcu.sv}
+vlog -sv -work work +incdir+E:/SynologyDrive/class/de0/design {E:/SynologyDrive/class/de0/design/adder_8bit.sv}
+

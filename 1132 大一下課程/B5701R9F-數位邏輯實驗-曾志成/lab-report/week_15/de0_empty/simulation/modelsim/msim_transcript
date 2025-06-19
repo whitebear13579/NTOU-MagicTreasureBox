@@ -1,0 +1,88 @@
+# Reading C:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do mcu_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -sv -work work +incdir+C:/Users/USER/Downloads/week_15/de0_empty/design {C:/Users/USER/Downloads/week_15/de0_empty/design/birthday.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module birthday
+# 
+# Top level modules:
+# 	birthday
+# vlog -sv -work work +incdir+C:/Users/USER/Downloads/week_15/de0_empty/simulation/tb {C:/Users/USER/Downloads/week_15/de0_empty/simulation/tb/tb_birthday.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_birthday
+# 
+# Top level modules:
+# 	tb_birthday
+# vlog -sv -work work +incdir+C:/Users/USER/Downloads/week_15/de0_empty/design {C:/Users/USER/Downloads/week_15/de0_empty/design/dflipflop.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module dflipflop
+# 
+# Top level modules:
+# 	dflipflop
+# 
+do compile2.do
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_birthday
+# 
+# Top level modules:
+# 	tb_birthday
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module birthday
+# 
+# Top level modules:
+# 	birthday
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module dflipflop
+# 
+# Top level modules:
+# 	dflipflop
+do sim2.do
+# vsim -voptargs=+acc work.tb_birthday 
+# Loading sv_std.std
+# Loading work.tb_birthday
+# Loading work.birthday
+# Loading work.dflipflop
+# ** Warning: (vsim-3017) ../../design/birthday.sv(8): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_birthday/u_birthday/dff1
+# ** Warning: (vsim-3722) ../../design/birthday.sv(8): [TFMPC] - Missing connection for port 'q_n'.
+# 
+# ** Warning: (vsim-3017) ../../design/birthday.sv(9): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_birthday/u_birthday/dff2
+# ** Warning: (vsim-3722) ../../design/birthday.sv(9): [TFMPC] - Missing connection for port 'q_n'.
+# 
+# ** Warning: (vsim-3017) ../../design/birthday.sv(10): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_birthday/u_birthday/dff3
+# ** Warning: (vsim-3722) ../../design/birthday.sv(10): [TFMPC] - Missing connection for port 'q_n'.
+# 
+# ** Warning: (vsim-3017) ../../design/birthday.sv(11): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_birthday/u_birthday/dff4
+# ** Warning: (vsim-3722) ../../design/birthday.sv(11): [TFMPC] - Missing connection for port 'q_n'.
+# 
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Error: (vish-4014) No objects found matching '/testbench/adder1/a'.
+# Executing ONERROR command at macro ./wave.do line 13
+# ** Error: (vish-4014) No objects found matching '/testbench/adder1/b'.
+# Executing ONERROR command at macro ./wave.do line 14
+# ** Error: (vish-4014) No objects found matching '/testbench/adder1/s'.
+# Executing ONERROR command at macro ./wave.do line 15
+# ** Error: (vish-4014) No objects found matching '/testbench/b[6]'.
+# Executing ONERROR command at macro ./wave.do line 16
+# ** Error: (vish-4014) No objects found matching '/testbench/b[5]'.
+# Executing ONERROR command at macro ./wave.do line 17
+# Break in Module tb_birthday at ../tb/tb_birthday.sv line 15
+# Simulation Breakpoint: Break in Module tb_birthday at ../tb/tb_birthday.sv line 15
+# MACRO ./sim2.do PAUSED at line 7
+add wave -position insertpoint sim:/tb_birthday/*

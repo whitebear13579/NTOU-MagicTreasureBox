@@ -1,0 +1,97 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\USER\Downloads\week_11\simulation\modelsim
+vfourSAS
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+!i10b 1
+!s100 LCQYBYOY:M1k0MUMF?P5L2
+I5a^hMA:8J=GFiC[J:2C<C0
+Z2 VjI3F8BJ;B]OiGl_7Z6?OO2
+Z3 !s105 fourSAS_sv_unit
+S1
+Z4 dC:\Users\USER\Downloads\week_11\simulation\modelsim
+Z5 w1745910321
+8../../design/fourSAS.sv
+F../../design/fourSAS.sv
+L0 1
+Z6 OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1745915471.466000
+!s107 ../../design/fourSAS.sv|
+!s90 -reportprogress|300|../../design/fourSAS.sv|
+!s101 -O0
+o-O0
+Z7 nfour@s@a@s
+vfulla
+R1
+Z8 IZoC@hEOL=a7l[g:TFKUSU2
+Z9 VAe8lW7:`a;7l^l:VSN;8i2
+S1
+R4
+Z10 w1745860688
+Z11 8C:/Users/USER/Downloads/week_11/design/fulla.sv
+Z12 FC:/Users/USER/Downloads/week_11/design/fulla.sv
+L0 1
+R6
+r1
+31
+Z13 o-sv -work work -O0
+Z14 !s92 -sv -work work +incdir+C:/Users/USER/Downloads/week_11/design -O0
+Z15 !s100 h;V;mJe?hS5m[hdiocIW@1
+Z16 !s105 fulla_sv_unit
+Z17 !s108 1745915457.519000
+Z18 !s107 C:/Users/USER/Downloads/week_11/design/fulla.sv|
+Z19 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/USER/Downloads/week_11/design|C:/Users/USER/Downloads/week_11/design/fulla.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vssd
+R1
+Z20 Ib8Xd_Q=Bz?d;;>3H?iSc[1
+Z21 VaV<_EhXP3_kBA^m5CzleV0
+S1
+R4
+Z22 w1745909553
+Z23 8C:/Users/USER/Downloads/week_11/design/ssd.sv
+Z24 FC:/Users/USER/Downloads/week_11/design/ssd.sv
+L0 1
+R6
+r1
+31
+R13
+R14
+Z25 !s100 Dc7Rbojmg`8S4[YjZza>52
+Z26 !s105 ssd_sv_unit
+Z27 !s108 1745915457.374000
+Z28 !s107 C:/Users/USER/Downloads/week_11/design/ssd.sv|
+Z29 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/USER/Downloads/week_11/design|C:/Users/USER/Downloads/week_11/design/ssd.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vtb_fourSAS
+R1
+Z30 IoFcMbH8iWUQFH;PgL6d5N3
+Z31 Vc;QRgPgAdQ6[SRaSkQdE31
+Z32 !s105 tb_fourSAS_sv_unit
+S1
+R4
+Z33 w1745910968
+Z34 8../tb/tb_fourSAS.sv
+Z35 F../tb/tb_fourSAS.sv
+L0 1
+R6
+r1
+31
+o-O0
+Z36 ntb_four@s@a@s
+!i10b 1
+Z37 !s100 ogAF8c^ckFW;Z5TWKAmbi0
+!s85 0
+Z38 !s108 1745915471.257000
+Z39 !s107 ../tb/tb_fourSAS.sv|
+Z40 !s90 -reportprogress|300|../tb/tb_fourSAS.sv|
+!s101 -O0

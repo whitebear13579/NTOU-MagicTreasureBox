@@ -1,0 +1,9 @@
+module multiplexer(
+	input s0,
+	input s1,
+	input i0,
+	input i1,
+	input i2,
+	input i3,
+	output logic Cout
+);

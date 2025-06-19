@@ -1,0 +1,93 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\USER\Downloads\week_12\de0_empty\simulation\modelsim
+vcounter
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+Z2 !s100 >J[HYlK<]DX^;AF4XK>AO0
+Z3 IhV3_VNY4RnOeMNY=C5;Kb3
+Z4 V]:dEMP3Ei<0[;TL5No7RD2
+Z5 !s105 counter_sv_unit
+S1
+Z6 dC:\Users\USER\Downloads\week_12\de0_empty\simulation\modelsim
+Z7 w1746508126
+Z8 8../../design/counter.sv
+Z9 F../../design/counter.sv
+L0 1
+Z10 OV;L;10.1d;51
+r1
+31
+Z11 !s90 -reportprogress|300|../../design/counter.sv|
+o-O0
+!i10b 1
+!s85 0
+Z12 !s108 1746513533.785000
+Z13 !s107 ../../design/counter.sv|
+!s101 -O0
+vdflipflop
+R1
+!i10b 1
+Z14 !s100 <Y0L9:n8C3c;M=0c9]dYI1
+Z15 Ig_X9jA:JT`AhjBGdQ_R5R0
+Z16 V3TRf^NLQFW8^ijS0Uk]M]2
+Z17 !s105 dflipflop_sv_unit
+S1
+R6
+Z18 w1746509398
+Z19 8../../design/dflipflop.sv
+Z20 F../../design/dflipflop.sv
+L0 1
+R10
+r1
+!s85 0
+31
+!s108 1746513534.008000
+!s107 ../../design/dflipflop.sv|
+Z21 !s90 -reportprogress|300|../../design/dflipflop.sv|
+!s101 -O0
+o-O0
+vssd
+R1
+Z22 IfLfPeBHh1E:IL=fP4H4eU0
+Z23 VaV<_EhXP3_kBA^m5CzleV0
+S1
+R6
+Z24 w1745909553
+Z25 8../../design/ssd.sv
+Z26 F../../design/ssd.sv
+L0 1
+R10
+r1
+31
+o-O0
+Z27 !s100 [2XkN:F`G]QA6=]7dzFNl0
+Z28 !s105 ssd_sv_unit
+Z29 !s108 1746513518.085000
+Z30 !s107 ../../design/ssd.sv|
+Z31 !s90 -reportprogress|300|../../design/ssd.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vtb_counter
+R1
+Z32 !s100 oOcTcEW;@^m[H9cXLlI:S2
+Z33 IOcB;2VXSSjhFoBPN0[29z3
+Z34 VPe>hc8P2Zj0nd^A9H2M030
+Z35 !s105 tb_counter_sv_unit
+S1
+R6
+Z36 w1746462163
+Z37 8../tb/tb_counter.sv
+Z38 F../tb/tb_counter.sv
+L0 1
+R10
+r1
+31
+Z39 !s90 -reportprogress|300|../tb/tb_counter.sv|
+o-O0
+Z40 !s108 1746513533.508000
+Z41 !s107 ../tb/tb_counter.sv|
+!i10b 1
+!s85 0
+!s101 -O0

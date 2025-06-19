@@ -1,0 +1,1 @@
+Info (10281): Verilog HDL Declaration information at mcu.sv(9): object "CLK" differs only in case from object "clk" in the same scope

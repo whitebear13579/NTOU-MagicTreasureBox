@@ -1,0 +1,266 @@
+# Reading C:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do mcu_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -sv -work work +incdir+C:/Users/USER/Downloads/week_14/de0_empty/simulation/tb {C:/Users/USER/Downloads/week_14/de0_empty/simulation/tb/tb_timer2.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_timer2
+# 
+# Top level modules:
+# 	tb_timer2
+# vlog -sv -work work +incdir+C:/Users/USER/Downloads/week_14/de0_empty/design {C:/Users/USER/Downloads/week_14/de0_empty/design/day_timer.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module day_timer
+# 
+# Top level modules:
+# 	day_timer
+# vlog -sv -work work +incdir+C:/Users/USER/Downloads/week_14/de0_empty/design {C:/Users/USER/Downloads/week_14/de0_empty/design/dflipflop.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module dflipflop
+# 
+# Top level modules:
+# 	dflipflop
+# vlog -sv -work work +incdir+C:/Users/USER/Downloads/week_14/de0_empty/design {C:/Users/USER/Downloads/week_14/de0_empty/design/unit.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module unit
+# 
+# Top level modules:
+# 	unit
+# vlog -sv -work work +incdir+C:/Users/USER/Downloads/week_14/de0_empty/design {C:/Users/USER/Downloads/week_14/de0_empty/design/ten_digit.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ten_digit
+# 
+# Top level modules:
+# 	ten_digit
+# 
+do compile2.do
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_timer2
+# 
+# Top level modules:
+# 	tb_timer2
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module day_timer
+# 
+# Top level modules:
+# 	day_timer
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ten_digit
+# 
+# Top level modules:
+# 	ten_digit
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module unit
+# 
+# Top level modules:
+# 	unit
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module dflipflop
+# 
+# Top level modules:
+# 	dflipflop
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module freg_div_23
+# 
+# Top level modules:
+# 	freg_div_23
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ssd
+# 
+# Top level modules:
+# 	ssd
+do sim2.do
+# vsim -voptargs=+acc work.tb_timer2 
+# Loading sv_std.std
+# Loading work.tb_timer2
+# Loading work.day_timer
+# Loading work.unit
+# Loading work.dflipflop
+# Loading work.ten_digit
+# ** Warning: (vsim-3017) ../../design/unit.sv(11): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_timer2/u_day_timer/sec_unit/dff1
+# ** Warning: (vsim-3722) ../../design/unit.sv(11): [TFMPC] - Missing connection for port 'q_n'.
+# 
+# ** Warning: (vsim-3017) ../../design/unit.sv(15): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_timer2/u_day_timer/sec_unit/dff2
+# ** Warning: (vsim-3722) ../../design/unit.sv(15): [TFMPC] - Missing connection for port 'q_n'.
+# 
+# ** Warning: (vsim-3017) ../../design/unit.sv(19): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_timer2/u_day_timer/sec_unit/dff3
+# ** Warning: (vsim-3722) ../../design/unit.sv(19): [TFMPC] - Missing connection for port 'q_n'.
+# 
+# ** Warning: (vsim-3017) ../../design/unit.sv(23): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_timer2/u_day_timer/sec_unit/dff4
+# ** Warning: (vsim-3722) ../../design/unit.sv(23): [TFMPC] - Missing connection for port 'q_n'.
+# 
+# ** Warning: (vsim-3017) ../../design/ten_digit.sv(12): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_timer2/u_day_timer/sec_ten/dff1
+# ** Warning: (vsim-3722) ../../design/ten_digit.sv(12): [TFMPC] - Missing connection for port 'q_n'.
+# 
+# ** Warning: (vsim-3017) ../../design/ten_digit.sv(16): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_timer2/u_day_timer/sec_ten/dff2
+# ** Warning: (vsim-3722) ../../design/ten_digit.sv(16): [TFMPC] - Missing connection for port 'q_n'.
+# 
+# ** Warning: (vsim-3017) ../../design/ten_digit.sv(20): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_timer2/u_day_timer/sec_ten/dff3
+# ** Warning: (vsim-3722) ../../design/ten_digit.sv(20): [TFMPC] - Missing connection for port 'q_n'.
+# 
+# ** Warning: (vsim-3017) ../../design/unit.sv(11): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_timer2/u_day_timer/min_unit/dff1
+# ** Warning: (vsim-3722) ../../design/unit.sv(11): [TFMPC] - Missing connection for port 'q_n'.
+# 
+# ** Warning: (vsim-3017) ../../design/unit.sv(15): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_timer2/u_day_timer/min_unit/dff2
+# ** Warning: (vsim-3722) ../../design/unit.sv(15): [TFMPC] - Missing connection for port 'q_n'.
+# 
+# ** Warning: (vsim-3017) ../../design/unit.sv(19): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_timer2/u_day_timer/min_unit/dff3
+# ** Warning: (vsim-3722) ../../design/unit.sv(19): [TFMPC] - Missing connection for port 'q_n'.
+# 
+# ** Warning: (vsim-3017) ../../design/unit.sv(23): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_timer2/u_day_timer/min_unit/dff4
+# ** Warning: (vsim-3722) ../../design/unit.sv(23): [TFMPC] - Missing connection for port 'q_n'.
+# 
+# ** Warning: (vsim-3017) ../../design/ten_digit.sv(12): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_timer2/u_day_timer/min_ten/dff1
+# ** Warning: (vsim-3722) ../../design/ten_digit.sv(12): [TFMPC] - Missing connection for port 'q_n'.
+# 
+# ** Warning: (vsim-3017) ../../design/ten_digit.sv(16): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_timer2/u_day_timer/min_ten/dff2
+# ** Warning: (vsim-3722) ../../design/ten_digit.sv(16): [TFMPC] - Missing connection for port 'q_n'.
+# 
+# ** Warning: (vsim-3017) ../../design/ten_digit.sv(20): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_timer2/u_day_timer/min_ten/dff3
+# ** Warning: (vsim-3722) ../../design/ten_digit.sv(20): [TFMPC] - Missing connection for port 'q_n'.
+# 
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Error: (vish-4014) No objects found matching '/testbench/adder1/a'.
+# Executing ONERROR command at macro ./wave.do line 13
+# ** Error: (vish-4014) No objects found matching '/testbench/adder1/b'.
+# Executing ONERROR command at macro ./wave.do line 14
+# ** Error: (vish-4014) No objects found matching '/testbench/adder1/s'.
+# Executing ONERROR command at macro ./wave.do line 15
+# ** Error: (vish-4014) No objects found matching '/testbench/b[6]'.
+# Executing ONERROR command at macro ./wave.do line 16
+# ** Error: (vish-4014) No objects found matching '/testbench/b[5]'.
+# Executing ONERROR command at macro ./wave.do line 17
+# ** Error: (vish-4014) No objects found matching '/tb_timer/u_day_timer/sec_unit_carry'.
+# Error in macro ./sim2.do line 8
+# (vish-4014) No objects found matching '/tb_timer/u_day_timer/sec_unit_carry'.
+#     while executing
+# "add wave /tb_timer/u_day_timer/sec_unit_carry"
+do sim2.do
+# vsim -voptargs=+acc work.tb_timer2 
+# Loading sv_std.std
+# Loading work.tb_timer2
+# Loading work.day_timer
+# Loading work.unit
+# Loading work.dflipflop
+# Loading work.ten_digit
+# ** Warning: (vsim-3017) ../../design/unit.sv(11): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_timer2/u_day_timer/sec_unit/dff1
+# ** Warning: (vsim-3722) ../../design/unit.sv(11): [TFMPC] - Missing connection for port 'q_n'.
+# 
+# ** Warning: (vsim-3017) ../../design/unit.sv(15): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_timer2/u_day_timer/sec_unit/dff2
+# ** Warning: (vsim-3722) ../../design/unit.sv(15): [TFMPC] - Missing connection for port 'q_n'.
+# 
+# ** Warning: (vsim-3017) ../../design/unit.sv(19): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_timer2/u_day_timer/sec_unit/dff3
+# ** Warning: (vsim-3722) ../../design/unit.sv(19): [TFMPC] - Missing connection for port 'q_n'.
+# 
+# ** Warning: (vsim-3017) ../../design/unit.sv(23): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_timer2/u_day_timer/sec_unit/dff4
+# ** Warning: (vsim-3722) ../../design/unit.sv(23): [TFMPC] - Missing connection for port 'q_n'.
+# 
+# ** Warning: (vsim-3017) ../../design/ten_digit.sv(12): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_timer2/u_day_timer/sec_ten/dff1
+# ** Warning: (vsim-3722) ../../design/ten_digit.sv(12): [TFMPC] - Missing connection for port 'q_n'.
+# 
+# ** Warning: (vsim-3017) ../../design/ten_digit.sv(16): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_timer2/u_day_timer/sec_ten/dff2
+# ** Warning: (vsim-3722) ../../design/ten_digit.sv(16): [TFMPC] - Missing connection for port 'q_n'.
+# 
+# ** Warning: (vsim-3017) ../../design/ten_digit.sv(20): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_timer2/u_day_timer/sec_ten/dff3
+# ** Warning: (vsim-3722) ../../design/ten_digit.sv(20): [TFMPC] - Missing connection for port 'q_n'.
+# 
+# ** Warning: (vsim-3017) ../../design/unit.sv(11): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_timer2/u_day_timer/min_unit/dff1
+# ** Warning: (vsim-3722) ../../design/unit.sv(11): [TFMPC] - Missing connection for port 'q_n'.
+# 
+# ** Warning: (vsim-3017) ../../design/unit.sv(15): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_timer2/u_day_timer/min_unit/dff2
+# ** Warning: (vsim-3722) ../../design/unit.sv(15): [TFMPC] - Missing connection for port 'q_n'.
+# 
+# ** Warning: (vsim-3017) ../../design/unit.sv(19): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_timer2/u_day_timer/min_unit/dff3
+# ** Warning: (vsim-3722) ../../design/unit.sv(19): [TFMPC] - Missing connection for port 'q_n'.
+# 
+# ** Warning: (vsim-3017) ../../design/unit.sv(23): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_timer2/u_day_timer/min_unit/dff4
+# ** Warning: (vsim-3722) ../../design/unit.sv(23): [TFMPC] - Missing connection for port 'q_n'.
+# 
+# ** Warning: (vsim-3017) ../../design/ten_digit.sv(12): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_timer2/u_day_timer/min_ten/dff1
+# ** Warning: (vsim-3722) ../../design/ten_digit.sv(12): [TFMPC] - Missing connection for port 'q_n'.
+# 
+# ** Warning: (vsim-3017) ../../design/ten_digit.sv(16): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_timer2/u_day_timer/min_ten/dff2
+# ** Warning: (vsim-3722) ../../design/ten_digit.sv(16): [TFMPC] - Missing connection for port 'q_n'.
+# 
+# ** Warning: (vsim-3017) ../../design/ten_digit.sv(20): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /tb_timer2/u_day_timer/min_ten/dff3
+# ** Warning: (vsim-3722) ../../design/ten_digit.sv(20): [TFMPC] - Missing connection for port 'q_n'.
+# 
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Error: (vish-4014) No objects found matching '/testbench/adder1/a'.
+# Executing ONERROR command at macro ./wave.do line 13
+# ** Error: (vish-4014) No objects found matching '/testbench/adder1/b'.
+# Executing ONERROR command at macro ./wave.do line 14
+# ** Error: (vish-4014) No objects found matching '/testbench/adder1/s'.
+# Executing ONERROR command at macro ./wave.do line 15
+# ** Error: (vish-4014) No objects found matching '/testbench/b[6]'.
+# Executing ONERROR command at macro ./wave.do line 16
+# ** Error: (vish-4014) No objects found matching '/testbench/b[5]'.
+# Executing ONERROR command at macro ./wave.do line 17
+# Break in Module tb_timer2 at ../tb/tb_timer2.sv line 14
+# Simulation Breakpoint: Break in Module tb_timer2 at ../tb/tb_timer2.sv line 14
+# MACRO ./sim2.do PAUSED at line 13
+add wave -position insertpoint sim:/tb_timer2/*

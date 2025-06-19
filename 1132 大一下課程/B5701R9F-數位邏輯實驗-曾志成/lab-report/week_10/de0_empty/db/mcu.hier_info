@@ -1,0 +1,71 @@
+|tb_adder4B
+
+
+|tb_adder4B|adder4B:u_adder4B_0
+a[0] => xor1.IN0
+a[0] => and2.IN0
+a[1] => ~NO_FANOUT~
+a[2] => ~NO_FANOUT~
+a[3] => ~NO_FANOUT~
+b[0] => xor1.IN1
+b[0] => and2.IN1
+b[1] => ~NO_FANOUT~
+b[2] => ~NO_FANOUT~
+b[3] => ~NO_FANOUT~
+c0 => xor2.IN1
+c0 => and1.IN1
+c4 <= or1.DB_MAX_OUTPUT_PORT_TYPE
+s <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_adder4B|adder4B:u_adder4B_1
+a[0] => xor1.IN0
+a[0] => and2.IN0
+a[1] => ~NO_FANOUT~
+a[2] => ~NO_FANOUT~
+a[3] => ~NO_FANOUT~
+b[0] => xor1.IN1
+b[0] => and2.IN1
+b[1] => ~NO_FANOUT~
+b[2] => ~NO_FANOUT~
+b[3] => ~NO_FANOUT~
+c0 => xor2.IN1
+c0 => and1.IN1
+c4 <= or1.DB_MAX_OUTPUT_PORT_TYPE
+s <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_adder4B|adder4B:u_adder4B_2
+a[0] => xor1.IN0
+a[0] => and2.IN0
+a[1] => ~NO_FANOUT~
+a[2] => ~NO_FANOUT~
+a[3] => ~NO_FANOUT~
+b[0] => xor1.IN1
+b[0] => and2.IN1
+b[1] => ~NO_FANOUT~
+b[2] => ~NO_FANOUT~
+b[3] => ~NO_FANOUT~
+c0 => xor2.IN1
+c0 => and1.IN1
+c4 <= or1.DB_MAX_OUTPUT_PORT_TYPE
+s <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_adder4B|adder4B:u_adder4B_3
+a[0] => xor1.IN0
+a[0] => and2.IN0
+a[1] => ~NO_FANOUT~
+a[2] => ~NO_FANOUT~
+a[3] => ~NO_FANOUT~
+b[0] => xor1.IN1
+b[0] => and2.IN1
+b[1] => ~NO_FANOUT~
+b[2] => ~NO_FANOUT~
+b[3] => ~NO_FANOUT~
+c0 => xor2.IN1
+c0 => and1.IN1
+c4 <= or1.DB_MAX_OUTPUT_PORT_TYPE
+s <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+
+

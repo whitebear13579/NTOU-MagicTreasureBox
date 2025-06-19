@@ -1,0 +1,2 @@
+module tb_decoder;
+logic A, B, C;

@@ -1,0 +1,45 @@
+|tb_counter
+
+
+|tb_counter|counter:u_counter
+clk => clk.IN3
+reset => reset.IN3
+Q[0] <= dflipflop:dff3.q
+Q[1] <= dflipflop:dff2.q
+Q[2] <= dflipflop:dff1.q
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_counter|counter:u_counter|dflipflop:dff1
+d => q.DATAA
+d => q_n.DATAA
+clk => q_n~reg0.CLK
+clk => q~reg0.CLK
+reset => q.OUTPUTSELECT
+reset => q_n.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_n <= q_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_counter|counter:u_counter|dflipflop:dff2
+d => q.DATAA
+d => q_n.DATAA
+clk => q_n~reg0.CLK
+clk => q~reg0.CLK
+reset => q.OUTPUTSELECT
+reset => q_n.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_n <= q_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_counter|counter:u_counter|dflipflop:dff3
+d => q.DATAA
+d => q_n.DATAA
+clk => q_n~reg0.CLK
+clk => q~reg0.CLK
+reset => q.OUTPUTSELECT
+reset => q_n.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_n <= q_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
