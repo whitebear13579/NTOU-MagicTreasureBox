@@ -1,7 +1,7 @@
 # 2025 Operating System Mideterm
 
 # 3A OS 期中考大補帖
-- 線上版本，請參閱：https://hackmd.io/@whitebear13579/r13qofFJZl。
+- 線上版本，請參閱：[https://hackmd.io/@whitebear13579/r13qofFJZl](https://hackmd.io/@whitebear13579/r13qofFJZl)。
 - 實際考試範圍與內容請依教授公告與課本內容為主。
 
 ## 考前重點
@@ -108,9 +108,7 @@ Policy / Mechanism 的極致：將核心簡化到只剩下基本功能，盡可�
 - Data Section : 這裡放全域變數，大小固定。
 - Text Section : 這裡放可執行的程式碼（指令），大小固定
 OS 會確保 Stack Section 與 Heap Section 兩區域的資料不會覆蓋到彼此。   
-:::warning
-即使執行同個程式(Program)，使用 fork 產生新 process 時，process 的 Text Section、Data Section、Heap Section、Stack Section 也是不同的！
-:::
+> 即使執行同個程式(Program)，使用 fork 產生新 process 時，process 的 Text Section、Data Section、Heap Section、Stack Section 也是不同的！
 
 ### Program State Diagram 狀態圖，很重要
 欸真的很重要看一下啦   
@@ -144,7 +142,7 @@ PCB 是 OS 中用來記錄並管理 Process 狀態、資源的資料結構，Sch
 
 ### Process Termination (Zombie / Orphan process) 肯定會考，看一下
 - 殭屍程序（Zombie Process）：程序已經結束，但因為其父程序尚未讀取他的結束狀態，導致其仍然留於 Process Table 中。（已結束但父未讀其狀態而暫留在表中）
-- 孤兒程序（Orphan Process）：某程序尚在執行時其父程序已經先終止了，這會讓子程序直接被init 程序 (PID = 1)收養。(父先終止，子由PID1收養)
+- 孤兒程序（Orphan Process）：某程序尚在執行時其父程序已經先終止了，這會讓子程序直接被 init 程序 (PID = 1) 收養。(父先終止，子由PID1收養)
 
 ### IPC in Shared memory / Message Passing System
 - IPC in Shared memory System (記憶體共享)
@@ -179,7 +177,7 @@ PCB 是 OS 中用來記錄並管理 Process 狀態、資源的資料結構，Sch
 ## Chapter 4
 ### Thread 線程 ?
 這個結構會考，要記   
-![image](https://hackmd.io/_uploads/SJuAjU5J-x.png =70%x)
+![image](https://hackmd.io/_uploads/SJuAjU5J-x.png)
 - **共享**所屬處理程序 (Process) 的資源
 - 要叫 Process 老爸
 - 創建成本低，Thread 之間切換成本也低 -> Light Weight
@@ -203,39 +201,39 @@ PCB 是 OS 中用來記錄並管理 Process 狀態、資源的資料結構，Sch
     - 任務平行（Task Parallelism）：把不同任務分派到不同核心，各自做不同工作（有兩個不同的事情要處理，比如 Word，Thread A 做自動儲存、Thread B 做拼字檢查）
 
 ### Amdal's Law 阿爾達姆定律
-理想上，MultiCore Programming 應該要能把工作切分並均分到所有核心，讓所有核心有相同的負載。但實務上，有些任務是不能夠被拆分的，這些任務是必須序列地被執行。
-Amdal's Law 就是用來評估當一個程式同時包含序列與平行的部分時，在系統中加入核心能夠帶來多少效能提升？
-$$speedUP \le \frac{1}{S+\frac{(1-S)}{N}}$$
-
-其中
+理想上，MultiCore Programming 應該要能把工作切分並均分到所有核心，讓所有核心有相同的負載。但實務上，有些任務是不能夠被拆分的，這些任務是必須序列地被執行。   
+Amdal's Law 就是用來評估當一個程式同時包含序列與平行的部分時，在系統中加入核心能夠帶來多少效能提升？   
+$$speedUP \le \frac{1}{S+\frac{(1-S)}{N}}$$   
+   
+其中   
 - $S$：序列任務所占的比例
 - $N$：處理器核心數
 - 當 $N→∞$ 時，加速比趨近於 $\frac{1}{S}$
 
-若一個 Process 有 $75\%$ 是平行的任務， $25\%$ 是序列的任務，若核心數從1核升級成2核心，那麼
+若一個 Process 有 $75\%$ 是平行的任務， $25\%$ 是序列的任務，若核心數從1核升級成2核心，那麼   
 $$\frac{1}{0.25+\frac{(1-0.25)}{2}} = \frac{1}{0.25+0.375} = 1.6$$
 
 加速比為 $1.6$。
 
 ### MultiThreading Models 多執行續模型
 - Many-to-One 多對一
-    ![image](https://hackmd.io/_uploads/BJUClO9k-x.png =70%x)
+    ![image](https://hackmd.io/_uploads/BJUClO9k-x.png)
     - User 端有多個 Threads，OS 端只有一個 Thread
     - 其中一個 Thread 發生阻塞時，就會導致所有 Thread 阻塞。
     - **模擬出來的，不是真正的"同時"**
 
 - One-to-One 一對一
-    ![image](https://hackmd.io/_uploads/HkwZ-dcyZg.png =70%x)
+    ![image](https://hackmd.io/_uploads/HkwZ-dcyZg.png)
     - 每個 user threads 都對應到一個 kernal threads。
     - 如果有大量的 Thread 時，會導致系統的效能負擔。
     - 現今 OS 多採用此設計。
     
 - Mant-to-many 多對多
-    ![image](https://hackmd.io/_uploads/HkXQWuckbe.png =70%x)
+    ![image](https://hackmd.io/_uploads/HkXQWuckbe.png)
     - 把多個 user threads 對應到相同或較少數量的 kernal threads 執行。
 
 - Two-level 混和模型
-    ![image](https://hackmd.io/_uploads/rygKEW_ck-e.png =70%x)
+    ![image](https://hackmd.io/_uploads/rygKEW_ck-e.png)
     - 混合了 one-to-one Modal 與 many-to-many Modal，較為重要的 Thread 採用 one-to-one，剩下的用 many-to-many。
 
 ## Chapter 5
@@ -256,9 +254,7 @@ $$\frac{1}{0.25+\frac{(1-0.25)}{2}} = \frac{1}{0.25+0.375} = 1.6$$
 - **最小化** 等待時間 -> 一個 Process 在 Ready Queue 中等待的時間
 - **最小化** 響應時間 -> 從使用者 / 程式發出一個請求，到系統開始回應這個請求的所需時間
 
-:::info
-現今個人電腦比較強調**等待時間**與**響應時間**的最小化。
-:::
+> 現今個人電腦比較強調**等待時間**與**響應時間**的最小化。
 
 ### Scheduling Algorithm: FCFS / SJF 必考
 - FCFS (First Come First Service)
@@ -285,7 +281,7 @@ $$\frac{1}{0.25+\frac{(1-0.25)}{2}} = \frac{1}{0.25+0.375} = 1.6$$
             - P3 : 3
         - 平均 waiting time: $(6+0+3)/3 = 3$
     - FCFS 會有很嚴重的護航效應(Convoy Effect) : 短的工作被拖在長的工作後面
-        - 在不可搶佔式的 FCFS 中，若長的 CPU-bound 先拿到 CPU，就會跑得很久，其他IO bound Process 雖然每次只要一點點 CPU 就能回去做 IO，卻只能排隊等。
+        - 在不可搶佔式的 FCFS 中，若長的 CPU-bound 先拿到 CPU，就會跑得很久，其他 IO bound Process 雖然每次只要一點點 CPU 就能回去做 IO，卻只能排隊等。
         - 導致短工作的平均 wating time 暴增，回應時間變差。
 
 - Shortest Job First Scheduling
@@ -382,7 +378,7 @@ $$\frac{1}{0.25+\frac{(1-0.25)}{2}} = \frac{1}{0.25+0.375} = 1.6$$
 - Rate-Monotonic Scheduling, RMS
     - 速率單調排程，固定優先權的演算法
     - 依照週期的倒數來指派優先權，週期越短，優先權越高。
-    - 週期 = 死線（$p=d$）
+    - 週期 = 死線（ $p=d$ ）
     - Example (key: $p$ 小的先做):
         - P1 : $p_1 = 50, t_1 =20$
         - P2 : $p_2 = 100, t_2 =35$
@@ -403,6 +399,6 @@ $$\frac{1}{0.25+\frac{(1-0.25)}{2}} = \frac{1}{0.25+0.375} = 1.6$$
 - 在評估一個排程演算法的好壞之前，我們必須先決定 [Criteria](#Scheduling-Criteria-評量一個排程演算法的好壞)
 - 四種評估方法：
     - 決定性建模 Deterministic Modeling：預先給定一個事先決定好的資料集來評估
-    - 排隊理論 Queueing Models：利用數學表達式來描述 Process 的抵達，例如利特爾法則： $n = λW$，其中 $n$ 為平均隊列長度，$W$ 為隊列中的平均等待時間，$λ$進入隊列的平均到達率。
+    - 排隊理論 Queueing Models：利用數學表達式來描述 Process 的抵達，例如利特爾法則： $n = λW$，其中 $n$ 為平均隊列長度， $W$ 為隊列中的平均等待時間， $λ$ 進入隊列的平均到達率。
     - 模擬：利用模擬器來評估一個演算法的好壞。
     - 實作測試：直接在實機上進行測試，高風險與高成本。
