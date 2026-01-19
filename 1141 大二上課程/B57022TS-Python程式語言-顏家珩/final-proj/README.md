@@ -1,0 +1,1 @@
+欲瀏覽期末專題，請造訪此儲存庫：https://github.com/whitebear13579/Steam-Perfect-Game-Bot   
