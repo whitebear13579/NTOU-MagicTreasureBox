@@ -1,0 +1,17 @@
+D:\Project\NTOU-CSharp\week2\week2\bin\Debug\net8.0-windows\week2.exe
+D:\Project\NTOU-CSharp\week2\week2\bin\Debug\net8.0-windows\week2.deps.json
+D:\Project\NTOU-CSharp\week2\week2\bin\Debug\net8.0-windows\week2.runtimeconfig.json
+D:\Project\NTOU-CSharp\week2\week2\bin\Debug\net8.0-windows\week2.dll
+D:\Project\NTOU-CSharp\week2\week2\bin\Debug\net8.0-windows\week2.pdb
+D:\Project\NTOU-CSharp\week2\week2\obj\Debug\net8.0-windows\week2.Form1.resources
+D:\Project\NTOU-CSharp\week2\week2\obj\Debug\net8.0-windows\week2.csproj.GenerateResource.cache
+D:\Project\NTOU-CSharp\week2\week2\obj\Debug\net8.0-windows\week2.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\NTOU-CSharp\week2\week2\obj\Debug\net8.0-windows\week2.AssemblyInfoInputs.cache
+D:\Project\NTOU-CSharp\week2\week2\obj\Debug\net8.0-windows\week2.AssemblyInfo.cs
+D:\Project\NTOU-CSharp\week2\week2\obj\Debug\net8.0-windows\week2.csproj.CoreCompileInputs.cache
+D:\Project\NTOU-CSharp\week2\week2\obj\Debug\net8.0-windows\week2.dll
+D:\Project\NTOU-CSharp\week2\week2\obj\Debug\net8.0-windows\refint\week2.dll
+D:\Project\NTOU-CSharp\week2\week2\obj\Debug\net8.0-windows\week2.pdb
+D:\Project\NTOU-CSharp\week2\week2\obj\Debug\net8.0-windows\week2.genruntimeconfig.cache
+D:\Project\NTOU-CSharp\week2\week2\obj\Debug\net8.0-windows\ref\week2.dll
+D:\Project\NTOU-CSharp\week2\week2\obj\Debug\net8.0-windows\week2.Properties.Resources.resources

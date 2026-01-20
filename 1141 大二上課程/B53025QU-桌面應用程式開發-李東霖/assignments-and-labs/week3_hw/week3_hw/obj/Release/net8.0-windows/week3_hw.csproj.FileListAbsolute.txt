@@ -1,0 +1,17 @@
+D:\Project\NTOU-CSharp\week3_hw\week3_hw\bin\Release\net8.0-windows\week3_hw.exe
+D:\Project\NTOU-CSharp\week3_hw\week3_hw\bin\Release\net8.0-windows\week3_hw.deps.json
+D:\Project\NTOU-CSharp\week3_hw\week3_hw\bin\Release\net8.0-windows\week3_hw.runtimeconfig.json
+D:\Project\NTOU-CSharp\week3_hw\week3_hw\bin\Release\net8.0-windows\week3_hw.dll
+D:\Project\NTOU-CSharp\week3_hw\week3_hw\bin\Release\net8.0-windows\week3_hw.pdb
+D:\Project\NTOU-CSharp\week3_hw\week3_hw\obj\Release\net8.0-windows\week3_hw.mainWindows.resources
+D:\Project\NTOU-CSharp\week3_hw\week3_hw\obj\Release\net8.0-windows\week3_hw.Properties.Resources.resources
+D:\Project\NTOU-CSharp\week3_hw\week3_hw\obj\Release\net8.0-windows\week3_hw.csproj.GenerateResource.cache
+D:\Project\NTOU-CSharp\week3_hw\week3_hw\obj\Release\net8.0-windows\week3_hw.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\NTOU-CSharp\week3_hw\week3_hw\obj\Release\net8.0-windows\week3_hw.AssemblyInfoInputs.cache
+D:\Project\NTOU-CSharp\week3_hw\week3_hw\obj\Release\net8.0-windows\week3_hw.AssemblyInfo.cs
+D:\Project\NTOU-CSharp\week3_hw\week3_hw\obj\Release\net8.0-windows\week3_hw.csproj.CoreCompileInputs.cache
+D:\Project\NTOU-CSharp\week3_hw\week3_hw\obj\Release\net8.0-windows\week3_hw.dll
+D:\Project\NTOU-CSharp\week3_hw\week3_hw\obj\Release\net8.0-windows\refint\week3_hw.dll
+D:\Project\NTOU-CSharp\week3_hw\week3_hw\obj\Release\net8.0-windows\week3_hw.pdb
+D:\Project\NTOU-CSharp\week3_hw\week3_hw\obj\Release\net8.0-windows\week3_hw.genruntimeconfig.cache
+D:\Project\NTOU-CSharp\week3_hw\week3_hw\obj\Release\net8.0-windows\ref\week3_hw.dll

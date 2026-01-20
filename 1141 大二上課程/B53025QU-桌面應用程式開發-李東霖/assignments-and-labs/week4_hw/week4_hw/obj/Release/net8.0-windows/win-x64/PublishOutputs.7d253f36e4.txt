@@ -1,0 +1,2 @@
+D:\Project\NTOU-CSharp\week4_hw\release\week4_hw.pdb
+D:\Project\NTOU-CSharp\week4_hw\release\week4_hw.exe

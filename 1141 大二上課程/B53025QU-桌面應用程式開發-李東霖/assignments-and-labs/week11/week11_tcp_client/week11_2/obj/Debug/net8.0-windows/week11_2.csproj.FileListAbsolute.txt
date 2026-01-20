@@ -1,0 +1,17 @@
+D:\Project\NTOU-CSharp\week11_2\week11_2\bin\Debug\net8.0-windows\week11_2.exe
+D:\Project\NTOU-CSharp\week11_2\week11_2\bin\Debug\net8.0-windows\week11_2.deps.json
+D:\Project\NTOU-CSharp\week11_2\week11_2\bin\Debug\net8.0-windows\week11_2.runtimeconfig.json
+D:\Project\NTOU-CSharp\week11_2\week11_2\bin\Debug\net8.0-windows\week11_2.dll
+D:\Project\NTOU-CSharp\week11_2\week11_2\bin\Debug\net8.0-windows\week11_2.pdb
+D:\Project\NTOU-CSharp\week11_2\week11_2\obj\Debug\net8.0-windows\week11_2.Form1.resources
+D:\Project\NTOU-CSharp\week11_2\week11_2\obj\Debug\net8.0-windows\week11_2.csproj.GenerateResource.cache
+D:\Project\NTOU-CSharp\week11_2\week11_2\obj\Debug\net8.0-windows\week11_2.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\NTOU-CSharp\week11_2\week11_2\obj\Debug\net8.0-windows\week11_2.AssemblyInfoInputs.cache
+D:\Project\NTOU-CSharp\week11_2\week11_2\obj\Debug\net8.0-windows\week11_2.AssemblyInfo.cs
+D:\Project\NTOU-CSharp\week11_2\week11_2\obj\Debug\net8.0-windows\week11_2.csproj.CoreCompileInputs.cache
+D:\Project\NTOU-CSharp\week11_2\week11_2\obj\Debug\net8.0-windows\week11_2.sourcelink.json
+D:\Project\NTOU-CSharp\week11_2\week11_2\obj\Debug\net8.0-windows\week11_2.dll
+D:\Project\NTOU-CSharp\week11_2\week11_2\obj\Debug\net8.0-windows\refint\week11_2.dll
+D:\Project\NTOU-CSharp\week11_2\week11_2\obj\Debug\net8.0-windows\week11_2.pdb
+D:\Project\NTOU-CSharp\week11_2\week11_2\obj\Debug\net8.0-windows\week11_2.genruntimeconfig.cache
+D:\Project\NTOU-CSharp\week11_2\week11_2\obj\Debug\net8.0-windows\ref\week11_2.dll

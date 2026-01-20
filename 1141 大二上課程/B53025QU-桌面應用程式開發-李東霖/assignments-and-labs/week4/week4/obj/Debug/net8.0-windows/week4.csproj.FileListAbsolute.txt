@@ -1,0 +1,17 @@
+D:\Project\NTOU-CSharp\week4\week4\obj\Debug\net8.0-windows\week4.Form1.resources
+D:\Project\NTOU-CSharp\week4\week4\obj\Debug\net8.0-windows\week4.csproj.GenerateResource.cache
+D:\Project\NTOU-CSharp\week4\week4\obj\Debug\net8.0-windows\week4.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\NTOU-CSharp\week4\week4\obj\Debug\net8.0-windows\week4.AssemblyInfoInputs.cache
+D:\Project\NTOU-CSharp\week4\week4\obj\Debug\net8.0-windows\week4.AssemblyInfo.cs
+D:\Project\NTOU-CSharp\week4\week4\obj\Debug\net8.0-windows\week4.csproj.CoreCompileInputs.cache
+D:\Project\NTOU-CSharp\week4\week4\obj\Debug\net8.0-windows\week4.sourcelink.json
+D:\Project\NTOU-CSharp\week4\week4\bin\Debug\net8.0-windows\week4.exe
+D:\Project\NTOU-CSharp\week4\week4\bin\Debug\net8.0-windows\week4.deps.json
+D:\Project\NTOU-CSharp\week4\week4\bin\Debug\net8.0-windows\week4.runtimeconfig.json
+D:\Project\NTOU-CSharp\week4\week4\bin\Debug\net8.0-windows\week4.dll
+D:\Project\NTOU-CSharp\week4\week4\bin\Debug\net8.0-windows\week4.pdb
+D:\Project\NTOU-CSharp\week4\week4\obj\Debug\net8.0-windows\week4.dll
+D:\Project\NTOU-CSharp\week4\week4\obj\Debug\net8.0-windows\refint\week4.dll
+D:\Project\NTOU-CSharp\week4\week4\obj\Debug\net8.0-windows\week4.pdb
+D:\Project\NTOU-CSharp\week4\week4\obj\Debug\net8.0-windows\week4.genruntimeconfig.cache
+D:\Project\NTOU-CSharp\week4\week4\obj\Debug\net8.0-windows\ref\week4.dll

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "y9Yj2cK3ZkY=",
+  "success": true,
+  "projectFilePath": "D:\\Project\\NTOU-CSharp\\week4_hw\\week4_hw\\week4_hw.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\USER\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.20\\microsoft.net.illink.tasks.8.0.20.nupkg.sha512"
+  ],
+  "logs": []
+}

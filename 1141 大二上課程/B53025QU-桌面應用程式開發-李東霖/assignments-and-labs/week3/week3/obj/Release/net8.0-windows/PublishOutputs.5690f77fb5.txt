@@ -1,0 +1,5 @@
+D:\Project\NTOU-CSharp\week3\week3.exe
+D:\Project\NTOU-CSharp\week3\week3.dll
+D:\Project\NTOU-CSharp\week3\week3.deps.json
+D:\Project\NTOU-CSharp\week3\week3.runtimeconfig.json
+D:\Project\NTOU-CSharp\week3\week3.pdb

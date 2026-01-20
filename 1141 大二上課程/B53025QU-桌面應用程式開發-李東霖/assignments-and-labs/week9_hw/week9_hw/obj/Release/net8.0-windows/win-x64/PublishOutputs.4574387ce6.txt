@@ -1,0 +1,7 @@
+D:\Project\NTOU-CSharp\week9_hw\release\week9_hw.pdb
+D:\Project\NTOU-CSharp\week9_hw\release\D3DCompiler_47_cor3.dll
+D:\Project\NTOU-CSharp\week9_hw\release\PenImc_cor3.dll
+D:\Project\NTOU-CSharp\week9_hw\release\PresentationNative_cor3.dll
+D:\Project\NTOU-CSharp\week9_hw\release\vcruntime140_cor3.dll
+D:\Project\NTOU-CSharp\week9_hw\release\wpfgfx_cor3.dll
+D:\Project\NTOU-CSharp\week9_hw\release\week9_hw.exe

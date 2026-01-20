@@ -1,0 +1,17 @@
+D:\Project\NTOU-CSharp\week11\week11_udp_client\week11_udp_client\bin\Debug\net8.0-windows\week11_udp_client.exe
+D:\Project\NTOU-CSharp\week11\week11_udp_client\week11_udp_client\bin\Debug\net8.0-windows\week11_udp_client.deps.json
+D:\Project\NTOU-CSharp\week11\week11_udp_client\week11_udp_client\bin\Debug\net8.0-windows\week11_udp_client.runtimeconfig.json
+D:\Project\NTOU-CSharp\week11\week11_udp_client\week11_udp_client\bin\Debug\net8.0-windows\week11_udp_client.dll
+D:\Project\NTOU-CSharp\week11\week11_udp_client\week11_udp_client\bin\Debug\net8.0-windows\week11_udp_client.pdb
+D:\Project\NTOU-CSharp\week11\week11_udp_client\week11_udp_client\obj\Debug\net8.0-windows\week11_udp_client.Form1.resources
+D:\Project\NTOU-CSharp\week11\week11_udp_client\week11_udp_client\obj\Debug\net8.0-windows\week11_udp_client.csproj.GenerateResource.cache
+D:\Project\NTOU-CSharp\week11\week11_udp_client\week11_udp_client\obj\Debug\net8.0-windows\week11_udp_client.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\NTOU-CSharp\week11\week11_udp_client\week11_udp_client\obj\Debug\net8.0-windows\week11_udp_client.AssemblyInfoInputs.cache
+D:\Project\NTOU-CSharp\week11\week11_udp_client\week11_udp_client\obj\Debug\net8.0-windows\week11_udp_client.AssemblyInfo.cs
+D:\Project\NTOU-CSharp\week11\week11_udp_client\week11_udp_client\obj\Debug\net8.0-windows\week11_udp_client.csproj.CoreCompileInputs.cache
+D:\Project\NTOU-CSharp\week11\week11_udp_client\week11_udp_client\obj\Debug\net8.0-windows\week11_udp_client.sourcelink.json
+D:\Project\NTOU-CSharp\week11\week11_udp_client\week11_udp_client\obj\Debug\net8.0-windows\week11_udp_client.dll
+D:\Project\NTOU-CSharp\week11\week11_udp_client\week11_udp_client\obj\Debug\net8.0-windows\refint\week11_udp_client.dll
+D:\Project\NTOU-CSharp\week11\week11_udp_client\week11_udp_client\obj\Debug\net8.0-windows\week11_udp_client.pdb
+D:\Project\NTOU-CSharp\week11\week11_udp_client\week11_udp_client\obj\Debug\net8.0-windows\week11_udp_client.genruntimeconfig.cache
+D:\Project\NTOU-CSharp\week11\week11_udp_client\week11_udp_client\obj\Debug\net8.0-windows\ref\week11_udp_client.dll

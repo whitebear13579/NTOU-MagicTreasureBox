@@ -1,0 +1,5 @@
+D:\Project\NTOU-CSharp\week3_hw\release\week3_hw.exe
+D:\Project\NTOU-CSharp\week3_hw\release\week3_hw.dll
+D:\Project\NTOU-CSharp\week3_hw\release\week3_hw.deps.json
+D:\Project\NTOU-CSharp\week3_hw\release\week3_hw.runtimeconfig.json
+D:\Project\NTOU-CSharp\week3_hw\release\week3_hw.pdb
