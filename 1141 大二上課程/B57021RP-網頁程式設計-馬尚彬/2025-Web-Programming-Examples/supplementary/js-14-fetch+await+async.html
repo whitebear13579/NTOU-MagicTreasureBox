@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8" />
+    <title>簡易 fetch GET/POST 範例（async/await）</title>
+    <style>
+        body {
+            font-family: "Noto Sans TC", sans-serif;
+            margin: 20px;
+        }
+
+        button {
+            margin: 4px 8px 12px 0;
+        }
+
+        label {
+            display: block;
+            margin-top: 8px;
+        }
+
+        input, textarea {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        #status {
+            margin: 8px 0;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JSONPlaceholder fetch 範例（GET + POST, async/await）</h1>
+    <p>資料來源：<code>https://jsonplaceholder.typicode.com</code></p>
+
+    <button id="btnGet">GET：載入前5筆貼文</button>
+
+    <h2>新增貼文（POST）</h2>
+    <label>Title
+        <input id="title" value="Hello JSONPlaceholder">
+    </label>
+    <label>Body
+        <textarea id="body" rows="3">這是一篇測試貼文的內容。</textarea>
+    </label>
+    <label>User ID
+        <input id="userId" type="number" value="1">
+    </label>
+    <button id="btnPost">POST：送出新貼文</button>
+
+    <h2>狀態</h2>
+    <div id="status"></div>
+
+    <h2>文章列表（只顯示標題）</h2>
+    <ul id="list"></ul>
+
+    <script>
+        const BASE_URL = "https://jsonplaceholder.typicode.com";
+
+        const statusEl = document.getElementById("status");
+        const listEl = document.getElementById("list");
+
+        const setStatus = (text, ok = true) => {
+            statusEl.textContent = text;
+            statusEl.style.color = ok ? "green" : "red";
+        };
+
+        const clearList = () => {
+            listEl.innerHTML = "";
+        };
+
+        const addPostToList = (post) => {
+            let idText;
+            if (post.id !== undefined && post.id !== null) {
+                idText = post.id;
+            } else {
+                idText = "?";
+            }
+
+            let titleText;
+            if (post.title) {
+                titleText = post.title;
+            } else {
+                titleText = "(無標題)";
+            }
+
+            const li = document.createElement("li");
+            li.textContent = "#" + idText + " - " + titleText;
+            listEl.appendChild(li);
+        };
+
+        // async/await 版本的 GET
+        const handleGet = async () => {
+            setStatus("載入中...");
+
+            try {
+                const response = await fetch(BASE_URL + "/posts?_limit=5");
+
+                if (!response.ok) {
+                    throw new Error("HTTP 狀態碼：" + response.status);
+                }
+
+                const data = await response.json(); // 等待 JSON 轉換
+                setStatus("GET 成功（詳情請看 console）"); // 設定顯示訊息
+                console.log("GET /posts?_limit=5 回傳資料：", data);
+
+                clearList(); // 清空文章列表
+                for (let i = 0; i < data.length; i++) {
+                    addPostToList(data[i]);
+                }
+            } catch (error) {
+                setStatus("GET 失敗：" + error.message, false);
+                console.error("GET 錯誤：", error);
+            }
+        };
+
+        // async/await 版本的 POST
+        const handlePost = async () => {
+            const title = document.getElementById("title").value;
+            const body = document.getElementById("body").value;
+            const userIdValue = document.getElementById("userId").value;
+
+            const payload = {
+                title: title,
+                body: body,
+            };
+
+            setStatus("送出中...");
+
+            try {
+                const response = await fetch(BASE_URL + "/posts", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json; charset=UTF-8"
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    throw new Error("HTTP 狀態碼：" + response.status);
+                }
+
+                const data = await response.json();
+                setStatus("POST 成功（詳情請看 console）");
+                console.log("POST /posts 回傳資料：", data);
+
+                addPostToList(data);
+            } catch (error) {
+                setStatus("POST 失敗：" + error.message, false);
+                console.error("POST 錯誤：", error);
+            }
+        };
+
+        // 綁定按鈕事件
+        document.getElementById("btnGet").addEventListener("click", handleGet);
+        document.getElementById("btnPost").addEventListener("click", handlePost);
+
+    </script>
+</body>
+
+</html>

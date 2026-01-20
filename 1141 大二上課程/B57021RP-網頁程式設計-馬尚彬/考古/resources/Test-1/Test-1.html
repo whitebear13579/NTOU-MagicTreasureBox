@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museum Website</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            margin: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 10px;
+            background-color: powderblue;
+            width: 70%;
+            float: left
+        }
+
+        table, th, td {
+            border: 1px solid darkgray;
+            padding: 3px;
+        }
+
+        table td {
+            text-align: left;
+        }
+
+        table h2 {
+            color: darkgoldenrod;
+        }
+
+        table img {
+            margin-top: 10px;
+            width: 30%;
+        }
+
+        .image-container {
+            width: 25%;
+            float: right;
+            border: 1px solid lightgray;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .image-container img {
+            align-self: center;
+            margin: 10px;
+            width: 70%;
+        }
+
+        .image-container a {
+            text-decoration: none;
+            color:blue;
+        }
+
+        .image-container a:hover {
+            text-decoration: underline;
+            color:darkred;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .image-container{
+                float: none;
+                align-self: center;
+                width: 90%;
+            }
+
+            table {
+                float: none;
+                align-self: center;
+                width: 90%;
+            }
+
+            table img {
+                width: 50%;
+            }
+
+            .container {
+                flex-direction: column;
+                display: flex;
+                align-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to the Museum of History</h1>
+
+        <p>The Museum of History is a place dedicated to preserving and showcasing the rich history of our world.
+            Founded in 1950, our mission is to educate and inspire visitors about the past.</p>
+
+        <table>
+            <tr>
+                <th colspan="3">
+                    <img src="./exhibit1.jpg" title="exhibit1">
+                    <h2>Exhibit 1: Ancient Civilizations</h2>
+                </th>
+                <tr>
+                    <td>
+                        Explore the fascinating artifacts and relics from ancient civilizations, including pottery, tools, and sculptures. Gain insights into the daily life and cultural practices of these remarkable societies.
+                    </td>
+                    <td>
+                        Discover the architectural marvels and advancements in art from the ancient world. From the Pyramids of Egypt to the Acropolis in Greece, this exhibit showcases the ingenuity of human civilization.
+                    </td>
+                    <td>
+                        Uncover the mysteries of ancient rituals and beliefs. From religious ceremonies to burial practices, delve into the spiritual aspects that shaped the identity of ancient cultures.
+                    </td>
+                </tr>
+            </tr>
+            <tr>
+                <th colspan="3">
+                    <img src="./exhibit2.jpg" title="exhibit1">
+                    <h2>Exhibit 2: The Renaissance Era</h2>
+                </th>
+                <tr>
+                    <td>
+                        Immerse yourself in the vibrant world of the Renaissance. Witness the explosion of creativity in art, science, and literature. Experience the works of Michelangelo, Leonardo da Vinci, and other iconic figures.
+                    </td>
+                    <td>
+                        Journey through a time of rebirth and transformation. Explore the societal changes, technological innovations, and the birth of the printing press that defined the Renaissance era.
+                    </td>
+                    <td>
+                        Gain insights into the intellectual revolution that shaped modern thinking. From humanism to the scientific method, this exhibit highlights the Renaissance's profound impact on the course of history.
+                    </td>
+                </tr>
+            </tr>
+            <tr>
+                <th colspan="3">
+                    <img src="./exhibit3.jpg" title="exhibit1">
+                    <h2>Exhibit 3: Space Exploration</h2>
+                </th>
+                <tr>
+                    <td>
+                        Embark on a cosmic journey through the history of space exploration. Witness the achievements of pioneers like Yuri Gagarin and Neil Armstrong, who ventured beyond our planet.
+                    </td>
+                    <td>
+                        Explore the technological advancements that propelled humanity into space. From early rockets to the International Space Station, this exhibit showcases the evolution of space travel.
+                    </td>
+                    <td>
+                        Experience the awe-inspiring beauty of the cosmos. View stunning images captured by telescopes and spacecraft, and learn about ongoing missions that continue to expand our understanding of the universe.
+                    </td>
+                </tr>
+            </tr>
+        </table>
+
+        <div class="image-container">
+            <img src="./museum.jpg" title="museum" >
+            <a href="https://www.ntm.gov.tw/en/">Visit the Official Website</a>
+        </div>
+    </div>
+</body>
+
+</html>

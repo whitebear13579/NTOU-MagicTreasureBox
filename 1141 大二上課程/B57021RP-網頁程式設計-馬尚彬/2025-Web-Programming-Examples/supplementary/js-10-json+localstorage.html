@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        let obj = {};
+        obj["firstName"] = "Steven";
+        obj["lastName"] = "Curry";
+
+        objJSON = JSON.stringify(obj);
+        localStorage.setItem("player", objJSON);
+        window.alert(objJSON);
+
+        let savedObjJSON = localStorage.getItem("player");
+        window.alert(savedObjJSON);
+        
+        let convertedObj = JSON.parse(savedObjJSON);
+        window.alert(convertedObj.firstName);
+        window.alert(convertedObj.lastName);
+    </script>
+</head>
+
+</html>

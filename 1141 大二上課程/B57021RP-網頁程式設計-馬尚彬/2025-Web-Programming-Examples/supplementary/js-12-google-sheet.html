@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        body {
+            font-family: Helvetica, "Microsoft YaHei", "LiHei Pro", TW-Kai;
+        }
+
+        table, tr {
+            border-collapse: collapse;
+            border: 1px solid gray;
+        }
+
+        td {
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tbody id="test"></tbody>
+    </table>
+    <script>
+        //Source: https://docs.google.com/spreadsheets/d/1wLUWngwK7ejzREjX1aNQH1pyptre_Ww9BrqsCH9bLWM/edit#gid=0
+        document.addEventListener('DOMContentLoaded', function() {
+            const sheetID = "1wLUWngwK7ejzREjX1aNQH1pyptre_Ww9BrqsCH9bLWM"; // 試算表代號
+            const gid = "0"; // 工作表代號
+            let sql = encodeURI("select * where F > 300"); // SQL 語法，目前是設定"F>300"才會撈出來
+            let callback = "display"; // 回呼函數名稱
+            let url = "https://spreadsheets.google.com/tq?tqx=responseHandler:" + callback + "&tq=" + sql + "&key=" + sheetID + "&gid=" + gid;
+            //console.log(url);
+
+            // 使用原生JavaScript載入腳本
+            const script = document.createElement('script');
+            script.src = url;
+            document.body.appendChild(script);
+        });
+
+        function display(resultJson) {
+            console.log(resultJson); //印出回傳結果，可仔細觀察一下Google試算表回傳之JSON內容
+            let rowArray = resultJson.table.rows;            
+            let rowLength = rowArray.length;
+
+            let htmlContent = "<tr><th>武將名</th><th>統率</th><th>武力</th><th>智力</th><th>政治</th><th>總和</th></tr>";
+
+            for (let i = 0; i < rowLength; i++) {
+                let dataGroup = rowArray[i].c;
+                let dataLength = dataGroup.length;
+
+                htmlContent += "<tr>";
+
+                for (let j = 0; j < 6; j++) {
+                    if (!dataGroup[j]) {
+                        htmlContent += "<td></td>";
+                        continue; //預防空的field
+                    }
+                    htmlContent += "<td>" + (dataGroup[j].f || dataGroup[j].v || " ") + "</td>"; //有f印f (field)，沒f印v (value)，不然印空字串
+                }
+                htmlContent += "</tr>";
+            }
+            document.getElementById("test").innerHTML = htmlContent;
+        }
+    </script>
+</body>
+</html>

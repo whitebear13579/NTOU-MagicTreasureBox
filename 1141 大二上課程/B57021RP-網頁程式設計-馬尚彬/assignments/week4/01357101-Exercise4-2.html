@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            min-height: 100%;
+            background: #eee;
+            font-family: 'Lato', sans-serif;
+            font-weight: 400;
+            color: #222;
+            font-size: 14px;
+            line-height: 26px;
+            padding-bottom: 50px;
+        }
+
+        .container {
+            max-width: 700px;
+            background: #fff;
+            margin: 0px auto 0px;
+            box-shadow: 1px 1px 2px #DAD7D7;
+            border-radius: 3px;
+            padding: 40px;
+            margin-top: 50px;
+        }
+
+        .header {
+            margin-bottom: 30px;
+        }
+
+        .full-name {
+            font-size: 40px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .first-name {
+            font-weight: 700;
+        }
+
+        .last-name {
+            font-weight: 300;
+        }
+
+        .contact-info {
+            margin-bottom: 20px;
+        }
+
+        .email,
+        .phone {
+            color: #999;
+            font-weight: 300;
+        }
+
+        .separator {
+            height: 10px;
+            display: inline-block;
+            border-left: 2px solid #999;
+            margin: 0px 10px;
+        }
+
+        .position {
+            font-weight: bold;
+            display: inline-block;
+            margin-right: 10px;
+            text-decoration: underline;
+        }
+
+        .details {
+            line-height: 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section:last-of-type {
+            margin-bottom: 0px;
+        }
+
+        .section__title {
+            letter-spacing: 2px;
+            color: #54AFE4;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .section__list-item {
+            margin-bottom: 40px;
+        }
+
+        .section__list-item:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .left,
+        .right {
+            vertical-align: top;
+            display: inline-block;
+        }
+
+        .left {
+            width: 60%;
+        }
+
+        .right {
+            text-align: right;
+            width: 39%;
+        }
+
+        .name {
+            font-weight: bold;
+        }
+        
+        .about {
+            text-align: justify;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+            font-style: italic;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #000;
+        }
+
+        .skills__item {
+            margin-bottom: 10px;
+        }
+
+        .nameBold {
+            font-weight: bold;
+        }
+
+        input {
+            display: none;
+        }
+
+        label {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: #C3DEF3;
+            border-radius: 20px;
+            margin-right: 3px;
+        }
+
+        input:checked+label {
+            background: #79A9CE;
+        }
+    </style>
+</head>
+
+<body>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+
+    <div class="container">
+        <div class="header">
+            <div class="full-name">
+                <span class="first-name">HUANG</span>
+                <span class="last-name">YI HONG</span>
+            </div>
+            <div class="contact-info">
+                <span class="email">Email: </span>
+                <span class="email-val">mail@coolyeah.eu.org</span>
+                <span class="separator"></span>
+                <span class="phone">Phone: </span>
+                <span class="phone-val">(+886) 900-550-104</span>
+            </div>
+
+            <div>
+                <img src="./profile.png" width="60%" alt="profile image">
+            </div>
+
+            <div class="about">
+                <span class="position">Undergraduate Computer Science @ 🇹🇼 NTOU </span>
+                <span class="desc">
+                    我是一名來自臺灣，目前正在就讀資訊工程學系的大二學生 <span class="nameBold">黃翊宏</span>，而這份簡歷是學校中一門選修課「網頁程式設計」於第四周的作業。我們需要將範例的 resume-example.html 經過修改後，部署在 Github Page 上並繳交 Github Page 網址。
+                </span>
+            </div>
+        </div>
+        <div class="details">
+            <div class="section">
+                <div class="section__title">Experience</div>
+                <div class="section__list">
+                    <div class="section__list-item">
+                        <div class="left">
+                            <div class="name">學生計算機年會</div>
+                            <div class="addr">中央研究院 人文社會科學館</div>
+                            <div class="duration">2024 03 09</div>
+                        </div>
+                        <div class="right">
+                            <div class="name">場務組工人</div>
+                            <div class="desc">協助場控、維持年會秩序</div>
+                        </div>
+                    </div>
+                    <div class="section__list-item">
+                        <div class="left">
+                            <div class="name">資訊研究社</div>
+                            <div class="addr">NTSH</div>
+                            <div class="duration">Jan 2023 ~ Jan 2024</div>
+                        </div>
+                        <div class="right">
+                            <div class="name">社長兼教學</div>
+                            <div class="desc">課程安排、授課</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="section__title">教育經歷</div>
+                <div class="section__list">
+                    <div class="section__list-item">
+                        <div class="left">
+                            <div class="name">National Taiwan Ocean University</div>
+                            <div class="addr">Keelung City, Taiwan 🇹🇼</div>
+                            <div class="duration">Sep 2024 - </div>
+                        </div>
+                        <div class="right">
+                            <div class="name">Undergraduate Student</div>
+                            <div class="desc">Computer Science Bachelor</div>
+                        </div>
+                    </div>
+                    <div class="section__list-item">
+                        <div class="left">
+                            <div class="name">New Taipei Municipal New Taipei Senior High School</div>
+                            <div class="addr">New Taipei City, Taiwan 🇹🇼</div>
+                            <div class="duration">Sep 2021 - Jun 2024</div>
+                        </div>
+                        <div class="right">
+                            <div class="name">Senior High School Student</div>
+                            <div class="desc">Graduate</div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="section">
+                <div class="section__title">Skills</div>
+                <div class="skills">
+                    <div class="skills__item">
+                        <div class="left">
+                            <div class="name">
+                                C / C++
+                            </div>
+                        </div>
+                        <div class="right">
+                            <input id="ck1" type="checkbox" checked />
+
+                            <label for="ck1"></label>
+                            <input id="ck2" type="checkbox" checked />
+
+                            <label for="ck2"></label>
+                            <input id="ck3" type="checkbox" checked />
+
+                            <label for="ck3"></label>
+                            <input id="ck4" type="checkbox" checked />
+                            <label for="ck4"></label>
+                            <input id="ck5" type="checkbox" />
+                            <label for="ck5"></label>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="skills__item">
+                    <div class="left">
+                        <div class="name">
+                            Python</div>
+                    </div>
+                    <div class="right">
+                        <input id="ck1" type="checkbox" checked />
+
+                        <label for="ck1"></label>
+                        <input id="ck2" type="checkbox" checked />
+
+                        <label for="ck2"></label>
+                        <input id="ck3" type="checkbox" checked />
+
+                        <label for="ck3"></label>
+                        <input id="ck4" type="checkbox" />
+                        <label for="ck4"></label>
+                        <input id="ck5" type="checkbox" />
+                        <label for="ck5"></label>
+
+                    </div>
+                </div>
+                <div class="skills__item">
+                    <div class="left">
+                        <div class="name">
+                            Full Stack</div>
+                    </div>
+                    <div class="right">
+                        <input id="ck1" type="checkbox" checked />
+
+                        <label for="ck1"></label>
+                        <input id="ck2" type="checkbox" checked />
+
+                        <label for="ck2"></label>
+                        <input id="ck3" type="checkbox" checked />
+
+                        <label for="ck3"></label>
+                        <input id="ck4" type="checkbox" />
+                        <label for="ck4"></label>
+                        <input id="ck5" type="checkbox" />
+                        <label for="ck5"></label>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="section">
+                <div class="section__title">
+                    Interests
+                </div>
+                <div class="section__list">
+                    <div class="section__list-item">
+                        ACG Culture, Programming.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

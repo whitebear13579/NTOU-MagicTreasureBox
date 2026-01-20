@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Programming week3 3-1</title>
+    <style type="text/css">
+        @import url(https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css);
+        body{
+            background-image: url(./ntou_logo.png);
+            background-position: right bottom;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 200px;
+
+        }
+        .flex-container {
+            display: flex;
+            justify-content: left;
+        }
+        .flex-container > div {
+            font-size: 24px;
+            font-family: "cwTeXFangSong";
+            text-align: justify;
+            width: 50%;
+            height: 130px;
+            overflow: auto;
+            border-color: cornflowerblue;
+            border-width: thin;
+            border-style: solid;
+        }
+        div::first-letter{
+            font-size: 220%;
+            float: left;
+        }
+        @media only screen and (max-width: 600px) {
+            .flex-container{
+                flex-direction: column;
+            }
+            .flex-container > div{
+                overflow: hidden;
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div>
+            人工神經網路（Artificial Neural Network，縮寫 ANN），簡稱神經網路（Neural Network，縮寫NN）或類神經網路，是一種模仿生物神經網路(動物的中樞神經系統，特別是大腦)的結構和功能的數學模型或計算模型，用於對函式進行估計或近似。神經網路由大量的人工神經元聯結進行計算。大多數情況下人工神經網路能在外界資訊的基礎上改變內部結構，是一種自適應系統。
+        </div>
+        <div>
+            馬可夫鏈（Markov chain），因俄國數學家安德烈·馬可夫（俄語：Андрей Андреевйч Марков）得名，為狀態空間中經過從一個狀態到另一個狀態的轉換的隨機過程。該過程要求具備「無記憶」的性質：下一狀態的機率分布只能由當前狀態決定，在時間序列中它前面的事件均與之無關。
+        </div>
+    </div>
+    <div class="flex-container">
+        <div>
+            蒙地卡羅方法（Monte Carlo method），也稱統計模擬方法。方法可以粗略地分成兩類：一類是所求解的問題本身具有內在的隨機性，藉助電腦的運算能力可以直接模擬這種隨機的過程。例如在核物理研究中，分析中子在反應爐中的傳輸過程。另一種類型是所求解問題可以轉化為某種隨機分布的特徵數，比如隨機事件出現的機率，或者隨機變數的期望值。通過隨機抽樣的方法，以隨機事件出現的頻率估計其機率，或者以抽樣的數字特徵估算隨機變數的數字特徵，並將其作為問題的解。
+        </div>
+        <div>
+            生成式人工智慧（Generative Artificial Intelligence，簡稱 Generative AI 或生成式 AI）是能根據提示（Prompt）自動生成文字、圖像、音訊、影片甚至三維內容的智慧系統。自 2020 年代中期以來，隨著大型多模態模型（如 ChatGPT、Gemini、Claude、LLaMA）與影像生成系統（如Stable Diffusion、Midjourney、DALL·E、Adobe Firefly）的快速發展，生成式 AI 不僅能理解並回應自然語言，還能跨越語言、視覺與聲音等不同媒介，並透過整合工具與代理能力（AI agents）展現更高的自動化與創造性，成為推動教育、設計、娛樂與產業創新的核心技術。
+        </div>
+    </div>
+</body>
+</html>

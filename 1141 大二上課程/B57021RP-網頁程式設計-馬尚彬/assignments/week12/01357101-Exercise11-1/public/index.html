@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>學生資訊管理系統</title>
+    <style>
+        table,
+        th,
+        td {
+            border: gray 2px solid;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>學生列表</h1>
+
+    <table id="student-list" style="width: 80%">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Grade</th>
+            </the>
+        </tr>
+    </table>
+
+    <h2>新增學生</h2>
+
+    <form id="add-student-form">
+        <label for="name">姓名：</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="age">年齡：</label>
+        <input type="number" id="age" name="age" required>
+
+        <label for="grade">年級：</label>
+        <input type="text" id="grade" name="grade" required>
+
+        <button type="submit">新增</button>
+    </form>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const studentList = document.getElementById('student-list');
+
+            // 取得學生列表
+            try {
+                const response = await fetch('students');
+                const students = await response.json();
+
+                students.forEach(student => {
+                    studentList.insertAdjacentHTML(
+                        'beforeend',
+                        `<tr><td>${student.name}</td><td>${student.age}歲</td><td>${student.grade}年級</td></tr>`
+                    );
+                });
+            } catch (err) {
+                console.error('取得學生資料失敗：', err);
+            }
+
+            // 監聽新增學生表單
+            document.getElementById('add-student-form').addEventListener('submit', async (event) => {
+                event.preventDefault();
+
+                const name = document.getElementById('name').value;
+                const age = document.getElementById('age').value;
+                const grade = document.getElementById('grade').value;
+
+                try {
+                    const response = await fetch('students', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ name, age, grade })
+                    });
+
+                    const newStudent = await response.json();
+
+                    studentList.insertAdjacentHTML(
+                        'beforeend',
+                        `<tr><td>${newStudent.name}</td><td>${newStudent.age}歲</td><td>${newStudent.grade}年級</td></tr>`
+                    );
+
+                    event.target.reset(); // 清空表單欄位
+                } catch (err) {
+                    console.error('新增學生失敗：', err);
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

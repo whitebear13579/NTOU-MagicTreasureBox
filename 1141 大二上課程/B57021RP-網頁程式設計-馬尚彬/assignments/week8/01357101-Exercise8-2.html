@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Programming week8 8-2</title>
+    <style>
+        table {
+            width: 90%;
+            border-collapse: collapse;
+            background-color: lightblue;
+            font-family: Perpetua;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid black;
+            padding: 4px;
+        }
+
+        th {
+            text-align: center;
+            color: white;
+            background-color: darkblue;
+        }
+
+        tr.oddrow {
+            background-color: white;
+        }
+
+        td {
+            text-align: center;
+        }
+    </style>
+    <script>
+        function display(){
+            let tableDisplay = document.getElementById("tableContent");
+            let content = "";
+            let row = 1
+            for ( let i = 0 ; i < localStorage.length ; i++ ){
+                if ( localStorage.key(i).startsWith("ntou-") ){
+                    let now = JSON.parse(localStorage.getItem(localStorage.key(i)));
+                    console.log(now);
+                    content += "<tr class=" + ( row%2 != 0 ? "'oddrow'" : "''" ) + ">";
+                    content += "<td>" + now.title + "</td>" + "<td>" + now.author + "</td>" + "<td>" + now.year + "</td>";
+                    content += "<td><a href='" + now.url + "' rel='noopener' target='_blank' >" + now.url + "</a></td>";
+                    content += "</tr>";
+                    console.log(content);
+                    row++;
+                }
+            }
+            tableDisplay.innerHTML = content;
+        }
+
+        function delItem(){
+            let delList = [];
+            for ( let i = 0 ; i < localStorage.length ; i++ ){
+                if ( localStorage.key(i).startsWith("ntou-") ){
+                    delList.push(localStorage.key(i));
+                }
+            }
+            delList.forEach( i => { localStorage.removeItem(i) } );
+
+            alert("All items were removed!");
+            display();
+        }
+
+        function addItem(){
+            let bookTitle = document.getElementById("bookTitle");
+            let bookAuthor = document.getElementById("bookAuthor");
+            let bookPublishYear = document.getElementById("bookPublishYear");
+            let bookUrl = document.getElementById("bookUrl");
+            
+            if ( bookTitle.value && bookAuthor.value && bookPublishYear.value && bookUrl.value ){
+                let key = "ntou-" + new Date().getTime()
+                let value = new Object({
+                    title: bookTitle.value,
+                    author: bookAuthor.value,
+                    year: bookPublishYear.value,
+                    url: bookUrl.value
+                });
+                console.log(key)
+                console.log(value)
+                localStorage.setItem(key,JSON.stringify(value));
+                bookTitle.value = "";
+                bookAuthor.value = "";
+                bookPublishYear.value = "";
+                bookUrl.value = "";
+                console.log("uwu ok")
+            }
+            display();
+        }
+
+        window.addEventListener("load",display,false);
+    </script>
+</head>
+
+<body>
+
+    <p>
+        <label>Book Title:<input type="text" id="bookTitle" /></label>
+        <label>Author(s):<input type="text" id="bookAuthor" /></label>
+        <label>Year:<input type="number" id="bookPublishYear"/></label>
+        <label>Book URL:<input type="url" id="bookUrl" /></label>
+    </p>
+    <p>
+        <input type="button" value="Add New Item" id="addButton" onclick="addItem()" >
+        <input type="button" value="Remove All Items" id="removeAllButton" onclick="delItem()" >
+    </p>
+    <hr>
+    <div id="display">
+        <table>
+            <thead>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Year</th>
+                <th>URL</th>
+            </thead>
+            <tbody id="tableContent" ></tbody>
+        </table>
+    </div>
+</body>
+
+</html>

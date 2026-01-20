@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Web Programming week5 5-2</title>
+        <style>
+            body {
+                font-family: Helvetica, Arial, sans-serif;
+                padding: 20px;
+            }
+
+            form {
+                display: grid;
+                grid-template-columns: auto auto auto auto auto auto auto auto;
+                gap: 12px;
+                align-items: end;
+            }
+
+            label {
+                font-weight: bold;
+            }
+
+            #display {
+                margin-top: 16px;
+                line-height: 0;
+            }
+
+            .btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                cursor: pointer;
+                border-radius: 8px;
+                background: #fafafa;
+            }
+
+            .btn:hover {
+                background: #f0f0f0;
+            }
+
+            hr {
+                margin: 16px 0;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Pokémon Grid</h1>
+
+        <form id="pokemonForm" onsubmit="return false;">
+            <div>
+                <label for="pokemon">Pokemon (1~5):</label><br />
+                <select id="pokemon">
+                    <option value="1">1-pikachu</option>
+                    <option value="2">2-bulbasaur</option>
+                    <option value="3">3-charmander</option>
+                    <option value="4">4-squirtle</option>
+                    <option value="5">5-random</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="width">Side length (1~10):</label>(預設5)<br />
+                <input id="width" type="number" value="5" min="1" max="10" />
+            </div>
+
+            <div>
+                <label for="size">Image size (50~150):</label>(預設100)<br />
+                <input id="size" type="number" value="100" min="50" max="150" />
+            </div>
+
+            <button id="drawBtn" class="btn" type="button" onclick="draw()">Draw</button>
+            <button id="clearBtn" class="btn" type="button" onclick="clearDisplay()" >Clear</button>
+        </form>
+
+        <hr />
+
+        <div id="display"></div>
+
+        <script>
+            const errMsg1 = "You input an invalid side length! It will be reset to 5.";
+            const errMsg2 = "Image size should be between 50 and 150! It will be reset to 100.";
+
+            const sideElement = document.getElementById("width");
+            const imgElement = document.getElementById("size");
+
+            function draw(){
+                let sideLength = parseInt(document.getElementById("width").value);
+                let imgSize = parseInt(document.getElementById("size").value);
+
+                if ( sideLength < 1 || sideLength > 10 ){
+                    alert(errMsg1);
+                    sideElement.value = 5;
+                    return;
+                }
+
+                if ( imgSize < 50 || imgSize > 150 ){
+                    alert(errMsg2);
+                    imgElement.value = 100;
+                    return;
+                }
+
+                let getMode = document.getElementById("pokemon").value;
+                let getDisplay = document.getElementById("display");
+
+                const randomList = ['./pikachu.png', './bulbasaur.png', './charmander.png', './squirtle.png'];
+
+                getDisplay.innerHTML = "";
+                
+                for ( let i = 0 ; i < sideLength ; i++ ){
+                    for ( let j = 0 ; j < sideLength ; j++ ){
+                        let src;
+                        if ( getMode === "5" ) src = randomList[Math.floor((Math.random() * 4))];
+                        else src = randomList[parseInt(getMode) - 1];
+
+                        getDisplay.innerHTML += `<img src='${src}' width='${imgSize}' height='${imgSize}' />`
+                    }
+                    getDisplay.innerHTML += "<br>";
+                }
+            }
+
+            function clearDisplay(){
+                let getDisplay = document.getElementById("display")
+                getDisplay.innerHTML = "";  
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<!-- js-03-logical-operators.html -->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Logical Operetor Testing</title>
+    <script>
+        //https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators
+        let a1 = true && true; // t && t 回傳 true
+        document.write("a1: " + a1 + "<br>");
+        let a2 = true && false; // t && f 回傳 false
+        document.write("a2: " + a2 + "<br>");
+        let a3 = false && true; // f && t 回傳 false
+        document.write("a3: " + a3 + "<br>");
+        let a4 = false && (3 == 4); // f && f 回傳 false
+        document.write("a4: " + a4 + "<br>");
+        let a5 = "Cat" && "Dog"; // t && t 回傳 Dog
+        document.write("a5: " + a5 + "<br>");
+        let a6 = false && "Cat"; // f && t 回傳 false
+        document.write("a6: " + a6 + "<br>");
+        let a7 = "Cat" && false; // t && f 回傳 false
+        document.write("a7: " + a7 + "<br>");
+        document.write("<hr>");
+
+        let o1 = true || true; // t || t 回傳 true
+        document.write("o1: " + o1 + "<br>");
+        let o2 = false || true; // f || t 回傳 true
+        document.write("o2: " + o2 + "<br>");
+        let o3 = true || false; // t || f 回傳 true
+        document.write("o3: " + o3 + "<br>");
+        let o4 = false || (3 == 4); // f || f 回傳 false
+        document.write("o4: " + o4 + "<br>");
+        let o5 = 'Cat' || 'Dog'; // t || t 回傳 Cat
+        document.write("o5: " + o5 + "<br>");
+        let o6 = false || 'Cat'; // f || t 回傳 Cat
+        document.write("o6: " + o6 + "<br>");
+        let o7 = 'Cat' || false; // t || f 回傳 Cat
+        document.write("o7: " + o7 + "<br>");
+        document.write("<hr>");
+
+        let n1 = !true; // !t 回傳 false
+        document.write("n1: " + n1 + "<br>");
+        let n2 = !false; // !f 回傳 true
+        document.write("n2: " + n2 + "<br>");
+        let n3 = !'Cat'; // !t 回傳 false
+        document.write("n3: " + n3 + "<br>");
+        let n4 = !null; // !t 回傳 true
+        document.write("n4: " + n4 + "<br>");
+    </script>
+</head>
+
+<body></body>
+
+</html>

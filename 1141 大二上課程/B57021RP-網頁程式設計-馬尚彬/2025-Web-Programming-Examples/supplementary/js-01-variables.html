@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<!-- js-01-variables.html -->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Variable Testing</title>
+    <script type="text/javascript">
+        let x;
+        let y = null;
+        let z = "nice!";
+
+        document.writeln("12/0: " + 12 / 0 + "<br />");
+        document.writeln("Convert 'javascript123' into integer: " + parseInt("javascript123") + "<br />");
+        document.writeln("Convert '123javascript' into integer: " + parseInt("123javascript") + "<br />");
+        document.writeln("<hr/>");
+
+        document.writeln("x: " + x + "<br />");
+        document.writeln("Type of x: " + typeof x + "<br />");
+        if (x) document.writeln("I can see x!" + "<br />")
+        if (!x) document.writeln("I cannot see x!" + "<br />");
+        document.writeln("x is undefined? " + (x === undefined) + "<br />");
+        document.writeln("x is null? " + (x === null) + "<br />");
+        document.writeln("<hr/>");
+
+        document.writeln("y: " + y + "<br />");
+        document.writeln("Type of y: " + typeof y + "<br />");
+        if (y) document.writeln("I can see y!" + "<br />");
+        if (!y) document.writeln("I cannot see y!" + "<br />");
+        document.writeln("y is undefined? " + (y === undefined) + "<br />");
+        document.writeln("y is null? " + (y === null) + "<br />");
+        document.writeln("<hr/>");
+
+        document.writeln("z: " + z + "<br />");
+        document.writeln("Type of z: " + typeof z + "<br />");
+        if (z) document.writeln("I can see z!" + "<br />");
+        if (typeof z == 'string') document.writeln("I can see z again!" + "<br />");
+        if (!z) document.writeln("I cannot see z!" + "<br />");
+        document.writeln("z is undifined? " + (z === 'undefined') + "<br />");
+        document.writeln("z is null? " + (z === null) + "<br />");
+        document.writeln("<hr/>");
+
+        document.writeln("Type of k: " + typeof k + "<br />");
+        // k = 5;
+        document.writeln("k: " + k + "<br />");
+        if (k) document.writeln("I can see k!" + "<br />");
+    </script>
+</head>
+
+<body></body>
+
+</html>

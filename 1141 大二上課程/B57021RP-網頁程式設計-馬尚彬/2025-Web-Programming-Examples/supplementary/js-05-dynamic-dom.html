@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<!-- js-05-simple-dom.html -->
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic DOM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        #demo img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>寶寶圖片選擇器</h2>
+    <div id="demo"></div>
+
+    <script>
+        let choice = window.prompt("請選擇(1)男孩(2)女孩:");
+        let imageUrl = '';
+        if (choice == 1) {
+            imageUrl = 'http://cdn2.momjunction.com/wp-content/uploads/2015/02/Hispanic-Baby-Names-For-Your-Little-Boy.jpg';
+        } else if (choice == 2) {
+            imageUrl = 'http://cdn2.momjunction.com/wp-content/uploads/2015/04/Top-188-Latest-And-Modern-Hindu-Baby-Girl-Names.jpg';
+        } else {
+            alert("無效的選擇!");
+        }
+        if (imageUrl) {
+            document.getElementById("demo").innerHTML = `<img src="${imageUrl}" alt="寶寶圖片">`;
+        }
+    </script>
+</body>
+
+</html>

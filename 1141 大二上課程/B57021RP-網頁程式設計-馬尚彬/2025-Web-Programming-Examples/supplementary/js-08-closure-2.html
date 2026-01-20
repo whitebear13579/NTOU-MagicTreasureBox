@@ -1,0 +1,21 @@
+<html>
+
+<body>
+    <p id="display"></p>
+    <script>
+        function closureTest(x) {
+            let y = 0;
+            return function (z) {
+                x += 3;
+                y += x - 2;
+                return x + y + z;
+            };
+        }
+        let add3 = closureTest(3);
+        let display = document.getElementById("display");
+        display.innerHTML = add3(5);
+        display.innerHTML += "<br>" + add3(5); 
+    </script>
+</body>
+
+</html>

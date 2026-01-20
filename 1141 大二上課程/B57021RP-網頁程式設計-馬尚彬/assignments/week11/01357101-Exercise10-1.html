@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <title>NTOU News</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-primary-subtle m-3">    
+    <div class="jumbotron text-center">
+        <h1 class="display-4">海大新聞</h1>
+        <p class="lead">這是臺灣海洋大學的最新消息與公告</p>
+    </div>
+    <div class="container-fluid">
+        <div class="row" id="newsContainer">
+        </div>
+    </div>
+    <script>
+        function newsDisplay(){
+            fetch("https://ntou-news-2024.onrender.com/news")
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (newsData){
+                let fuck = document.getElementById('newsContainer')
+                let newsDiv = "";
+                newsData.forEach(element => {
+                    newsDiv += `<div class='col-md-4 mb-3'>
+                                    <div class='card h-100'>
+                                        <div class='card-body'>
+                                            <a href='${element.link}' target='_blank' rel='noopener' >
+                                                <h5 class='card-title'>${element.title}</h5>
+                                            </a>
+                                            <p class='card-text'><small class='text-muted'>${element.date}-${element.publisher}</small></p>
+                                        </div>
+                                    </div>
+                                </div>`;
+                });
+                fuck.innerHTML = newsDiv;
+            })
+        }
+
+        window.addEventListener("load", newsDisplay, false);
+    </script>
+
+</html>

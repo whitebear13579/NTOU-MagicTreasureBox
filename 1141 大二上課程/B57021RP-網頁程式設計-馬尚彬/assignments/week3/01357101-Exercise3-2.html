@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Web Programming week3 3-2</title>
+      <style type = "text/css">
+         body {
+            font-family: "Perpetua";
+         }
+         h1{
+            text-align: center;
+            color: royalblue;
+         }
+         .flex-container {
+            display: flex;
+            box-sizing: border-box;
+            width: 100%;
+         }
+         .flex-container > div{
+            border: 2px solid RoyalBlue;
+            background-color: RoyalBlue;
+            box-sizing: border-box;
+            width: calc(100% / 6);
+         }
+         nav {
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            background-color: RoyalBlue;
+            position: relative;
+         }
+         nav ul {
+            display: none;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            width: 100%;
+            box-sizing: border-box;
+         }
+         nav:hover ul {
+            display: block;
+         }
+         nav ul li {
+            border-bottom: 2px solid RoyalBlue;
+            border-left: 2px solid RoyalBlue;
+            border-right: 2px solid RoyalBlue;
+            background-color: white;
+            color: black;
+         }
+         nav ul li:first-child {
+            margin-top: 3px;
+         }
+         nav ul li:hover {
+            background-color: PowderBlue;
+         }
+         a {
+            text-decoration: none;
+         }
+         iframe {
+            display: block;
+            box-sizing: border-box;
+         }
+          @media only screen and (max-width: 600px) {
+            .flex-container{
+               flex-direction: column;
+            }
+            .flex-container > div {
+               width: 100%;
+            }
+            .flex-container > div ul {
+               width: 100%;
+               position: relative;
+            }
+            nav ul li {
+               border-left: none;
+               border-right: none;
+            }
+        }
+      </style>
+   </head>
+   <body>
+      <h1>Web Intelligence</h1>
+      <div class="flex-container">
+         <div>
+            <nav>JavaScript
+                  <ul>
+                     <li><a href="https://www.w3schools.com/js/default.asp" target="_blank" rel="noopener">W3Schools</a></li>
+                     <li><a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript" target="_blank" rel="noopener">MDN</a></li>
+                     <li><a href="https://www.json.org/json-en.html" target="_blank" rel="noopener">JSON</a></li>
+                  </ul>
+            </nav>
+         </div>
+         <div>
+            <nav>Client-side Framework
+               <ul>
+                  <li><a href="https://react.dev/" target="_blank" rel="noopener">react</a></li>
+                  <li><a href="https://vuejs.org/" target="_blank" rel="noopener">vue.js</a></li>
+                  <li><a href="https://angular.tw/" target="_blank" rel="noopener">Angular</a></li>
+               </ul>
+            </nav>
+         </div>
+         <div>
+            <nav>node.js
+               <ul>
+                  <li><a href="https://www.w3schools.com/nodejs/" target="_blank" rel="noopener">Node.js Tutorial</a></li>
+               </ul>
+            </nav>
+         </div>
+         <div>
+            <nav>PHP
+               <ul>
+                  <li><a href="https://www.php.net/manual/en/tutorial.php" target="_blank" rel="noopener">PHP Tutorial</a></li>
+               </ul>
+            </nav>
+         </div>
+         <div>
+            <nav>Python FastAPI
+               <ul>
+                  <li><a href="https://fastapi.tiangolo.com/tutorial/" target="_blank" rel="noopener">FastAPI User Guide</a></li>
+               </ul>
+            </nav>
+         </div>
+         <div>
+            <nav>Spring Boot
+               <ul>
+                  <li><a href="https://spring.io/guides/gs/spring-boot" target="_blank" rel="noopener">Spring Boot Tutorial</a></li>
+               </ul>
+            </nav>
+         </div>
+      </div>
+      <iframe src="./01357101-Exercise3-1.html" height="550px" width="100%" title="Exercise 3-1 Content">
+      </iframe>
+   </body>
+</html>

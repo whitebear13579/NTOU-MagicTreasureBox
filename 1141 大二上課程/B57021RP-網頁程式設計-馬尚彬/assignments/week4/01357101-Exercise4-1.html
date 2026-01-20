@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Programming week4 4-1</title>
+    <style>
+        h1 {
+            font-weight: normal !important;
+        }
+        body {
+            font-family: "Helvetica";
+        }
+        .name {
+            color: firebrick;
+            font-weight: bold;
+        }
+        .ages {
+            color: navy;
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        let userName, birthStr, birth, age, nowYear;
+        const nowDate = new Date();
+        nowYear = nowDate.getFullYear()
+
+        userName = window.prompt("Please input your name:");
+        document.write("<h1>Hello, <span class='name'>" + userName + "</span> !</h1>")
+
+        birthStr = window.prompt("Please input your birth year:");
+        birth = parseInt(birthStr);
+        age = nowYear - birth;
+
+        console.log("Hello, %s!",userName);
+        if ( age == 1  ){
+            console.log("You are one year old!")
+            document.write("<h1>You are <span class='ages'>one</span> year old!</h1>");
+        }else if ( age <= 0 || isNaN(age) ){
+            console.log("Your input is incorrect!")
+            window.alert("Your input is incorrect!")
+            document.write("<h1>Your age is a mystery!</h1>")
+        }else{
+            console.log("You are %i years old!", age)
+            document.write("<h1>You are <span class='ages'>" + age + "</span> years old!</h1>")
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

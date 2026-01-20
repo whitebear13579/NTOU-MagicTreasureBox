@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Basic DOM</title>
+    <style type="text/CSS">
+
+        h1 {
+			font-size: 50px;
+			font-family: 'Arial', sans-serif;
+		}
+
+		div {
+			font-size: 80px;
+			font-family: Consolas;
+			margin: 5px;
+            padding: 5px;
+            display: inline-block;
+		}
+
+        div.number {
+			border: 1px solid gray;			
+			color: dodgerblue;
+            min-width: 100px;
+            text-align: center;
+		}
+
+
+	</style>
+    <script>
+        function start(){
+            let oper = window.prompt("Please enter an arithmetic operator: 1 represents addition (+), 2 represents subtraction(-), 3 represents multiplication (*), 4 represents division (/)")
+            let hasOperErr = false;
+
+            if ( !isFinite(oper) || !( oper == 1 || oper == 2 || oper == 3 || oper == 4 )){
+                hasOperErr = true;
+            }
+
+            if ( hasOperErr ){
+                alert("Invalid input! The option is automatically set to 1!")
+                oper = 1;
+            }
+
+            let a = 0;
+            let b = 0;
+            let hasInputErr = false;
+            
+            a = window.prompt("Please enter the first number:");
+            if ( !isFinite(a) ){
+                alert("Invalid input! The value is automatically set to 1.");
+                a = 1;
+                b = 1;
+                hasInputErr = true;
+            }
+
+            if (!hasInputErr){
+                b = window.prompt("Please enter the second number:");
+                if ( !isFinite(b) ){
+                    alert("Invalid input! The value is automatically set to 1.");
+                    a = 1;
+                    b = 1;
+                    hasInputErr = true;
+                }
+            }
+            
+            let n1 = document.getElementById("num1")
+            let n2 = document.getElementById("num2");
+            let op = document.getElementById("op")
+            let res = document.getElementById("result");
+            n1.innerHTML = a;
+            n2.innerHTML = b;
+
+            switch (parseInt(oper)){
+                case 1:
+                    op.innerHTML = "+";
+                    res.innerHTML = (parseInt(a) + parseInt(b));
+                case 2:
+                    op.innerHTML = "-";
+                    res.innerHTML = (parseInt(a) - parseInt(b));
+                case 3:
+                    op.innerHTML = "*";
+                    res.innerHTML = (parseInt(a) * parseInt(b));
+                case 4:
+                    op.innerHTML = "/";
+                    let tp = (parseInt(a) / parseInt(b));
+                    res.innerHTML = tp.toFixed(2)
+            }
+
+        }
+
+        window.addEventListener("load", start, false);
+    </script>
+</head>
+
+<body>
+    <h1>Arithmetic Operation Result:</h1>
+    <div class="number" id="num1">Number1</div>
+    <div id="op">?</div>
+    <div class="number" id="num2">Number2</div>
+    <div>=</div>
+    <div class="number" id="result">Result</div>   
+</body>
+
+</html>

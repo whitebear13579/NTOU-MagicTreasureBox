@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Programming week6 6-2</title>
+    <style type="text/css">
+        li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        ol {
+            margin-left: 0;
+            padding-left: 0;
+        }
+
+        img.dice {
+            width: 100px;
+            height: 100px;
+        }
+
+        img.congrats {
+            width: 440px;
+        }
+
+        #msg {
+            font-family: Helvetica, "Microsoft YaHei", "LiHei Pro", TW-Kai;
+            font-size: 120%;
+            color: navy;
+        }
+    </style>
+    <script>
+        let Debug = false;
+        let cnt = {};
+        const imgAry = ["","./img6-2/die1.jpg","./img6-2/die2.jpg", "./img6-2/die3.jpg", "./img6-2/die4.jpg", "./img6-2/die5.jpg", "./img6-2/die6.jpg"]
+        /*
+            一色：四骰子點數相同 -> 恭喜訊息 & 圖片： return ０
+            無面：四骰子點數都不同時 -> oops訊息 & 圖片 : return １
+            No decision：三骰子點數同、一不同：return 2
+            可以計算分數： return 3
+            18：分數為 max 12
+
+            分數計算：要有兩骰相同才能算分數
+        */
+        function checker( radArr ){
+            cnt = { };
+            for (let num of radArr) {
+                cnt[num] = (cnt[num] || 0) + 1;
+            }
+
+            if ( Debug ) console.log("Counter Dict:",cnt);
+
+            if ( Object.keys(cnt).length == 1 ){
+                /* yi se */
+                return 0;
+            }
+
+            if ( Object.keys(cnt).length == 4 ){
+                /* wu mian */
+                return 1;
+            }
+
+            if ( Object.values(cnt).includes(3) ){
+                /* no di xi shun */
+                return 2
+            }
+
+            if ( Object.values(cnt).includes(2) ){
+                /* have scores */
+                return 3;
+            }
+        }
+        
+        function setImage ( dieImg, num ){
+            dieImg.setAttribute( "src", imgAry[num] );
+            dieImg.setAttribute( "alt", "die image with " + num + " spot(s)." );
+        }
+        
+        function getScore () {            
+            let pairs = [];
+            for (let num in cnt) {
+                if (cnt[num] === 2) {
+                    pairs.push(parseInt(num));
+                }
+            }
+            
+            let pairNum;
+            if (pairs.length === 2) {
+                pairNum = Math.min(...pairs);
+                let scorePair = Math.max(...pairs);
+                return scorePair * 2;
+            } else if (pairs.length === 1) {
+                pairNum = pairs[0];
+                let score = 0;
+                for (let num in cnt) {
+                    if (parseInt(num) !== pairNum) {
+                        score += parseInt(num) * cnt[num];
+                    }
+                }
+                return score;
+            } else {
+                return 0;
+            }
+        }
+
+        function result( radArr ){
+            let special = checker(radArr);
+            if ( Debug ) console.log("Specail Case:", special);
+            let die1Image, die2Image, die3Image, die4Image, resultMsg;
+            die1Image = document.getElementById('die1');
+            die2Image = document.getElementById('die2');
+            die3Image = document.getElementById('die3');
+            die4Image = document.getElementById('die4');
+            resultMsg = document.getElementById('msg');
+            
+            setImage( die1Image, radArr[0] );
+            setImage( die2Image, radArr[1] );
+            setImage( die3Image, radArr[2] );
+            setImage( die4Image, radArr[3] );
+            
+            if ( Debug ) console.log("Radom Array:" , radArr);
+            
+            if ( special == 0 ){
+                resultMsg.innerHTML = "<p>Congratulations! Your roll is \"一色\"!</p>" + "<img alt='congratulations images' src='./img6-2/congrats.png'  />";
+            } else if ( special == 1 ) {
+                resultMsg.innerHTML = "<p>Oops! Your roll is \"無面\"!</p>" + "<img alt='oops images' src='./img6-2/oops.jpg'  />";
+            } else if ( special == 2 ){
+                resultMsg.innerHTML = "<p>No Decision, please re-roll the dice";                
+            } else if ( special == 3 ){
+                let score = getScore();
+                if ( Debug ) console.log("Now Score:" , score);
+                if ( score == 12 ){
+                    resultMsg.innerHTML = "<p>Congratulations! Your roll is \"十八\"!</p>" + "<img alt='congratulations images' src='./img6-2/congrats.png'  /><p>Your score is 12!</p>";
+                } else{
+                    resultMsg.innerHTML = "<p>Your score is " + score + "!</p>";
+                }
+            } 
+        }
+        
+        function rollDice (){
+            if ( Debug ) console.log( "Now Mode: rollDice" )
+
+            let die1Value = Math.floor(Math.random() * 6) + 1;
+            let die2Value = Math.floor(Math.random() * 6) + 1;
+            let die3Value = Math.floor(Math.random() * 6) + 1;
+            let die4Value = Math.floor(Math.random() * 6) + 1;
+            let radArr = [die1Value, die2Value, die3Value, die4Value];
+            result(radArr);
+        }
+
+        function sh1(){  /*直接產一色*/
+            if ( Debug ) console.log( "Now Mode: sh1" )
+
+            let die1Value = Math.floor(Math.random() * 6) + 1;
+            let die2Value, die3Value, die4Value;
+            die2Value = die1Value;
+            die3Value = die1Value;
+            die4Value = die1Value;
+            let radArr = [die1Value, die2Value, die3Value, die4Value];
+            result(radArr);
+        }
+
+        function sh2(){ /*直接產18*/
+            if ( Debug ) console.log( "Now Mode: sh2" )
+
+            let radArr = [ 0, 0, 0, 0 ];
+            let fSix = Math.floor(Math.random() * 4);
+            let sSix = 0;
+            while (true){
+                sSix = Math.floor(Math.random() * 4);
+                if ( sSix != fSix ) break;
+            }
+            radArr[fSix] = 6;
+            radArr[sSix] = 6;
+            let another = Math.floor(Math.random() * 5) + 1;
+            for ( let i = 0 ; i < radArr.length ; i++ ){
+                if ( radArr[i] == 0 ){
+                    radArr[i] = another;
+                }
+            }
+            result(radArr);
+        }
+
+        function start( event ){
+            document.getElementById("rollButton").addEventListener("click", rollDice, false);
+            document.getElementById("cheatButton").addEventListener("click", sh1, false);
+            document.getElementById("cheatButton2").addEventListener("click", sh2, false);
+        }
+
+        window.addEventListener("load", start, false);
+    </script>
+</head>
+
+<body>
+    <form action="#">
+        <input id="rollButton" type="button" value="Roll Dice">
+        <input id="cheatButton" type="button" value="Shortcut">
+        <input id="cheatButton2" type="button" value="Shortcut2">
+    </form>
+    <ol>
+        <li><img id="die1" class="dice" src="./img6-2/blank.jpg" alt="blank image"></li>
+        <li><img id="die2" class="dice" src="./img6-2/blank.jpg" alt="blank image"></li>
+        <li><img id="die3" class="dice" src="./img6-2/blank.jpg" alt="blank image"></li>
+        <li><img id="die4" class="dice" src="./img6-2/blank.jpg" alt="blank image"></li>
+    </ol>
+    <div id="msg"></div>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>廢文產生器</title>
+  <style type="text/css">
+    @font-face {
+      font-family: "WCL-07";
+      src: url("./王漢宗粗鋼筆體.ttf");
+    }
+    body{
+      font-family: "WCL-07";
+    }
+  </style>
+  <script>
+    const phrases = [
+    '不斷地', '科技界認為', '有時候', '不可思議地', '科學家表示',
+    '顯然地', '專家指出', '毫無疑問地', '根據研究', '數據顯示'
+    ];
+    const adjectives = [
+    '創新', '前所未有', '具未來性', '革命性', '先進',
+    '突破性', '有效率', '頂尖', '前瞻性', '尖端'
+    ];
+    const objects = [
+    '手機', '人工智慧', '雲端技術', '機器人', '虛擬實境',
+    '區塊鏈', '物聯網', '量子電腦', '智慧穿戴', '大數據'
+    ];
+    const verbs = [
+    '改變', '優化', '孕育', '塑造', '推動',
+    '革新', '加速', '創造', '引領', '實現'
+    ];
+    const locations = [
+    '實驗室裡', '科技公司', '研究中心', '未來世界', '資通訊領域',
+    '創新園區', '科技園區', '智能工廠', '智慧城市', '數位空間'
+    ];
+
+    function getRandom( min, max){
+      return Math.floor(Math.random() * (max-min+1)) + min;
+    }
+
+    function cnm(){
+      let wtf = document.getElementById("nounInput").value;
+      let string = `有關${wtf}的消息在科學界掀起了一陣熱潮。${phrases[getRandom(0,phrases.length-1)]}，它像${adjectives[getRandom(0,adjectives.length-1)]}的${objects[getRandom(0,objects.length-1)]}一樣在${locations[getRandom(0,locations.length-1)]}${verbs[getRandom(0,verbs.length-1)]}，並且${adjectives[getRandom(0,adjectives.length-1)]}地引領著${wtf}產業的未來。許多專家正密切關注${wtf}的最新發展。${phrases[getRandom(0,phrases.length-1)]}，它不僅是${adjectives[getRandom(0,adjectives.length-1)]}的${objects[getRandom(0,objects.length-1)]}，更是${adjectives[getRandom(0,adjectives.length-1)]}地${verbs[getRandom(0,verbs.length-1)]}著人類的科技進步。`
+      let p = document.getElementById("paragraph")
+      p.innerHTML = string
+
+    }
+  </script>
+</head>
+
+<body>
+  <h1>廢文產生器</h1>
+  <input type="text" id="nounInput" placeholder="請輸入名詞">
+  <button onclick="cnm()" >產生文章</button>
+  <div id="articleOutput">
+    <p id="paragraph"></p>
+  </div>
+
+  <script>
+  </script>
+</body>
+
+</html>

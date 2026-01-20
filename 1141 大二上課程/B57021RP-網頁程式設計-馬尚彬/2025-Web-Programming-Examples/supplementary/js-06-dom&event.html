@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<!-- js-05-simple-dom.html -->
+<html lang="zh-TW">
+
+<head>
+    <meta charset="utf-8">
+    <title>Simple DOM and Events</title>
+    <script>
+
+        // 設計按鈕事件處理器的function
+        function start() {
+            //找到id為"displayButton"的網頁元素物件(就是那個按鈕的物件)
+            const button = document.getElementById("displayButton");
+            //幫按鈕註冊事件處理器，一旦按鈕被使用者點擊，就會呼叫display function
+            button.addEventListener("click", display, false);
+        }
+
+        // 顯示訊息的function
+        function display() {
+            //找到id為"name"的網頁元素物件(就是那個文字欄位的物件)
+            let textFieldObject = document.getElementById("name");
+            //取得文字欄位的文字內容
+            let content = textFieldObject.value;
+
+            //組合出想在div區塊中呈現的html片段
+            let message = "<h3>您的名字是" + content + "</h3>";
+
+            //找到id為"display"的網頁元素物件(就是那個div區塊的物件)
+            const divObject = document.getElementById("display");
+
+            //將div區塊的內容改為我們準備好的html片段，網頁上的div就會顯示新的內容
+            divObject.innerHTML = message;
+        }
+
+        //幫視窗註冊事件處理器，在網頁載入完成後，"load"事件就觸發，而"load"事件一發生，就會呼叫start function
+        window.addEventListener("load", start, false);
+
+    </script>
+</head>
+
+<body>
+    <!-- 文字欄位元素與按鈕元素 -->
+    <input id="name" type="text" placeholder="Please Input Your Name">
+    <input id="displayButton" type="button" value="Display">
+
+    <!-- 預留div區塊，以便能更新此區塊之內容 -->
+    <div id="display"></div>
+</body>
+
+</html>

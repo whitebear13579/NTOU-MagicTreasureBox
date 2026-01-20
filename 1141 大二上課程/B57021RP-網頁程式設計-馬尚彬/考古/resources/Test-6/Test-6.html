@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Virtual Coffee Break Reminder</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        #coffeeBox {
+            width: 260px;
+            height: 120px;
+            border: 2px solid black;
+            line-height: 120px;
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        // Write your JavaScript code here.
+		const runningSentence = "The reminder is running. Don't forget to take a break!";
+        const pauseSentence = "Enjoy your coffee break now! The reminder is paused.";
+        const finishSentence = "The reminder has been finished. Have a nice day!";
+		const colors = ["#ffd966", "#ffe599", "#f6b26b", "#f4cccc", "#c9daf8"];
+        let backgroundControlled = false;
+        let isFinished = false;
+        let colorPtr = 0;
+        let hoverTime = 0;
+        let visitCount = 0;
+
+        function changeingBg(){
+            if ( !backgroundControlled ){
+                let bg = document.getElementById("coffeeBox");
+                bg.style.backgroundColor = colors[colorPtr];
+                colorPtr = (colorPtr+1)%5;
+            }
+        }
+
+        function isMouseHover(){
+            if ( isFinished )  return;
+            
+            backgroundControlled = true;
+            document.getElementById("statusMessage").innerHTML = pauseSentence;
+            hoverTime++;
+            document.getElementById("checkCount").innerHTML = `You have checked this reminder ${hoverTime} times.`;
+            localStorage.setItem("coffeeHoverTime", hoverTime);
+        }
+
+        function isMouseLeft(e){
+            if ( isFinished )  return;
+
+            backgroundControlled = false;
+            document.getElementById("statusMessage").innerHTML = runningSentence;
+        }
+
+        function isMouseClick(){
+            if ( isFinished )  return;
+
+            isFinished = true;
+            backgroundControlled = true;
+            document.getElementById("coffeeBox").style.backgroundColor = "gray";
+            document.getElementById("coffeeBox").innerHTML = "Reminder Finished";
+            document.getElementById("statusMessage").innerHTML = finishSentence;
+        }
+
+        function preparing(){
+            window.setInterval(changeingBg,500);
+            document.getElementById("statusMessage").innerHTML = runningSentence;
+
+            let bitch = document.getElementById("coffeeBox");
+            bitch.addEventListener("mouseover", isMouseHover, false);
+            bitch.addEventListener("mouseout", isMouseLeft, false);
+            bitch.addEventListener("click", isMouseClick, false);
+            
+            let loadHoverTime = localStorage.getItem("coffeeHoverTime");
+            if ( loadHoverTime == null ){
+                hoverTime = 0;
+                localStorage.setItem("coffeeHoverTime", hoverTime);
+            }else{
+                hoverTime = parseInt(loadHoverTime);
+            }
+            document.getElementById("checkCount").innerHTML = `You have checked this reminder ${hoverTime} times.`;
+
+            let loadVisitTime = localStorage.getItem("coffeeVisitTime");
+            if ( loadVisitTime == null ){
+                visitCount = 1;
+                localStorage.setItem("coffeeVisitTime", visitCount);
+            } else {
+                visitCount = parseInt(loadVisitTime);
+            }
+            document.getElementById("visitCount").innerHTML = `You have opened this reminder ${visitCount} times.`;
+        }
+
+        window.addEventListener("load", preparing, false);
+    </script>
+</head>
+
+<body>
+    <h2>Virtual Coffee Break Reminder</h2>
+    <div id="coffeeBox">Coffee Break Reminder</div>
+    <p id="statusMessage"></p>
+    <p id="checkCount"></p>
+    <p id="visitCount"></p>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Programming week1 2-2</title>
+    <style>
+        body{
+            font-family: Helvetica, sans-serif;
+            font-size: 1.5em;
+            color:white;
+            background-image: url(./ntou.jpg);
+            background-repeat: repeat-y;
+            background-position: left top;
+            background-color: rgb(59,138,205);
+        }
+        a{
+            text-decoration: none;
+            color:white
+        }
+        a:hover{
+            text-decoration: underline;
+            background-color: lightblue;
+            color: navy;
+            font-weight: bold;
+        }
+        .logo{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        .link{  
+            margin-bottom: 25px;
+        }
+        .link img{
+            height: 20px;
+            width: 20px;
+            vertical-align: -2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Here are my favorite sites</h1>
+    <p>Click on a name to go to the website</p>
+    <div class="link">
+        <a href="https://www.google.com">
+            <img src="./link.png" alt="link">
+            Google
+        </a>
+    </div>
+    <div class="link">
+        <a href="https://www.facebook.com">
+            <img src="./link.png" alt="link">
+            Facebook
+        </a>
+    </div>
+    <div class="link">
+        <a href="https://www.youtube.com">
+            <img src="./link.png" alt="link">
+            Youtube
+        </a>
+    </div>
+    <img src="./ntou_logo.png" alt="ntou_logo" class="logo">
+</body>
+</html>

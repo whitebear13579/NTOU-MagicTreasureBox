@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Programming week9 9-2</title>
+    <style type="text/css">
+        div.nav {
+            border: 1px solid skyBlue;
+            margin-left: 3px;
+            padding: 3px;
+            float: left;
+        }
+
+        input, p, li {
+            font-family: Helvetica, "Microsoft YaHei", "LiHei Pro", TW-Kai;
+        }
+
+        li {
+            font-size: 12px;
+        }
+
+        img.picture {
+            position: absolute;
+        }
+    </style>
+    <script type="text/javascript">
+        // 1-based
+        const picAry = [ "", "img9-2/01.png", "img9-2/02.png", "img9-2/03.png", "img9-2/04.png", "img9-2/05.png", "img9-2/06.png", "img9-2/07.png", "img9-2/08.png", "img9-2/09.png", "img9-2/10.png" ];
+        const pinnAry = [ "img9-2/blue.png", "img9-2/red.png", "img9-2/yellow.png" ];
+        let zIdxPiority = 2;
+
+        function dragHandler(e){
+            //console.log(e);
+            
+            let moveX = e.clientX;
+            if ( moveX > 600 ) moveX = 600;
+            else if ( moveX < 40 ) moveX = 40;
+
+            let moveY = e.clientY;
+            if ( moveY > 400 ) moveY = 400;
+            else if ( moveY < 40 ) moveY = 40;
+
+            let moveKey = 'imgSave' + e.target.id;
+            console.log(moveKey);
+            let target = JSON.parse(localStorage[moveKey]);
+            target.posX = moveX;
+            target.posY = moveY;
+            target.piority = zIdxPiority;
+            zIdxPiority += 2;
+            localStorage.setItem(moveKey, JSON.stringify(target));
+            display();
+        }
+
+
+        function display(){
+            let draw = document.getElementById("canvas");
+            draw.innerHTML = "";
+            for ( let i = 0 ; i < localStorage.length ; i++ ){
+                if ( localStorage.key(i).startsWith("imgSave") ){
+                    let data = JSON.parse(localStorage.getItem(localStorage.key(i)));
+                    let nowAdd = document.createElement('div');
+                    let nowImg = document.createElement('img');
+                    let nowPin = document.createElement('img');
+                    // tools image
+                    nowImg.src = data.picture;
+                    nowImg.className = "picture";
+                    nowImg.height = 200;
+                    nowImg.width = 200;
+                    nowImg.style.top = data.posY + "px";
+                    nowImg.style.left = data.posX + "px";
+                    nowImg.style.zIndex = data.piority;
+                    nowImg.draggable = true;
+                    nowImg.id = data.timeId;
+                    nowImg.addEventListener('dragend', dragHandler, false);
+                    // pin image
+                    nowPin.src = data.imgPin;
+                    nowPin.width = 30;
+                    nowPin.style.top = parseInt(data.posY)-10 + "px";
+                    nowPin.style.left = parseInt(data.posX)+85 + "px";
+                    nowPin.style.zIndex = parseInt(data.piority)+1;
+                    nowPin.className = "picture";
+
+                    nowAdd.appendChild(nowImg);
+                    nowAdd.appendChild(nowPin);
+                    draw.append(nowAdd);
+                }
+            }
+        }
+
+        function addImage(){
+            let x = document.getElementById("x").value;
+            let y = document.getElementById("y").value;
+            if ( x >= 40 && x <= 600 && y >= 40 && y <= 400 ){
+                let t = new Date().getTime();
+                let image = picAry[document.getElementById("pic").value]
+                let pin = pinnAry[Math.floor(Math.random()*3)];
+                let data = new Object({
+                    picture: image,
+                    imgPin: pin,
+                    posX: x,
+                    posY: y,
+                    piority: zIdxPiority,
+                    timeId: t
+                });
+                let key = "imgSave" + t;
+                console.log(key);
+                console.log(data);
+                zIdxPiority += 2;
+                localStorage.setItem(key,JSON.stringify(data));
+                display();
+            }
+        }
+
+        function clearAllImage(){
+            let delList = [];
+            
+            for ( let i = 0 ; i < localStorage.length ; i++ ){
+                if ( localStorage.key(i).startsWith("imgSave") ){
+                    delList.push(localStorage.key(i));
+                }
+            }
+
+            delList.forEach( i => { localStorage.removeItem(i) } );
+            zIdxPiority = 2;
+            display();
+        }
+
+        window.addEventListener("load", display, false);
+    </script>
+</head>
+
+<body>
+    <div id="canvas" ></div>
+    <img src="img9-2/blackboard.jpg" alt="blackboard" height="720" width="960" style="float:left; z-index:-1;" />
+    <img id="img-0" class="picture" alt="doraemon" style="top: 50px; left: 50px; z-index:0;" src="img9-2/doraemon.png" />
+    <img id="pin-0" class="picture" alt="doraemon-pin" style="top: 40px; left: 135px; z-index:1;" width="30px" src="img9-2/red.png" />
+
+    <div id="nav" class="nav">
+        <form action="#">
+            <p>
+                <label>要放哪個道具圖片(請輸入編號):
+                    <input type="number" id="pic" min="1" max="10" step="1" value="1" />
+                </label>
+                <br />
+                <label>圖片X座標:
+                    <input type="number" id="x" min="40" max="600" step="1" value="40" />
+                </label>
+                <br />
+                <label>圖片Y座標:
+                    <input type="number" id="y" min="40" max="400" step="1" value="100" />
+                </label>
+            </p>
+            <p>
+                <input type="button" value="新增圖片" id="addButton" onclick="addImage()" >
+                <input type="button" value="移除所有圖片" id="removeAllButton" onclick="clearAllImage()" >
+            </p>
+        </form>
+        <ul>
+            <li>[01]任意門</li>
+            <li>[02]時光機</li>
+            <li>[03]竹蜻蜓</li>
+            <li>[04]時光布</li>
+            <li>[05]記憶麵包</li>
+            <li>[06]縮小燈</li>
+            <li>[07]翻譯蒟蒻</li>
+            <li>[08]如果電話亭</li>
+            <li>[09]穿透環</li>
+            <li>[10]更衣照相機</li>
+        </ul>
+    </div>
+</body>
+
+</html>

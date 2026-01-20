@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Draw</title>
+    <style>
+        #canvas {
+            width: 500px;
+            border: 1px solid #999999;
+            border-collapse: collapse
+        }
+
+        td {
+            width: 5px;
+            height: 5px;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .gray {
+            background-color: gray;
+        }
+
+    </style>
+    <script type="text/javascript">
+
+        const side = 100;  // 100 x 100 table        
+        // TODO
+
+        function createCanvas() {
+            // TODO
+        }
+
+        function startDraw(e) {
+            // TODO
+        }
+
+        function dragDraw(e) {
+            // TODO
+        }
+
+        function stopDraw(e) {
+            // TODO
+        }
+
+        function paintCell(e) {
+            // TODO
+        }
+
+        function clearAll() {
+            // TODO
+        }
+
+        window.addEventListener("load", createCanvas, false);
+    </script>
+</head>
+
+<body>
+    <table id="canvas">
+        <caption>
+            Hold
+            <em>Ctrl</em> to draw blue.
+            <em>Shift</em> to draw red.
+            <em>Alt</em> to draw green.
+            (Drag with no key = gray)
+        </caption>
+        <tbody id="tablebody"></tbody>
+    </table>
+    <input id="clear" type="button" value="Clear Canvas"></input>
+</body>
+
+</html>

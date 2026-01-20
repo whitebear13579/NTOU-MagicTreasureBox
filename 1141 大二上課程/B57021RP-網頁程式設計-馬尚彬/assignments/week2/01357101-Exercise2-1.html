@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!-- HTML: Form -->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Programming week2 2-1</title>
+    <style type="text/css">
+        body{
+            font-family: Perpetua;
+            font-size: 1.3em;
+        }
+        p::first-letter, h1::first-letter{
+            font-size: 1.5em;
+        }
+        input{
+            color: blue;
+            font-weight: 600;
+        }
+        input[type=submit], input[type=reset]{
+            color: firebrick;
+        }
+        input::placeholder{
+            color: blue;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Advanced Web Form</h1>
+    <form method="post" action="https://form-api-5rvw.onrender.com/submitForm">
+        <p>
+            <label>Your name:
+                <input type="text" name="fullname" required>
+            </label>
+        </p>
+        <p>
+            <label>Your email:
+                <input type="email" name="email" required>
+            </label>
+            (name@domain.com)
+        </p>
+        <p>
+            <label>Your homepage's URL:
+                <input type="url" name="url" required>
+            </label>
+            (http://www.domainname.com)
+        </p>
+        <p>
+            <label>Your birthday date:
+                <input type="date" name="date" required>
+            </label>
+            (yyyy-mm-dd)
+        </p>
+        <p>
+            <label>Your favorite color:
+                <input type="color" name="color" value="#0000ff" required>
+            </label>
+        </p>
+        <p>
+            <datalist id="department">
+                <option value="Department of Aquaculture"></option>
+                <option value="Department of Bioscience and Biotechnology"></option>
+                <option value="Department of Communications, Navigation and Control Engineering"></option>
+                <option value="Department of Computer Science and Engineering"></option>
+                <option value="Department of Electrical Engineering"></option>
+                <option value="Department of Environmental Biology and Fisheries Science"></option>
+                <option value="Department of Food Science"></option>
+                <option value="Department of Harbor and River Engineering"></option>
+                <option value="Department of Marine Engineering"></option>
+                <option value="Department of Marine Environmental Informatics"></option>
+                <option value="Department of Mechanical and Mechatronic Engineering"></option>
+                <option value="Department of Merchant Marine"></option>
+                <option value="Department of Optoelectronics and Materials Technology"></option>
+                <option value="Department of Shipping and Transportation Management"></option>
+                <option value="Department of Systems Engineering and Naval Architecture"></option>
+                <option value="Department of Transportation Science"></option>
+            </datalist>
+            <label>Your Department:
+                <input type="text" list="department" name="department" autocomplete="organization" placeholder="Select a department" required>
+            </label>
+        </p>
+        <p>
+            <strong><em>Check off all of the characteristics that you enjoyed about the college:</em></strong><br />
+        </p>
+        <p>
+            <input type="checkbox" name="likes" id="campus" value="campus">
+            <label for="campus">Campus</label>
+            <input type="checkbox" name="likes" id="students" value="students">
+            <label for="students">Students</label>
+            <input type="checkbox" name="likes" id="location" value="location">
+            <label for="location">Location</label>
+        </p>
+        <p name="interest" ><strong><em>How did you become interested in our college?</em></strong><br />
+        </p>
+        <p>
+            <input type="radio" name="interest" id="friends" value="friends">
+            <label for="friends">Friends</label>
+            <input type="radio" name="interest" id="television" value="television">
+            <label for="television">Television</label>
+            <input type="radio" name="interest" id="internet" value="internet">
+            <label for="internet">Internet</label>
+        </p>
+        <p>
+        </p>
+        <input type = "submit" value = "Submit"/>
+        <input type = "reset" value = "Clear"/>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<!-- Array Exercise-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>出包理由產生器</title>
+    <script>/* Web Programming week6 6-1 */</script>
+    <style>
+        /* https://coolors.co/2c3033-fef9ff-c5d5ea-7392b7-ad343e */
+        @import url("https://fonts.googleapis.com/earlyaccess/cwtexkai.css");
+        body {
+            font-family: cwTeXKai, Perpetua, serif;
+            text-align: center;
+
+        }
+        
+        .title {
+            color: #2C3033;
+        }
+
+        .pot {
+            color: #7392B7;
+        }
+
+        .reason {
+            color: #AD343E;
+        }
+
+        .setSize {
+            font-size: 150%;
+        }
+
+        .meme {
+            height: 300px;
+        }
+        
+    </style>
+    <script>
+        function res(){
+            document.getElementById("display").innerHTML = "";
+            start();
+        }
+
+        const adjAry = ["客戶那邊的", "我們的", "負責談需求的", "負責這個部分的", "直到上線前一天", "(雙手一攤)"];
+        const nounAry = ["專案經理", "主管", "工程師", "設計師", "外包", "User", "聯絡窗口"];
+        const verbAry = ["當初沒有講清楚", "一直換", "說他肚子不舒服", "擺爛不想做了", "突然開始放長假", "去生小孩了", "離職了", "都沒甚麼 sense", "都沒有跟我講", "以為這些不用做", "一直在狀況外", "做事拖拖拉拉", "還搞不清楚狀況", "Quality 有問題", "東西一直改", "在整我", "突然就沒來了"];
+        const imgAry = ["./img6-1/Cat.jpg", "./img6-1/Boy.jpg", "./img6-1/Ohtani.jpg","./img6-1/Harry.jpg", "./img6-1/Jacky.jpg"];
+
+        function start(){
+            const radAdj = adjAry[Math.floor(Math.random() * adjAry.length)];
+            const radNoun = nounAry[Math.floor(Math.random() * nounAry.length)];
+            const radVerb = verbAry[Math.floor(Math.random() * verbAry.length)];
+            const radImg = imgAry[Math.floor(Math.random() * imgAry.length)];
+            
+            const content = document.getElementById("display");
+
+            content.innerHTML += "<h1 class='pot'>" + radAdj + radNoun + "</h1>" + "<h1 class='reason'><span class='setSize'>" + radVerb + "</span></h1>";
+            content.innerHTML += "<img class='meme' onclick='res()' src='" + radImg + "'/>";
+            
+        }
+
+
+        window.addEventListener("load",start,false);
+    </script>
+</head>
+
+<body>
+    <div>
+        <h1 class="title">專案失敗了，是因為...</h1>
+        <div id="display"></div>        
+    </div>
+</body>
+
+</html>

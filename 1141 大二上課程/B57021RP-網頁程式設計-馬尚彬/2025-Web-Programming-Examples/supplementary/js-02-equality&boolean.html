@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<!-- js-02-equality&boolean.html -->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Variable Equality Testing</title>
+    <script>
+        const num = 0;
+        const obj = new String("0");
+        const str = "0";
+
+        const num2 = -1;
+        const nullObj = null;
+        const emptyStr = "";
+
+        document.writeln(num === num); // true
+        document.writeln(obj === obj); // true
+        document.writeln(str === str); // true
+
+        document.writeln("<hr/>");
+
+        document.writeln(num == obj); // true
+        document.writeln(num == str); // true
+        document.writeln(obj == str); // true
+
+        document.writeln("<hr/>");
+
+        document.writeln(num === obj); // false
+        document.writeln(num === str); // false
+        document.writeln(obj === str); // false
+
+        document.writeln("<hr/>");
+
+        document.writeln(null === undefined); // false
+        document.writeln(obj === null); // false
+        document.writeln(obj === undefined); // false
+
+        document.writeln("<hr/>");
+
+        if (num) document.writeln(num + " is considered to be true <br>");
+        else document.writeln(num + " is considered to be false <br>");
+
+        if (num2) document.writeln(num2 + " is considered to be true <br>");
+        else document.writeln(num2 + " is considered to be false <br>");
+
+        if (obj) document.writeln("Object " + obj + " is considered to be true <br>");
+        else document.writeln("Object " + obj + " is considered to be false <br>");
+
+        if (nullObj) document.writeln("Null is considered to be true <br>");
+        else document.writeln("Null is considered to be false <br>");
+
+        if (str) document.writeln("String " + str + " is considered to be true <br>");
+        else document.writeln("String " + str + " is considered to be false <br>");
+
+        if (emptyStr) document.writeln("Empty string is considered to be true <br>");
+        else document.writeln("Empty string is considered to be false <br>");
+    </script>
+</head>
+
+<body></body>
+
+</html>

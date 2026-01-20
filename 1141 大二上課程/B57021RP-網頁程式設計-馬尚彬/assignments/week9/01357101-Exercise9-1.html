@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Web Programming week9 9-1</title>
+	<script>
+		const picAry = ["microsoft", "google", "yahoo", "facebook", "amazon", "apple"];
+		
+		function getRandom( min, max ){
+			return Math.floor(Math.random() * (max-min+1)) + min;
+		}
+		
+		function timer(){
+			update()
+			window.setInterval(update,2000)
+		}
+
+		function update(){
+			let draw = document.getElementById("canvas");
+			draw.innerHTML = "";
+			picAry.sort( function(){ 
+				return Math.random()-0.5;
+			})
+			console.log(picAry);
+			picAry.forEach(img => {
+				let x = getRandom(100, 500), y = getRandom(100, 400) 
+				console.log(x,y);
+				let now = document.createElement('img');
+				now.src = "img9-1/" + img + ".png";
+				now.style.top = y+"px";
+				now.style.left = x+"px";
+				now.className = img;
+				draw.append(now);
+			});
+		}
+
+		window.addEventListener("load", timer, false);
+	</script>
+	<style>
+		.microsoft {
+			width: 380px;
+		}
+
+		.google {
+			width: 380px;
+		}
+
+		.yahoo {
+			width: 190px;
+		}
+
+		.facebook {
+			width: 180px;
+		}
+
+		.apple {
+			width: 180px;
+		}
+
+		.amazon {
+			width: 220px;
+		}
+
+		img {
+			position: absolute;
+			height: auto;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="canvas"></div>
+</body>
+
+</html>

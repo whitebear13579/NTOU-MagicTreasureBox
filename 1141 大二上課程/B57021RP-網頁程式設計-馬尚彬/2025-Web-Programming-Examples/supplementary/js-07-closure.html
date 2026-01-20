@@ -1,0 +1,22 @@
+<html>
+
+<body>
+    <p id="display"></p>
+    <script>
+        function makeAdder(x) {
+            return function (y) {
+                x += 2;
+                return x + y;
+            };
+        }
+        let add5 = makeAdder(5);
+        let add10 = makeAdder(10);
+        let display = document.getElementById("display");
+        display.innerHTML = add5(2) + "<br>";
+        display.innerHTML += add5(2) + "<br>";
+        display.innerHTML += add10(2) + "<br>";
+        display.innerHTML += add10(2) + "<br>";
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8" />
+    <title>簡易 AJAX GET/POST 範例（基礎版）</title>
+    <style>
+        body {
+            font-family: "Noto Sans TC", sans-serif;
+            margin: 20px;
+        }
+
+        button {
+            margin: 4px 8px 12px 0;
+        }
+
+        label {
+            display: block;
+            margin-top: 8px;
+        }
+
+        input, textarea {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        #status {
+            margin: 8px 0;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JSONPlaceholder AJAX 範例（GET + POST）</h1>
+    <p>資料來源：<code>https://jsonplaceholder.typicode.com</code></p>
+
+    <button id="btnGet">GET：載入前5筆貼文</button>
+
+    <h2>新增貼文（POST）</h2>
+    <label>Title
+        <input id="title" value="Hello JSONPlaceholder">
+    </label>
+    <label>Body
+        <textarea id="body" rows="3">這是一篇測試貼文的內容。</textarea>
+    </label>
+    <button id="btnPost">POST：送出新貼文</button>
+
+    <h2>狀態</h2>
+    <div id="status"></div>
+
+    <h2>文章列表（只顯示標題）</h2>
+    <ul id="list"></ul>
+
+    <script>
+        const BASE_URL = "https://jsonplaceholder.typicode.com";
+
+        const statusEl = document.getElementById("status");
+        const listEl = document.getElementById("list");
+
+        function setStatus(text, ok) {
+            if (ok === false) {
+                statusEl.style.color = "red";
+            } else {
+                statusEl.style.color = "green";
+            }
+            statusEl.textContent = text;
+        }
+
+        function clearList() {
+            listEl.innerHTML = "";
+        }
+
+        function addPostToList(post) {
+            let idText;
+            if (post.id !== undefined && post.id !== null) {
+                idText = post.id;
+            } else {
+                idText = "?";
+            }
+
+            let titleText;
+            if (post.title) {
+                titleText = post.title;
+            } else {
+                titleText = "(無標題)";
+            }
+
+            const li = document.createElement("li");
+            li.textContent = "#" + idText + " - " + titleText;
+            listEl.appendChild(li);
+        }
+
+        // GET：載入前 5 筆貼文
+        document.getElementById("btnGet").addEventListener("click", function () {
+            setStatus("載入中...");
+
+            const xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState === 4) {
+                    if (this.status === 200) {
+                        setStatus("GET 成功（HTTP 200），完整內容請看console。");
+
+                        // 解析 JSON
+                        const data = JSON.parse(this.responseText);
+                        console.log("GET /posts?_limit=5 回傳資料：", data);
+
+                        clearList();
+                        for (let i = 0; i < data.length; i++) {
+                            addPostToList(data[i]);
+                        }
+                    } else {
+                        setStatus("GET 失敗（HTTP " + this.status + "）", false);
+                        console.error("GET 錯誤：", this.status, this.responseText);
+                    }
+                }
+            };
+
+            xhttp.open("GET", BASE_URL + "/posts?_limit=5", true);
+            xhttp.send();
+        });
+
+        // POST：送出新貼文
+        document.getElementById("btnPost").addEventListener("click", function () {
+            const title = document.getElementById("title").value;
+            const body = document.getElementById("body").value;
+
+            const payload = {
+                title: title,
+                body: body,
+            };
+
+            setStatus("送出中...");
+
+            const xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState === 4) {
+                    if (this.status === 201 || this.status === 200) {
+                        setStatus("POST 成功（HTTP " + this.status + "），完整內容請看console。");
+
+                        const data = JSON.parse(this.responseText);
+                        console.log("POST /posts 回傳資料：", data);
+
+                        // 把新貼文加到列表最後面
+                        addPostToList(data);
+                    } else {
+                        setStatus("POST 失敗（HTTP " + this.status + "）", false);
+                        console.error("POST 錯誤：", this.status, this.responseText);
+                    }
+                }
+            };
+
+            xhttp.open("POST", BASE_URL + "/posts", true);
+            xhttp.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
+            xhttp.send(JSON.stringify(payload));
+        });
+
+    </script>
+</body>
+
+</html>

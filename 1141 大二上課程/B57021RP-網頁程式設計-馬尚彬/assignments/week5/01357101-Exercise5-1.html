@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Programming week5 5-1</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .calculator {
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+        }
+
+        input, select, button {
+            margin-bottom: 10px;
+            padding: 5px;
+            width: 200px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 120%;
+            width: 200px;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        .result {
+            font-size: 120%;     
+            padding: 10px;
+            border: 3px solid #ddd;
+            width: 200px;
+            text-align: center;
+            box-sizing: border-box;
+         }
+
+	</style>
+</head>
+
+<body>
+    <h3>Simple Calculator</h3>
+    <div class="calculator">
+        <input placeholder="Input first number" id="number1" required></input>
+        <select title="select operation" id="operation">
+            <option id="plus" >+</option>
+            <option id="subt" >-</option>
+            <option id="mult" >*</option>
+            <option id="divi" >/</option>
+        </select>
+        <input placeholder="Input second number" id="number2" required></input>
+        <button title="submit" id="submit" >
+            Calculate
+        </button>
+    </div>
+    <div id="result" class="result" >
+        Results
+    </div>
+
+    <script>
+        function start(){
+            const submitButton = document.getElementById("submit");
+            submitButton.addEventListener("click", calculate);
+        }
+
+        function calculate(){
+            let num1 = parseInt(document.getElementById("number1").value);
+            let num2 = parseInt(document.getElementById("number2").value);
+            let operate = document.getElementById("operation").value;
+            let res = document.getElementById("result");
+
+            if ( isNaN(num1) || isNaN(num2) ){
+                res.innerHTML = "Please Enter a valid numbers";
+                return;
+            }
+
+            switch(operate){
+                case "+":
+                    res.innerHTML = num1+num2;
+                    break;
+                case "-":
+                    res.innerHTML = num1-num2;
+                    break;
+                case "*":
+                    res.innerHTML= num1*num2;
+                    break;
+                case "/":
+                    if ( num2 === 0 ){
+                        res.innerHTML = "Dividing by 0 is illegal";
+                    }else{
+                        res.innerHTML = num1/num2;
+                    }
+                    break;
+            }
+        }
+
+        window.addEventListener("load", start)
+    </script>
+
+</body>
+
+</html>

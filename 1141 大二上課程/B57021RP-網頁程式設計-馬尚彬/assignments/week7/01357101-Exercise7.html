@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的軟體開發技術書籍收藏</title>
+    <style>
+        @import url(https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css);
+        body {
+            font-family: "cwTeXFangSong";
+        }
+
+        h1 {
+            color: darkblue;
+            font-size: 32px;
+            text-align: center;
+        }
+
+        p {
+            color: #030303;
+            background-color: #d4f1f9;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        #bookList{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #bookList > .book{
+            width: 50%;
+        }
+
+        .book-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .book{
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            width: 100%;
+        }
+
+        .book img {
+            width: 150px;
+            height: 150px;
+        }
+
+        .book-title {
+            display: flex;
+            flex-direction: column;
+            font-weight: bold;
+            color: orange;
+        }
+
+        .book-description {
+            display: block;
+            font-size: smaller;
+            color: gray;
+        }
+
+        .book-url a {
+            display: block;
+            text-decoration: none;
+        }
+
+        input {
+            width: 50%;
+            padding: 10px;
+            margin-bottom: 5px;
+            float: left;
+            box-sizing: border-box;
+        }
+
+        input.book-description {
+            width: 100%;
+        }
+
+        button {
+            width: 33%;
+            position: relative;
+            left: 33%;
+            padding: 10px;
+            border-radius: 10px;
+            border: 0px;
+            background: orange;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        @media only screen and (max-width: 600px) {
+            #bookList{
+                flex-direction: column;
+            }
+
+            #bookList .book {
+                width: 100%;
+            }
+            
+
+            .book{
+                flex-direction: column;
+                align-items: start;
+                width: 100%;
+            }
+            
+            .book img{
+                
+                align-self: center;
+            }
+
+            
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HTML 部分 -->
+    <h1>我的軟體開發技術書籍收藏</h1>
+    <p>主要收藏Web programming與Software engineering相關書籍</p>
+
+    <!-- 使用者輸入 -->
+    <div>
+        <span>
+            <input placeholder="輸入書籍名稱" class="book-title-input" id="bookTitle" ></input>
+            <input placeholder="書籍網址" class="book-url" id="bookUrl" ></input>
+        </span>
+        <input placeholder="輸入書籍描述" class="book-description" id="bookDes" ></input>
+        <button title="addBook" id="addButton" >
+            新增書籍
+        </button>
+    </div>
+
+    <hr>
+
+    <div id="bookList">
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        let cnt = 2;
+        let bookArray = [
+            `<div class="book">
+                <img src="https://picsum.photos/150/150" alt="書籍封面">
+                <div class="book-info">
+                    <div class="book-title">《JavaScript: The Good Parts》</div>
+                    <div class="book-url"><a href="https://example.com/js-good-parts" rel="noopener" target="_blank">書籍連結</a></div>
+                    <div class="book-description">由Douglas Crockford撰寫，是深入理解JavaScript精髓的經典書籍。</div>
+                </div>
+            </div>`,
+            `<div class="book">
+                <img src="https://picsum.photos/150/150" alt="書籍封面">
+                <div class="book-info">
+                    <div class="book-title">《Clean Code》</div>
+                    <div class="book-url"><a href="https://example.com/clean-code" rel="noopener" target="_blank">書籍連結</a></div>
+                    <div class="book-description">Robert C. Martin所著，介紹如何撰寫可維護且清晰的程式碼。</div>
+                </div>
+            </div>`];
+
+        document.getElementById("addButton").addEventListener("click", addBook, false);
+
+        function upd(){
+            let bookDisplay = document.getElementById("bookList");
+
+            bookDisplay.innerHTML = "";
+
+            for ( let i = 0 ; i < bookArray.length ; i++ ){
+                if ( cnt == 2 ){
+                    bookDisplay.innerHTML += `<div></div>`;
+                    cnt = 0;
+                }
+                bookDisplay.innerHTML += bookArray[i];
+                cnt = cnt + 1;
+            }
+        }
+
+        function addBook() {
+            bookName = document.getElementById("bookTitle").value
+            bookUrl = document.getElementById("bookUrl").value
+            bookText = document.getElementById("bookDes").value
+
+            if ( bookName.length === 0 || bookText.length === 0 ){
+                alert("請輸入書籍名稱和描述！")
+            }
+            
+            bookArray.push(
+                `<div class="book">
+                    <img src="https://picsum.photos/150/150" alt="書籍封面">
+                    <div class="book-info">
+                        <div class="book-title">《` + bookName + `》</div>
+                        <div class="book-url"><a href="` + bookUrl + `rel="noopener" target="_blank">書籍連結</a></div>
+                        <div class="book-description">` + bookText + `</div>
+                    </div>
+                </div>`
+            );
+            upd();
+        }
+        window.addEventListener("load", upd)
+    </script>
+
+</body>
+
+</html>

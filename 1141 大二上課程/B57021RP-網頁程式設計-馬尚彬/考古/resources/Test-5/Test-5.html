@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Draw</title>
+    <style>
+        #canvas {
+            width: 500px;
+            border: 1px solid #999999;
+            border-collapse: collapse
+        }
+
+        td {
+            width: 5px;
+            height: 5px;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .gray {
+            background-color: gray;
+        }
+
+    </style>
+    <script type="text/javascript">
+
+        const side = 100;  // 100 x 100 table        
+        let isDragging = false;
+
+        function createCanvas() {
+            let tbody = document.getElementById("tablebody");
+            for (let i = 0; i < side; ++i) {
+                let row = document.createElement("tr");
+                for (let j = 0; j < side; ++j) {
+                    let cell = document.createElement("td");
+                    row.appendChild(cell);
+                }
+                tbody.appendChild(row);
+            }
+            let canvas = document.getElementById("canvas");
+            canvas.addEventListener("mousedown", startDraw, false);
+            canvas.addEventListener("mouseover", dragDraw, false);
+            canvas.addEventListener("mouseup", stopDraw, false);
+
+            document.getElementById("clear").addEventListener("click", clearAll, false);
+        }
+
+        function startDraw(e) {
+            if ( e.target.tagName.toLowerCase() == "td" ){
+                isDragging = true;
+                paintCell(e);
+            }
+        }
+
+        function dragDraw(e) {
+            if ( isDragging && e.target.tagName.toLowerCase() == "td" ){
+                paintCell(e);
+            }
+        }
+
+        function stopDraw(e) {
+            isDragging = false;
+        }
+
+        function paintCell(e) {
+            if ( e.ctrlKey ){
+                e.target.setAttribute("class", "blue");
+            }else if ( e.shiftKey ){
+                e.target.setAttribute("class", "red");
+            }else if ( e.altKey ){
+                e.target.setAttribute("class", "green");
+            } else{
+                e.target.setAttribute("class", "gray");
+            }
+        }
+
+        function clearAll() {
+            let tbody = document.getElementById("tablebody");
+            tbody.innerHTML = "";
+            for (let i = 0; i < side; ++i) {
+                let row = document.createElement("tr");
+                for (let j = 0; j < side; ++j) {
+                    let cell = document.createElement("td");
+                    row.appendChild(cell);
+                }
+                tbody.appendChild(row);
+            }
+        }
+
+        window.addEventListener("load", createCanvas, false);
+    </script>
+</head>
+
+<body>
+    <table id="canvas">
+        <caption>
+            Hold
+            <em>Ctrl</em> to draw blue.
+            <em>Shift</em> to draw red.
+            <em>Alt</em> to draw green.
+            (Drag with no key = gray)
+        </caption>
+        <tbody id="tablebody"></tbody>
+    </table>
+    <input id="clear" type="button" value="Clear Canvas"></input>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <style type="text/css">
+        body {
+            font-family: Helvetica, "Microsoft YaHei", "LiHei Pro", TW-Kai;
+        }
+
+        table,
+        tr {
+            border-collapse: collapse;
+            border: 1px solid gray;
+        }
+
+        td {
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+    <table>
+        <tbody id="test"></tbody>
+    </table>
+    <script>
+        //Source: https://docs.google.com/spreadsheets/d/1d5J-4Ojvj9CMzueUd5FmGUBEyu2Fm7xOR4Y49c4q0Mo
+        //Form: https://forms.gle/EmPCKDfj4uAUs1TPA
+        $(document).ready(function () {
+            let sheetID = "1d5J-4Ojvj9CMzueUd5FmGUBEyu2Fm7xOR4Y49c4q0Mo"; // 試算表代號
+            let gid = "0"; // 工作表代號
+            let sql = encodeURI("select *"); // SQL 語法，目前是設定所有資訊都顯示
+            let callback = "display"; // 回呼函數名稱
+            let url = "https://spreadsheets.google.com/tq?tqx=responseHandler:" + callback + "&tq=" + sql + "&key=" + sheetID + "&gid=" + gid;
+            console.log(url);
+
+            $.getScript(url); //取回Google Spreadsheet API回傳之JS code並執行
+        });
+
+        function display(resultJson) {
+
+            console.log(resultJson); //印出回傳結果，可仔細觀察一下Google試算表回傳之JSON內容
+            let rowArray = resultJson.table.rows;
+            let rowLength = rowArray.length;
+
+            let htmlContent = "<tr><th>使用者</th><th>照片</th>";
+
+            for (let i = 0; i < rowLength; i++) {
+
+                let dataGroup = rowArray[i].c;
+                let dataLength = dataGroup.length;
+
+                htmlContent += "<tr>";
+
+                let timeStamp = dataGroup[0].f;
+                let email = dataGroup[1].v;
+                htmlContent += "<td>" + email + "<br>" + timeStamp + "</td>";
+
+                let text = dataGroup[2].v || " "; // 抓圖片描述   
+
+                let imgURL = dataGroup[3].v; //抓圖片網址
+
+                //有f印f (field)，沒f印v (value)，不然印空字串                
+
+                htmlContent += "<td style='text-align:center'>" + text + "<br>(<a target='_blank' href='" + imgURL + "' width='300px'>圖片連結</a>)<br></td>";// Google Drive連結
+
+                htmlContent += "</tr>";
+            }
+
+            document.getElementById("test").innerHTML = htmlContent;
+        };
+    </script>
+
+</html>

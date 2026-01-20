@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Flowing Text Around Floating Elements</title>
+      <style type="text/css">
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+         }
+         header {
+            background-color: #6db3f2;
+            text-align: center;
+            padding: 1em;
+            font-size: 1.8em;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+         }
+         section {
+            border: 1px solid #6db3f2;
+            margin: 1em auto;
+            padding: 1.5em;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+         }
+         h1 {
+            font-size: 1.6em;
+            margin-bottom: 0.5em;
+         }
+         p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin: 1em 0;
+         }
+         .floated {
+            background-color: #d3d3d3;
+            font-size: 1.2em;
+            padding: 0.5em;
+            margin: 1em 0;
+            float: right;
+            text-align: right;
+            width: 45%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+         }
+         /* 清除浮動 */
+         section::after {
+            content: "";
+            display: block;
+            clear: both;
+         }
+      </style>
+   </head>
+   <body>
+      <header>
+         <img src="deitel-new.png" width="400" alt="Deitel" />
+      </header>
+      <section>
+         <h1 class="floated">Corporate Training and Authoring</h1>
+         <p>Deitel & Associates, Inc. is an internationally
+         recognized corporate training and authoring organization 
+         specializing in programming languages, Internet/web 
+         technology, iPhone and Android app development and  
+         object technology education. The company provides courses 
+         on Java, C++, C#, Visual Basic, C, Internet and web 
+         programming, Object Technology and iPhone and Android
+         app development.</p>
+      </section>
+      <section>
+         <h1 class="floated">Programming Books and Videos</h1>
+         <p>Through its publishing 
+         partnership with Pearson, Deitel & Associates, 
+         Inc. publishes leading-edge programming textbooks, 
+         professional books and interactive web-based and DVD 
+         LiveLessons video courses.</p>
+      </section>
+   </body>
+</html>

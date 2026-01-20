@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>待辦事項系統</title>
+    <style>
+        table,
+        th,
+        td {
+            border: gray 2px solid;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>待辦事項列表</h1>
+
+    <table id="todo-list" style="width: 90%">
+        <tr>
+            <th width="30%">時間</th>
+            <th width="55%">待辦事項</th>
+            <th width="15%">是否完成</th>
+            </the>
+        </tr>
+    </table>
+
+    <h2>新增待辦事項</h2>
+
+    <form id="add-todo-form">
+        待辦事項內容：
+        <input type="text" id="thing" name="thing" required >
+        <input type="submit" value="送出">
+    </form>
+    
+    <script>
+        // 使用 async/await 取代 jQuery
+        document.addEventListener('DOMContentLoaded', async function () {
+            // 取得待辦事項列表
+            try {
+                const response = await fetch('todo');
+                const todos = await response.json();
+
+                const todoList = document.getElementById('todo-list');
+                todos.forEach(function (todo) {
+                    const row = `<tr><td>${new Date(todo.createdDate).toLocaleString()}</td><td>${todo.thing}</td><td>${todo.isDone ? "完成" : "未完成"}</td></tr>`;
+                    todoList.insertAdjacentHTML('beforeend', row);
+                });
+            } catch (error) {
+                console.error('取得待辦事項失敗:', error);
+            }
+
+            // 新增待辦事項
+            document.getElementById('add-todo-form').addEventListener('submit', async function (event) {
+                event.preventDefault(); // 避免跳頁
+
+                const thing = document.getElementById('thing').value;
+
+                try {
+                    const response = await fetch('todo', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ thing })
+                    });
+
+                    if (response.ok) {
+                        const newtodo = await response.json();
+                        location.reload();
+                    } else {
+                        console.error('新增失敗:', response.statusText);
+                    }
+                } catch (error) {
+                    console.error('新增待辦事項失敗:', error);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
