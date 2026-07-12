@@ -1,5 +1,9 @@
 # ようこそ "NTOU - MagicTreasureBox"
 
+> [!WARNING]  
+> 由於個人因素，自 2026 年 9 月起將離開海大資工系，因此本儲存庫即將被歸檔，不再繼續維護。
+> 如持續有資工系課程資料的需求，請前往 [NCKU-KoishiNoTakaramono](https://github.com/whitebear13579/NCKU-KoishiNoTakaramono) 查看。
+
 ## 儲存庫摘要 Repository summary
 
 嗨👋，我是海大資工 117 級的 whitebear，這裡是我的課程檔案儲存庫，學期結束後我會我所修課程所用到的一些電子檔、作業、文件存來這裡歸檔，歡迎各位來這裡挖寶 XD。
@@ -90,7 +94,13 @@ Contact:
 
 <details>
 <summary>1142 選課清單：</summary>
-TBD.
+| 課號       | 課名       | 授課教授  | 學分 | 選別 | 備註       |
+|----------|----------|-------|----|----|----------|
+| B5702P36 | 電腦網路     | 葉春超   | 3  | 必修 | ✅ Passed |
+| B5702P98 | 演算法      | 林清池   | 3  | 必修 | ✅ Passed |
+| B9D01969 | 英文(大一英文) | 丹尼爾伍德 | 2  | 必修 | ✅ Passed |
+| B9K02233 | 日文(二)    | 選修    | 2  | 選修 | ✅ Passed |
+| B9M014TY | 近代中外關係史  | 選修    | 2  | 選修 | ✅ Passed |
 
 </details>
 
