@@ -1,8 +1,8 @@
 # ようこそ "NTOU - MagicTreasureBox"
 
-> [!WARNING]  
-> 由於個人因素，自 2026 年 9 月起將離開海大資工系，因此本儲存庫即將被歸檔，不再繼續維護。
-> 如持續有資工系課程資料的需求，請前往 [NCKU-KoishiNoTakaramono](https://github.com/whitebear13579/NCKU-KoishiNoTakaramono) 查看。
+> [!WARNING]
+> 由於個人因素，自 2026 年 9 月起將離開海大資工系，因此本儲存庫即將被歸檔，不再繼續維護。   
+> 如持續有資工系課程資料的需求，請前往 [NCKU-KoishiNoTakaramono](https://github.com/whitebear13579/NCKU-KoishiNoTakaramono) 查看。   
 
 ## 儲存庫摘要 Repository summary
 
@@ -93,6 +93,7 @@ Contact:
 </details>
 
 <details>
+   ㄞ
 <summary>1142 選課清單：</summary>
 | 課號       | 課名       | 授課教授  | 學分 | 選別 | 備註       |
 |----------|----------|-------|----|----|----------|
